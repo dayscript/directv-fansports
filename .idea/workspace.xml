@@ -2,7 +2,459 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a95a0a6-4aa2-4614-a727-fb7c0d984d61" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assets/scss/_settings.scss" afterPath="$PROJECT_DIR$/src/assets/scss/_settings.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/favicon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.env.example" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitattributes" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ForgotPasswordController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Middleware/EncryptCookies.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Middleware/TrimStrings.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Providers/BroadcastServiceProvider.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/User.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/artisan" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/app.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/autoload.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/cache/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/composer.lock" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/app.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/auth.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/broadcasting.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/cache.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/database.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/filesystems.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/mail.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/queue.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/services.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/session.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/view.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/factories/ModelFactory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpunit.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/.htaccess" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/app.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/foundation/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/foundation/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/robots.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/js/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/js/bootstrap.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/js/components/Example.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/sass/_variables.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/assets/sass/app.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/lang/en/auth.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/lang/en/pagination.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/lang/en/passwords.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/lang/en/validation.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/api.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/channels.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/console.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/web.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/storage/app/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/storage/app/public/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/storage/framework/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/storage/framework/cache/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/storage/framework/sessions/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/storage/framework/testing/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/storage/framework/views/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/storage/logs/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/CreatesApplication.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/TestCase.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webpack.mix.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/yarn.lock" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.babelrc" afterPath="$PROJECT_DIR$/public/foundation/.babelrc" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.bowerrc" afterPath="$PROJECT_DIR$/public/foundation/.bowerrc" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/CHANGELOG.md" afterPath="$PROJECT_DIR$/public/foundation/CHANGELOG.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/config.yml" afterPath="$PROJECT_DIR$/public/foundation/config.yml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/gulpfile.babel.js" afterPath="$PROJECT_DIR$/public/foundation/gulpfile.babel.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/readme.md" afterPath="$PROJECT_DIR$/public/foundation/readme.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/HelveticaNeueLTStd-Cn/HelveticaNeueLTStd-Cn.eot" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/HelveticaNeueLTStd-Cn/HelveticaNeueLTStd-Cn.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/HelveticaNeueLTStd-Cn/HelveticaNeueLTStd-Cn.otf" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/HelveticaNeueLTStd-Cn/HelveticaNeueLTStd-Cn.otf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/HelveticaNeueLTStd-Cn/HelveticaNeueLTStd-Cn.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/HelveticaNeueLTStd-Cn/HelveticaNeueLTStd-Cn.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/HelveticaNeueLTStd-Cn/HelveticaNeueLTStd-Cn.ttf" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/HelveticaNeueLTStd-Cn/HelveticaNeueLTStd-Cn.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/HelveticaNeueLTStd-Cn/HelveticaNeueLTStd-Cn.woff" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/HelveticaNeueLTStd-Cn/HelveticaNeueLTStd-Cn.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/HelveticaNeueLTStd-Cn/preview.html" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/HelveticaNeueLTStd-Cn/preview.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/HelveticaNeueLTStd-Cn/styles.css" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/HelveticaNeueLTStd-Cn/styles.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/Raleway-Bold/Raleway-Bold.eot" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/Raleway-Bold/Raleway-Bold.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/Raleway-Bold/Raleway-Bold.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/Raleway-Bold/Raleway-Bold.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/Raleway-Bold/Raleway-Bold.ttf" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/Raleway-Bold/Raleway-Bold.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/Raleway-Bold/Raleway-Bold.woff" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/Raleway-Bold/Raleway-Bold.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/Raleway-Bold/preview.html" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/Raleway-Bold/preview.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/Raleway-Bold/styles.css" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/Raleway-Bold/styles.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/Raleway-Medium/Raleway-Medium.eot" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/Raleway-Medium/Raleway-Medium.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/Raleway-Medium/Raleway-Medium.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/Raleway-Medium/Raleway-Medium.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/Raleway-Medium/Raleway-Medium.ttf" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/Raleway-Medium/Raleway-Medium.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/Raleway-Medium/Raleway-Medium.woff" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/Raleway-Medium/Raleway-Medium.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/Raleway-Medium/preview.html" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/Raleway-Medium/preview.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/Raleway-Medium/styles.css" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/Raleway-Medium/styles.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/Raleway-Regular/Raleway-Regular.eot" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/Raleway-Regular/Raleway-Regular.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/Raleway-Regular/Raleway-Regular.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/Raleway-Regular/Raleway-Regular.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/Raleway-Regular/Raleway-Regular.ttf" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/Raleway-Regular/Raleway-Regular.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/Raleway-Regular/Raleway-Regular.woff" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/Raleway-Regular/Raleway-Regular.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/Raleway-Regular/preview.html" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/Raleway-Regular/preview.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/Raleway-Regular/styles.css" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/Raleway-Regular/styles.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/.fontcustom-data" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/.fontcustom-data" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/foundation-icons.css" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/foundation-icons.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/foundation-icons.eot" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/foundation-icons.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/foundation-icons.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/foundation-icons.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/foundation-icons.ttf" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/foundation-icons.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/foundation-icons.woff" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/foundation-icons.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/preview.html" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/preview.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-address-book.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-address-book.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-alert.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-alert.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-align-center.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-align-center.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-align-justify.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-align-justify.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-align-left.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-align-left.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-align-right.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-align-right.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-anchor.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-anchor.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-annotate.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-annotate.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-archive.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-archive.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-arrow-down.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-arrow-down.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-arrow-left.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-arrow-left.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-arrow-right.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-arrow-right.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-arrow-up.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-arrow-up.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-arrows-compress.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-arrows-compress.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-arrows-expand.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-arrows-expand.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-arrows-in.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-arrows-in.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-arrows-out.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-arrows-out.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-asl.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-asl.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-asterisk.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-asterisk.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-at-sign.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-at-sign.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-background-color.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-background-color.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-battery-empty.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-battery-empty.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-battery-full.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-battery-full.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-battery-half.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-battery-half.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-bitcoin-circle.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-bitcoin-circle.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-bitcoin.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-bitcoin.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-blind.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-blind.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-bluetooth.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-bluetooth.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-bold.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-bold.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-book-bookmark.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-book-bookmark.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-book.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-book.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-bookmark.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-bookmark.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-braille.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-braille.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-burst-new.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-burst-new.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-burst-sale.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-burst-sale.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-burst.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-burst.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-calendar.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-calendar.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-camera.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-camera.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-check.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-check.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-checkbox.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-checkbox.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-clipboard-notes.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-clipboard-notes.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-clipboard-pencil.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-clipboard-pencil.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-clipboard.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-clipboard.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-clock.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-clock.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-closed-caption.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-closed-caption.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-cloud.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-cloud.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-comment-minus.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-comment-minus.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-comment-quotes.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-comment-quotes.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-comment-video.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-comment-video.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-comment.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-comment.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-comments.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-comments.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-compass.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-compass.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-contrast.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-contrast.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-credit-card.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-credit-card.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-crop.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-crop.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-crown.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-crown.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-css3.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-css3.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-database.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-database.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-die-five.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-die-five.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-die-four.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-die-four.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-die-one.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-die-one.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-die-six.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-die-six.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-die-three.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-die-three.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-die-two.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-die-two.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-dislike.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-dislike.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-dollar-bill.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-dollar-bill.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-dollar.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-dollar.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-download.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-download.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-eject.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-eject.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-elevator.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-elevator.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-euro.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-euro.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-eye.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-eye.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-fast-forward.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-fast-forward.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-female-symbol.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-female-symbol.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-female.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-female.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-filter.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-filter.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-first-aid.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-first-aid.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-flag.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-flag.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-folder-add.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-folder-add.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-folder-lock.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-folder-lock.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-folder.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-folder.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-foot.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-foot.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-foundation.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-foundation.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-graph-bar.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-graph-bar.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-graph-horizontal.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-graph-horizontal.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-graph-pie.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-graph-pie.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-graph-trend.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-graph-trend.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-guide-dog.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-guide-dog.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-hearing-aid.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-hearing-aid.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-heart.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-heart.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-home.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-home.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-html5.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-html5.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-indent-less.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-indent-less.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-indent-more.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-indent-more.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-info.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-info.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-italic.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-italic.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-key.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-key.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-laptop.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-laptop.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-layout.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-layout.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-lightbulb.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-lightbulb.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-like.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-like.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-link.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-link.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-list-bullet.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-list-bullet.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-list-number.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-list-number.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-list-thumbnails.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-list-thumbnails.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-list.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-list.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-lock.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-lock.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-loop.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-loop.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-magnifying-glass.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-magnifying-glass.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-mail.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-mail.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-male-female.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-male-female.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-male-symbol.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-male-symbol.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-male.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-male.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-map.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-map.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-marker.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-marker.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-megaphone.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-megaphone.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-microphone.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-microphone.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-minus-circle.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-minus-circle.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-minus.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-minus.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-mobile-signal.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-mobile-signal.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-mobile.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-mobile.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-monitor.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-monitor.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-mountains.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-mountains.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-music.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-music.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-next.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-next.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-no-dogs.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-no-dogs.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-no-smoking.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-no-smoking.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-page-add.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-page-add.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-page-copy.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-page-copy.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-page-csv.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-page-csv.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-page-delete.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-page-delete.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-page-doc.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-page-doc.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-page-edit.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-page-edit.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-page-export-csv.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-page-export-csv.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-page-export-doc.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-page-export-doc.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-page-export-pdf.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-page-export-pdf.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-page-export.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-page-export.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-page-filled.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-page-filled.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-page-multiple.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-page-multiple.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-page-pdf.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-page-pdf.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-page-remove.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-page-remove.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-page-search.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-page-search.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-page.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-page.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-paint-bucket.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-paint-bucket.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-paperclip.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-paperclip.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-pause.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-pause.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-paw.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-paw.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-paypal.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-paypal.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-pencil.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-pencil.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-photo.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-photo.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-play-circle.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-play-circle.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-play-video.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-play-video.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-play.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-play.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-plus.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-plus.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-pound.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-pound.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-power.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-power.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-previous.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-previous.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-price-tag.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-price-tag.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-pricetag-multiple.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-pricetag-multiple.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-print.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-print.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-prohibited.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-prohibited.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-projection-screen.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-projection-screen.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-puzzle.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-puzzle.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-quote.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-quote.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-record.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-record.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-refresh.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-refresh.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-results-demographics.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-results-demographics.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-results.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-results.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-rewind-ten.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-rewind-ten.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-rewind.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-rewind.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-rss.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-rss.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-safety-cone.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-safety-cone.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-save.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-save.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-share.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-share.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-sheriff-badge.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-sheriff-badge.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-shield.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-shield.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-shopping-bag.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-shopping-bag.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-shopping-cart.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-shopping-cart.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-shuffle.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-shuffle.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-skull.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-skull.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-500px.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-500px.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-adobe.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-adobe.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-amazon.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-amazon.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-android.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-android.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-apple.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-apple.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-behance.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-behance.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-bing.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-bing.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-blogger.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-blogger.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-delicious.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-delicious.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-designer-news.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-designer-news.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-deviant-art.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-deviant-art.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-digg.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-digg.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-dribbble.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-dribbble.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-drive.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-drive.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-dropbox.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-dropbox.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-evernote.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-evernote.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-facebook.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-facebook.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-flickr.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-flickr.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-forrst.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-forrst.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-foursquare.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-foursquare.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-game-center.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-game-center.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-github.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-github.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-google-plus.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-google-plus.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-hacker-news.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-hacker-news.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-hi5.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-hi5.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-instagram.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-instagram.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-joomla.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-joomla.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-lastfm.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-lastfm.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-linkedin.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-linkedin.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-medium.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-medium.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-myspace.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-myspace.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-orkut.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-orkut.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-path.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-path.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-picasa.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-picasa.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-pinterest.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-pinterest.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-rdio.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-rdio.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-reddit.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-reddit.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-skillshare.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-skillshare.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-skype.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-skype.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-smashing-mag.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-smashing-mag.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-snapchat.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-snapchat.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-spotify.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-spotify.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-squidoo.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-squidoo.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-stack-overflow.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-stack-overflow.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-steam.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-steam.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-stumbleupon.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-stumbleupon.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-treehouse.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-treehouse.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-tumblr.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-tumblr.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-twitter.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-twitter.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-vimeo.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-vimeo.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-windows.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-windows.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-xbox.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-xbox.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-yahoo.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-yahoo.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-yelp.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-yelp.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-youtube.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-youtube.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-zerply.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-zerply.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-social-zurb.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-social-zurb.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-sound.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-sound.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-star.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-star.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-stop.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-stop.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-strikethrough.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-strikethrough.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-subscript.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-subscript.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-superscript.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-superscript.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-tablet-landscape.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-tablet-landscape.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-tablet-portrait.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-tablet-portrait.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-target-two.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-target-two.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-target.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-target.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-telephone-accessible.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-telephone-accessible.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-telephone.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-telephone.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-text-color.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-text-color.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-thumbnails.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-thumbnails.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-ticket.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-ticket.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-torso-business.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-torso-business.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-torso-female.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-torso-female.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-torso.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-torso.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-torsos-all-female.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-torsos-all-female.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-torsos-all.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-torsos-all.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-torsos-female-male.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-torsos-female-male.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-torsos-male-female.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-torsos-male-female.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-torsos.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-torsos.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-trash.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-trash.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-trees.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-trees.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-trophy.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-trophy.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-underline.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-underline.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-universal-access.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-universal-access.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-unlink.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-unlink.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-unlock.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-unlock.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-upload-cloud.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-upload-cloud.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-upload.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-upload.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-usb.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-usb.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-video.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-video.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-volume-none.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-volume-none.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-volume-strike.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-volume-strike.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-volume.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-volume.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-web.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-web.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-wheelchair.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-wheelchair.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-widget.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-widget.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-wrench.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-wrench.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-x-circle.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-x-circle.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-x.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-x.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-yen.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-yen.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-zoom-in.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-zoom-in.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/fonts/foundation-icons/svgs/fi-zoom-out.svg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/fonts/foundation-icons/svgs/fi-zoom-out.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/img/.gitkeep" afterPath="$PROJECT_DIR$/public/foundation/src/assets/img/.gitkeep" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/img/Premier_League_Logo.png" afterPath="$PROJECT_DIR$/public/foundation/src/assets/img/Premier_League_Logo.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/img/by-day.png" afterPath="$PROJECT_DIR$/public/foundation/src/assets/img/by-day.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/img/default.png" afterPath="$PROJECT_DIR$/public/foundation/src/assets/img/default.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/img/directv-channel.png" afterPath="$PROJECT_DIR$/public/foundation/src/assets/img/directv-channel.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/img/directv.png" afterPath="$PROJECT_DIR$/public/foundation/src/assets/img/directv.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/img/fansports-servientrega.png" afterPath="$PROJECT_DIR$/public/foundation/src/assets/img/fansports-servientrega.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/img/fansports.png" afterPath="$PROJECT_DIR$/public/foundation/src/assets/img/fansports.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/img/la-liga.png" afterPath="$PROJECT_DIR$/public/foundation/src/assets/img/la-liga.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/img/ligue-1.png" afterPath="$PROJECT_DIR$/public/foundation/src/assets/img/ligue-1.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/img/pauta/dtv-ligas.jpg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/img/pauta/dtv-ligas.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/img/pauta/dtv-ligas.png" afterPath="$PROJECT_DIR$/public/foundation/src/assets/img/pauta/dtv-ligas.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/img/pauta/servientrega.jpg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/img/pauta/servientrega.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/img/pauta/servientrega.png" afterPath="$PROJECT_DIR$/public/foundation/src/assets/img/pauta/servientrega.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/img/servientrega.png" afterPath="$PROJECT_DIR$/public/foundation/src/assets/img/servientrega.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/img/test/slide.jpg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/img/test/slide.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/img/test/slide2.jpg" afterPath="$PROJECT_DIR$/public/foundation/src/assets/img/test/slide2.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/js/app.js" afterPath="$PROJECT_DIR$/public/foundation/src/assets/js/app.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/js/lib/foundation-explicit-pieces.js" afterPath="$PROJECT_DIR$/public/foundation/src/assets/js/lib/foundation-explicit-pieces.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/scss/_settings.scss" afterPath="$PROJECT_DIR$/public/foundation/src/assets/scss/_settings.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/scss/app.scss" afterPath="$PROJECT_DIR$/public/foundation/src/assets/scss/app.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/scss/components/.gitkeep" afterPath="$PROJECT_DIR$/public/foundation/src/assets/scss/components/.gitkeep" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/scss/components/_blocks.scss" afterPath="$PROJECT_DIR$/public/foundation/src/assets/scss/components/_blocks.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/scss/components/_fonts.scss" afterPath="$PROJECT_DIR$/public/foundation/src/assets/scss/components/_fonts.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/scss/components/_general.scss" afterPath="$PROJECT_DIR$/public/foundation/src/assets/scss/components/_general.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/data/.gitkeep" afterPath="$PROJECT_DIR$/public/foundation/src/data/.gitkeep" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/layouts/default.html" afterPath="$PROJECT_DIR$/public/foundation/src/layouts/default.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/pages/como-jugar.html" afterPath="$PROJECT_DIR$/public/foundation/src/pages/como-jugar.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/pages/contacto.html" afterPath="$PROJECT_DIR$/public/foundation/src/pages/contacto.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/pages/index.html" afterPath="$PROJECT_DIR$/public/foundation/src/pages/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/pages/ligas.html" afterPath="$PROJECT_DIR$/public/foundation/src/pages/ligas.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/pages/mi-cuenta.html" afterPath="$PROJECT_DIR$/public/foundation/src/pages/mi-cuenta.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/pages/privacidad.html" afterPath="$PROJECT_DIR$/public/foundation/src/pages/privacidad.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/pages/pronosticos.html" afterPath="$PROJECT_DIR$/public/foundation/src/pages/pronosticos.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/pages/ranking.html" afterPath="$PROJECT_DIR$/public/foundation/src/pages/ranking.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/pages/registro.html" afterPath="$PROJECT_DIR$/public/foundation/src/pages/registro.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/pages/terminos-y-condiciones.html" afterPath="$PROJECT_DIR$/public/foundation/src/pages/terminos-y-condiciones.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/partials/.gitkeep" afterPath="$PROJECT_DIR$/public/foundation/src/partials/.gitkeep" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/partials/banner.html" afterPath="$PROJECT_DIR$/public/foundation/src/partials/banner.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/partials/footer.html" afterPath="$PROJECT_DIR$/public/foundation/src/partials/footer.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/partials/header.html" afterPath="$PROJECT_DIR$/public/foundation/src/partials/header.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/partials/home.html" afterPath="$PROJECT_DIR$/public/foundation/src/partials/home.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/partials/login-in.html" afterPath="$PROJECT_DIR$/public/foundation/src/partials/login-in.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/partials/login.html" afterPath="$PROJECT_DIR$/public/foundation/src/partials/login.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/partials/pauta.html" afterPath="$PROJECT_DIR$/public/foundation/src/partials/pauta.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/styleguide/index.md" afterPath="$PROJECT_DIR$/public/foundation/src/styleguide/index.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/styleguide/template.html" afterPath="$PROJECT_DIR$/public/foundation/src/styleguide/template.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/fansports.iml" afterPath="$PROJECT_DIR$/.idea/fansports.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <ignored path="fansports.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -14,27 +466,14 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="fansports" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="_settings.scss" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/assets/scss/_settings.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.35">
-              <caret line="67" column="21" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -73,39 +512,43 @@
         <option value="$PROJECT_DIR$/src/assets/scss/components/_blocks.scss" />
         <option value="$PROJECT_DIR$/src/partials/footer.html" />
         <option value="$PROJECT_DIR$/src/assets/scss/_settings.scss" />
+        <option value="$PROJECT_DIR$/dist/index.html" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" />
-  <component name="JsBuildToolPackageJson" detection-done="true">
-    <package-json value="$PROJECT_DIR$/package.json" />
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/public/foundation/package.json" />
   </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <gulpfiles>
       <GulpfileState>
-        <gulpfile-path>$PROJECT_DIR$/gulpfile.babel.js</gulpfile-path>
+        <gulpfile-path>$PROJECT_DIR$/public/foundation/gulpfile.babel.js</gulpfile-path>
+        <tasks>
+          <GulpTaskState>
+            <task-name>build</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>default</task-name>
+          </GulpTaskState>
+        </tasks>
       </GulpfileState>
     </gulpfiles>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+    <handled-path value="$PROJECT_DIR$/public/foundation/node_modules" />
   </component>
   <component name="PhpServers">
     <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="1860" />
     <option name="height" value="1008" />
-  </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
-    <OptionsSetting value="true" id="Add" />
-    <OptionsSetting value="true" id="Remove" />
-    <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
-    <OptionsSetting value="true" id="Status" />
-    <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
-    <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -126,138 +569,13 @@
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fansports" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fansports" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fansports" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fansports" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fansports" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fansports" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fansports" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="partials" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fansports" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fansports" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fansports" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fansports" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scss" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fansports" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fansports" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scss" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fansports" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fansports" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="fansports" type="b2602c69:ProjectViewProjectNode" />
+              <item name="directv-fansports" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
     </panes>
@@ -268,8 +586,36 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="js-jscs-nodeInterpreter" value="$USER_HOME$/.nvm/versions/node/v6.9.4/bin/node" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
+    <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
+    <property name="js.buildTools.gulp.gulp_package_dir" value="$PROJECT_DIR$/public/foundation/node_modules/gulp" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/fansports/public/foundation" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+    </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
@@ -284,14 +630,6 @@
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
       <method />
     </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
       <command value="run-script" />
       <scripts />
@@ -299,7 +637,9 @@
       <method />
     </configuration>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -308,34 +648,38 @@
       <changelist id="2a95a0a6-4aa2-4614-a727-fb7c0d984d61" name="Default" comment="" />
       <created>1500927450921</created>
       <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
       <updated>1500927450921</updated>
+      <workItem from="1501272766271" duration="1257000" />
     </task>
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1257000" />
+  </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1860" height="1008" extended-state="0" />
-    <editor active="false" />
+    <frame x="0" y="22" width="1920" height="1173" extended-state="6" />
     <layout>
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970026" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32970026" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40962762" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2421875" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30457935" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -360,6 +704,9 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
       <collection />
@@ -376,220 +723,202 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/partials/header.html">
+    <entry file="file://$PROJECT_DIR$/public/foundation/src/assets/scss/_settings.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="2211">
+          <caret line="67" column="21" lean-forward="false" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/pronosticos.html">
+    <entry file="file://$PROJECT_DIR$/public/foundation/src/partials/header.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="276" column="64" selection-start-line="276" selection-start-column="64" selection-end-line="276" selection-end-column="64" />
-          <folding>
-            <element signature="n#div#4;n#div#10;n#div#0;n#div#2;n#!!top" expanded="false" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/scss/components/_fonts.scss">
+    <entry file="file://$PROJECT_DIR$/public/foundation/src/pages/pronosticos.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="125" column="15" selection-start-line="125" selection-start-column="11" selection-end-line="125" selection-end-column="15" />
+        <state relative-caret-position="0">
+          <caret line="276" column="64" lean-forward="false" selection-start-line="276" selection-start-column="64" selection-end-line="276" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/foundation/src/assets/scss/components/_fonts.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="125" column="15" lean-forward="false" selection-start-line="125" selection-start-column="11" selection-end-line="125" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/foundation/src/pages/registro.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="9" column="78" lean-forward="false" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/foundation/node_modules/foundation-sites/scss/components/_menu-icon.scss" />
+    <entry file="file://$PROJECT_DIR$/public/foundation/src/partials/pauta.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="66" lean-forward="false" selection-start-line="0" selection-start-column="66" selection-end-line="0" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/foundation/src/partials/banner.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="18" column="6" lean-forward="false" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/foundation/src/assets/scss/components/_fonts.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="125" column="15" lean-forward="false" selection-start-line="125" selection-start-column="11" selection-end-line="125" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/foundation/src/pages/como-jugar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="13" column="46" lean-forward="false" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/foundation/src/pages/contacto.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="48" column="46" lean-forward="false" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/foundation/src/pages/terminos-y-condiciones.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/foundation/src/pages/privacidad.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/foundation/src/pages/registro.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="40" column="16" lean-forward="false" selection-start-line="40" selection-start-column="16" selection-end-line="42" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/foundation/src/partials/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/foundation/src/pages/ligas.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="94" column="104" lean-forward="false" selection-start-line="94" selection-start-column="69" selection-end-line="94" selection-end-column="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/foundation/src/partials/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="5" column="51" lean-forward="false" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/foundation/src/pages/pronosticos.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="281" column="0" lean-forward="false" selection-start-line="281" selection-start-column="0" selection-end-line="281" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/foundation/src/partials/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/foundation/src/assets/scss/components/_general.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="59" column="1" lean-forward="false" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/foundation/src/pages/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="3" column="10" lean-forward="false" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/foundation/src/pages/ranking.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="35" column="71" lean-forward="false" selection-start-line="35" selection-start-column="71" selection-end-line="35" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/foundation/src/assets/scss/app.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/foundation/src/partials/login-in.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/foundation/src/pages/mi-cuenta.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="56" column="49" lean-forward="false" selection-start-line="56" selection-start-column="49" selection-end-line="56" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/foundation/src/assets/scss/components/_blocks.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="420" column="0" lean-forward="false" selection-start-line="420" selection-start-column="0" selection-end-line="420" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/foundation/src/partials/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="32" column="10" lean-forward="false" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/foundation/src/assets/scss/_settings.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="74" column="19" lean-forward="true" selection-start-line="74" selection-start-column="19" selection-end-line="74" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/registro.html">
+    <entry file="file://$PROJECT_DIR$/public/foundation/dist/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="78" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/foundation-sites/scss/components/_menu-icon.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23396881">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/partials/pauta.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="66" selection-start-line="0" selection-start-column="66" selection-end-line="0" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/partials/banner.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46793762">
-          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/scss/components/_fonts.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.625">
-          <caret line="125" column="15" selection-start-line="125" selection-start-column="11" selection-end-line="125" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/como-jugar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.125">
-          <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/contacto.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.791666">
-          <caret line="48" column="46" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/terminos-y-condiciones.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/privacidad.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/registro.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.75">
-          <caret line="40" column="16" selection-start-line="40" selection-start-column="16" selection-end-line="42" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/partials/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/ligas.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50606585">
-          <caret line="94" column="104" selection-start-line="94" selection-start-column="69" selection-end-line="94" selection-end-column="104" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/partials/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12998267">
-          <caret line="5" column="51" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/pronosticos.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="6.7712307">
-          <caret line="281" column="0" selection-start-line="281" selection-start-column="0" selection-end-line="281" selection-end-column="0" />
-          <folding>
-            <element signature="n#div#4;n#div#10;n#div#0;n#div#2;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/partials/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.75">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/scss/components/_general.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.25">
-          <caret line="59" column="1" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.875">
-          <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/ranking.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.875">
-          <caret line="35" column="71" selection-start-line="35" selection-start-column="71" selection-end-line="35" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/scss/app.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.5660377">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/partials/login-in.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.375">
-          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/mi-cuenta.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.725">
-          <caret line="56" column="49" selection-start-line="56" selection-start-column="49" selection-end-line="56" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/scss/components/_blocks.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.95">
-          <caret line="420" column="0" selection-start-line="420" selection-start-column="0" selection-end-line="420" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/partials/footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8791209">
-          <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/scss/_settings.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35">
-          <caret line="67" column="21" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="21" />
+        <state relative-caret-position="297">
+          <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
           <folding />
         </state>
       </provider>
