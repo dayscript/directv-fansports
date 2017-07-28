@@ -1,0 +1,70 @@
+{{> header}}
+<div class="section-title">
+    <div class="row columns">
+        <h1>Registro</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="medium-9 columns">
+        <p>Puede registrarse o iniciar sesión usando su cuenta de Facebook</p>
+        <a href="#" class="button facebook"><i class="fi-social-facebook"></i> Iniciar sesión en Facebook</a>
+        <hr class="green">
+        <div class="row">
+            <div class="medium-6 columns">
+                <label>Nombre
+                    <input type="text">
+                </label>
+                <label>Email
+                    <input type="text">
+                </label>
+                <label>Pais
+                    <select>
+                        <option value="">Seleccione</option>
+                    </select>
+                </label>
+                <label>Contraseña
+                    <input type="text">
+                </label>
+            </div>
+            <div class="medium-6 columns">
+                <label>Apellidos
+                    <input type="text">
+                </label>
+                <label>Celular
+                    <input type="text">
+                </label>
+                <label>Ciudad
+                    <select>
+                        <option value="">Seleccione</option>
+                    </select>
+                </label>
+                <label>Confirmar contraseña
+                    <input type="text">
+                </label>
+            </div>
+        </div>
+        <div class="row columns">
+            <legend>Genero</legend>
+            <input type="radio" name="" value="" id="" required><label for="">Masculino</label>
+            <input type="radio" name="" value="" id=""><label for="">Femenino</label>
+        </div>
+        <hr>
+        <hr class="light">
+        <div class="row columns">
+            <p>¿Le gustaría estar al día en las emocionantes promociones ofrecidas por Directv y Servientrega?
+                Puede cambiar esta configuración en las preferencias de su perfil en cualquier momento.
+            </p>
+            <input id="checkbox1" type="checkbox"><label for="checkbox1">Acepto</label>
+        </div>
+        <hr>
+        <hr class="light">
+        <div class="row columns">
+            <p>Acepta <a href="terminos-y-condiciones.html">Términos y condiciones</a></p>
+        </div>
+        <a href="#" class="button expanded">Acepto y continuar</a>
+    </div>
+    <div class="medium-3 columns hide-for-small-only">
+        {{> pauta}}
+    </div>
+</div>
+{{> footer}}
