@@ -198,7 +198,23 @@
     color: #ad2c2c;
   }
   .item-liga {
-    margin-top: 12px;
+    margin-top: 18px;
+  }
+  &.liga{
+    font-size: 0.9em;
+    @include breakpoint(medium){
+      font-size: 1em;
+    }
+    strong{
+      color: black;
+    }
+    .puntaje{
+      color: $primary-color;
+      font-family: $font-bold;
+    }
+    .close{
+      margin-top: 10px;
+    }
   }
 }
 
@@ -412,7 +428,12 @@ h2.section {
     margin-top: 0px;
   }
 }
-
+.accordion{
+  .accordion-title{
+    text-transform: uppercase;
+    font-family: $font-bold;
+  }
+}
 //By Day
 .day{
   margin: 16px 0;
