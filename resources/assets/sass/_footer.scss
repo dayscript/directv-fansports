@@ -1,0 +1,43 @@
+//Footer
+
+.footer-ligas {
+  background-color: #020514;
+  margin-top: 60px;
+  padding: 40px;
+  background-image: none;
+  background-repeat: no-repeat;
+  min-height: 245px;
+  @include breakpoint(medium) {
+    background-image: url("/img/ads/dtv-ligas.png");
+    background-repeat: no-repeat;
+  }
+  .logo {
+    margin: 14px;
+    width: 50%;
+    @include breakpoint(medium) {
+      width: auto;
+    }
+  }
+}
+
+.footer {
+  background-color: $secondary-color;
+  padding: 50px 0;
+  text-align: center;
+  .footer-links {
+    font-size: 0.8em;
+    color: white;
+    margin: 12px 0;
+  }
+  .patrocina {
+    margin: 16px;
+    width: 50%;
+    @include breakpoint(medium) {
+      margin: 0 16px 0 0;
+      width: auto;
+    }
+  }
+  @include breakpoint(medium) {
+    text-align: left;
+  }
+}

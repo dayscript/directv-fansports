@@ -1,0 +1,42 @@
+@extends('layouts.app')
+
+@section('content')
+    <div class="section-title">
+        <div class="row columns">
+            <h1>Cómo Jugar Fansports</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="medium-9 columns">
+            <h2 class="section">Subtitulo</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porttitor metus sit amet dictum bibendum.
+                Proin augue neque, laoreet in suscipit vitae, luctus id dolor. Donec id nisl urna. Nulla ac condimentum
+                enim. Vivamus laoreet sem a placerat laoreet. Cras at cursus libero. Vivamus rutrum sem eu est ornare
+                iaculis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porttitor metus sit amet dictum bibendum.
+                Proin augue neque, laoreet in suscipit vitae, luctus id dolor. Donec id nisl urna. Nulla ac condimentum
+                enim. Vivamus laoreet sem a placerat laoreet. Cras at cursus libero. Vivamus rutrum sem eu est ornare
+                iaculis.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porttitor metus sit amet dictum bibendum.
+                Proin augue neque, laoreet in suscipit vitae, luctus id dolor. Donec id nisl urna. Nulla ac condimentum
+                enim. Vivamus laoreet sem a placerat laoreet.
+            </p>
+            <p>
+                Morbi porttitor metus sit amet dictum bibendum. Proin augue neque, laoreet in suscipit vitae, luctus id dolor. Donec id nisl urna. Nulla ac condimentum
+                enim. Vivamus laoreet sem a placerat laoreet. Cras at cursus libero. Vivamus rutrum sem eu est ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porttitor metus sit amet dictum bibendum.
+                Proin augue neque, laoreet in suscipit vitae, luctus id dolor. Donec id nisl urna. Nulla ac condimentum
+                enim. Vivamus laoreet sem a placerat laoreet. Cras at cursus libero. Vivamus rutrum sem eu est ornare
+                iaculis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porttitor metus sit amet dictum bibendum.
+                Proin augue neque, laoreet in suscipit vitae, luctus id dolor. Donec id nisl urna. Nulla ac condimentum
+                enim. Vivamus laoreet sem a placerat laoreet. Cras at cursus libero. Vivamus rutrum sem eu est ornare
+                iaculis.
+                iaculis.
+            </p>
+        </div>
+        <div class="medium-3 columns text-center">
+            @include('layouts.partials.ads')
+        </div>
+    </div>
+@endsection

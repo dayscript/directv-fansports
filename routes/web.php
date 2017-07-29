@@ -11,10 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
+Route::get('como-jugar', 'HomeController@instructions');
+Route::get('terminos-y-condiciones', 'HomeController@terms');
+Route::get('politica-de-privacidad', 'HomeController@privacy');
+Route::get('soporte', 'HomeController@support');
+Route::get('pronosticos', 'HomeController@support');
+Route::get('ligas', 'HomeController@support');
+Route::get('ranking', 'HomeController@support');
+Route::resource('users','UsersController');

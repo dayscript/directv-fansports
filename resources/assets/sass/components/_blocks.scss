@@ -1,0 +1,369 @@
+//Header
+
+.header {
+  background-color: $secondary-color;
+  .logo {
+    margin: 28px 0;
+  }
+}
+
+#menu-fan {
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: bolder;
+  li {
+    margin-top: 6px;
+    @include breakpoint(medium) {
+      margin-top: 30px;
+    }
+  }
+  a {
+    color: white;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+  .title-bar {
+    background: none;
+  }
+  .menu.vertical {
+    float: right;
+  }
+  .button {
+    padding: 1em 1em 3em 0;
+    font-weight: normal;
+    background: $secondary-color;
+    text-align: right;
+    font-family: $font-body;
+    font-weight: bolder;
+    font-size: 1em;
+    &:hover {
+      color: $secondary-color;
+    }
+    @include breakpoint(medium) {
+      padding: 3.2em 1em;
+      text-align: center;
+      background: $primary-color;
+    }
+  }
+  .menu .is-active {
+    a {
+      background-color: $secondary-color;
+      color: $primary-color;
+    }
+  }
+}
+
+.barra {
+  margin: 25px 13px 30px 0;
+}
+
+
+
+//SLide
+.orbit {
+  margin-bottom: 20px;
+  border-bottom: 4px solid $primary-color;
+  .orbit-caption {
+    background: none;
+    padding: 8% 20%;
+  }
+  @include breakpoint(medium) {
+    margin-bottom: 60px;
+  }
+}
+
+//Home
+.item {
+  padding: 2px 0;
+  @include breakpoint(medium) {
+    padding: 7px 0;
+  }
+  .user {
+    font-size: 0.9em;
+    margin: 6px 0 7px 0;
+    @include breakpoint(medium) {
+      font-size: 1em;
+    }
+  }
+  strong {
+    margin-right: 12px;
+    text-align: right;
+    font-weight: normal;
+    color: $primary-color;
+  }
+  .equipos {
+    font-size: 0.9em;
+    font-family: $font-bold;
+    padding: 0 !important;
+    margin: 4px 0;
+    .shield {
+      height: 16px;
+      width: 16px;
+      margin: 4px;
+    }
+    .versus {
+      font-size: 0.9em;
+      color: $primary-color;
+      margin: 12px 0 0 0;
+
+    }
+    .home {
+      text-align: right;
+    }
+    .away {
+      text-align: left;
+    }
+    @include breakpoint(medium) {
+      margin: 0;
+    }
+  }
+  .fecha {
+    color: $primary-color;
+    font-size: 0.8em;
+    font-family: $font-condensed !important;
+    margin-top: 0px;
+    text-align: center;
+    @include breakpoint(medium) {
+      text-align: left;
+      margin-top: 12px;
+    }
+  }
+  .canal {
+    font-size: 0.6em;
+    margin-top: 0px;
+    text-transform: uppercase;
+    line-height: 0.6em;
+    font-family: $font-bold;
+    color: #0c4d78;
+    text-align: center;
+    .logo {
+      height: 22px;
+      width: 22px;
+    }
+    @include breakpoint(medium) {
+      text-align: right;
+      margin-top: 10px;
+    }
+  }
+  &:hover {
+    background-color: #f1f1f1;
+  }
+  &.account {
+    background-color: $secondary-color;
+    color: white;
+  }
+  .fi-shield {
+    font-size: 1.8em;
+    color: #bababa;
+    margin: 4px;
+  }
+  .fi-lock {
+    font-size: 1.8em;
+    color: #0099F6;
+    margin: 4px;
+  }
+  .fi-x-circle {
+    font-size: 1.8em;
+    color: #ad2c2c;
+  }
+  .item-liga {
+    margin-top: 18px;
+  }
+  &.liga{
+    font-size: 0.9em;
+    @include breakpoint(medium){
+      font-size: 1em;
+    }
+    strong{
+      color: black;
+    }
+    .puntaje{
+      color: $primary-color;
+      font-family: $font-bold;
+    }
+    .close{
+      margin-top: 10px;
+    }
+  }
+}
+
+.puntos {
+  font-family: $font-bold;
+  color: $primary-color;
+  font-size: 1em;
+  @include breakpoint(medium) {
+    font-size: 1.18em;
+  }
+}
+
+.pauta {
+  img {
+    width: 100%;
+  }
+}
+
+
+
+//Internas
+
+.section-title {
+  background-color: $primary-color;
+  padding: 18px 0 12px 0;
+  margin-bottom: 32px;
+  h1 {
+    color: white;
+    font-size: 2em
+  }
+}
+
+h2.section {
+  font-size: 1.2em;
+}
+
+.encabezado {
+  background-color: $primary-color;
+  padding: 12px 8px;
+  text-transform: uppercase;
+  color: white;
+  font-family: $font-bold;
+  font-size: 0.9em;
+}
+
+//Pronosticos
+.comodin {
+  text-align: center;
+  .comodin-img {
+    width: 50%;
+    margin-bottom: 6px;
+  }
+  .button {
+    font-size: 0.9em;
+  }
+  input::placeholder {
+    font-size: 0.9em;
+  }
+  @include breakpoint(medium) {
+    text-align: left;
+  }
+}
+
+.nota {
+  font-size: 0.8em;
+  color: #0f7595;
+  line-height: 16px;
+  text-align: center;
+  @include breakpoint(medium) {
+    text-align: left;
+  }
+}
+
+.fecha-title {
+  color: $primary-color;
+  margin: 26px 0 26px 0;
+  font-size: 2em;
+  @include breakpoint(medium) {
+    margin: 26px 0 0 0;
+    font-size: 2.4em;
+  }
+}
+
+.partido {
+  margin: 10px 0;
+  .home, .away {
+    font-family: $font-bold;
+    font-size: 0.9em;
+  }
+  .marcador, .puntaje {
+    font-family: $font-bold;
+    color: $secondary-color;
+    margin-top: 0px;
+    font-size: 0.9em;
+    @include breakpoint(medium) {
+      margin-top: 6px;
+      font-size: 1.2em;
+    }
+  }
+  .pronostico {
+    margin-top: 10px;
+    label {
+      font-size: 0.8em;
+    }
+  }
+  strong {
+    font-family: $font-body;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: black;
+  }
+  @include breakpoint(medium) {
+    margin: 0;
+  }
+}
+
+.suma {
+  padding: 12px 0;
+  font-family: $font-bold;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  background-color: $light-gray;
+  strong {
+    font-size: 1.2em;
+    margin: 0 10px;
+    color: $primary-color;
+  }
+  @include breakpoint(medium) {
+    font-size: 1em;
+  }
+}
+
+//Mi cuenta
+.section {
+  font-family: $font-bold;
+  margin: 12px 0;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+
+.usuario {
+  line-height: 30px;
+  strong {
+    font-weight: normal;
+    font-family: $font-bold;
+  }
+}
+
+.resumen{
+  background: $secondary-color;
+  color: white;
+  text-transform: uppercase;
+  padding: 8px 10px 0px 10px;
+  font-size: 0.8em;
+    strong {
+      font-weight: normal;
+      color: $primary-color;
+      font-size: 1.2em;
+      font-family: $font-bold;
+    }
+  .status{
+    margin-top: 16px;
+  }
+  .button{
+    margin-top: 10px;
+  }
+  @include breakpoint(medium){
+    font-size: 1em;
+    margin-top: 0px;
+  }
+}
+.accordion{
+  .accordion-title{
+    text-transform: uppercase;
+    font-family: $font-bold;
+  }
+}
+//By Day
+.day{
+  margin: 16px 0;
+}
+
