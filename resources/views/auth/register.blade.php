@@ -93,7 +93,7 @@
                     <p>¿Le gustaría estar al día en las emocionantes promociones ofrecidas por Directv y Servientrega?
                         Puede cambiar esta configuración en las preferencias de su perfil en cualquier momento.
                     </p>
-                    <input id="promotions" name="promotions" type="checkbox" {{ old('promotions')?'checked':'' }}><label for="promotions">Si, deseo recibir promociones</label>
+                    <input id="promotions" name="promotions" type="checkbox" {{ old('promotions')?'checked':'' }} value="1"><label for="promotions">Si, deseo recibir promociones</label>
                 </div>
                 <hr>
                 <hr class="light">
