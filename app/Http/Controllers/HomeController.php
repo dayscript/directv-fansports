@@ -34,7 +34,7 @@ class HomeController extends Controller
      */
     public function instructions()
     {
-        $page = Page::firstOrCreate(['slug'=>'como-jugar-fansports']);
+        $page = Page::firstOrCreate(['slug'=>'como-jugar-fansports'],['title'=>'Cómo jugar Fansports']);
         return view('instructions', compact('page'));
     }
     /**
@@ -44,7 +44,7 @@ class HomeController extends Controller
      */
     public function terms()
     {
-        $page = Page::firstOrCreate(['slug'=>'terminos-y-condiciones']);
+        $page = Page::firstOrCreate(['slug'=>'terminos-y-condiciones'],['title'=>'Términos y Condiciones']);
         return view('terms', compact('page'));
     }
     /**
@@ -54,7 +54,7 @@ class HomeController extends Controller
      */
     public function privacy()
     {
-        $page = Page::firstOrCreate(['slug'=>'politica-de-privacidad']);
+        $page = Page::firstOrCreate(['slug'=>'politica-de-privacidad'],['title'=>'Política de Privacidad']);
         return view('privacy',compact('page'));
     }
     /**
