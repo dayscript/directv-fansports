@@ -58,6 +58,16 @@ class HomeController extends Controller
         return view('privacy',compact('page'));
     }
     /**
+     * Show privacy policy
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function ligas()
+    {
+        $page = Page::firstOrCreate(['slug'=>'ligas'],['title'=>'Ligas']);
+        return view('ligas',compact('page'));
+    }
+    /**
      * Show support page
      *
      * @return \Illuminate\Http\Response
