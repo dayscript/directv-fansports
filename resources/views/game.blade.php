@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <game :rounds="{{ $rounds }}" selected_round="{{ $selected_round->name }}"></game>
+    <game :rounds="{{ $rounds }}" selected_round="{{ $selected_round->name??'' }}"></game>
     <div class="row">
         <div class="medium-12 columns">
             <hr>
