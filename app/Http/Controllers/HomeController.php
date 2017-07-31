@@ -64,7 +64,7 @@ class HomeController extends Controller
      */
     public function support()
     {
-        $page = Page::firstOrCreate(['slug'=>'soporte']);
+        $page = Page::firstOrCreate(['slug'=>'soporte'],['title'=>'Soporte']);
         return view('support',compact('page'));
     }
     /**
