@@ -58,7 +58,7 @@ class HomeController extends Controller
         return view('privacy',compact('page'));
     }
     /**
-     * Show privacy policy
+     * Show Ligas page
      *
      * @return \Illuminate\Http\Response
      */
@@ -66,6 +66,16 @@ class HomeController extends Controller
     {
         $page = Page::firstOrCreate(['slug'=>'ligas'],['title'=>'Ligas']);
         return view('ligas',compact('page'));
+    }
+    /**
+     * Show Ranking page
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function ranking()
+    {
+        $page = Page::firstOrCreate(['slug'=>'ranking'],['title'=>'Ranking']);
+        return view('ranking',compact('page'));
     }
     /**
      * Show support page

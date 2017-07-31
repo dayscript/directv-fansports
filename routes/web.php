@@ -19,8 +19,8 @@ Route::get('terminos-y-condiciones', 'HomeController@terms');
 Route::get('politica-de-privacidad', 'HomeController@privacy');
 Route::get('soporte', 'HomeController@support');
 Route::get('pronosticos', 'HomeController@game');
-Route::get('ligas', 'HomeController@support');
-Route::get('ranking', 'HomeController@support');
+Route::get('ligas', 'HomeController@ligas');
+Route::get('ranking', 'HomeController@ranking');
 Route::resource('users','UsersController');
 
 
