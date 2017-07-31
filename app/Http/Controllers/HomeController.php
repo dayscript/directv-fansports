@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Round;
 use Illuminate\Http\Request;
+use TCG\Voyager\Models\Page;
 
 class HomeController extends Controller
 {
@@ -32,7 +34,8 @@ class HomeController extends Controller
      */
     public function instructions()
     {
-        return view('instructions');
+        $page = Page::find(4);
+        return view('instructions', compact('page'));
     }
     /**
      * Show the application terms and conditions
@@ -41,7 +44,8 @@ class HomeController extends Controller
      */
     public function terms()
     {
-        return view('terms');
+        $page = Page::find(1);
+        return view('terms', compact('page'));
     }
     /**
      * Show privacy policy
@@ -50,7 +54,8 @@ class HomeController extends Controller
      */
     public function privacy()
     {
-        return view('privacy');
+        $page = Page::find(2);
+        return view('privacy',compact('page'));
     }
     /**
      * Show support page
@@ -59,6 +64,18 @@ class HomeController extends Controller
      */
     public function support()
     {
-        return view('support');
+        $page = Page::find(3);
+        return view('support',compact('page'));
+    }
+    /**
+     * Game page
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function game()
+    {
+        $rounds = Round::orderBy('name')->get();
+        $selected_round = $rounds->first();
+        return view('game',compact('rounds','selected_round'));
     }
 }

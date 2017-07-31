@@ -18,7 +18,12 @@ Route::get('como-jugar', 'HomeController@instructions');
 Route::get('terminos-y-condiciones', 'HomeController@terms');
 Route::get('politica-de-privacidad', 'HomeController@privacy');
 Route::get('soporte', 'HomeController@support');
-Route::get('pronosticos', 'HomeController@support');
+Route::get('pronosticos', 'HomeController@game');
 Route::get('ligas', 'HomeController@support');
 Route::get('ranking', 'HomeController@support');
 Route::resource('users','UsersController');
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});

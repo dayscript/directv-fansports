@@ -166,7 +166,7 @@
 
 
 
-                    <a href="#" class="button expanded">Pronosticar</a>
+                    <a href="/pronosticos" class="button expanded">Pronosticar</a>
                     <hr class="light">
                 </div>
 

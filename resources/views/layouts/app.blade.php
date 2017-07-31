@@ -11,6 +11,7 @@
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
+    @include('layouts.partials.googleanalytics')
     <div id="app">
         @include('layouts.partials.header')
         @yield('content')
