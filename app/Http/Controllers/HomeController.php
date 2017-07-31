@@ -34,7 +34,7 @@ class HomeController extends Controller
      */
     public function instructions()
     {
-        $page = Page::find(4);
+        $page = Page::firstOrCreate(['slug'=>'como-jugar-fansports']);
         return view('instructions', compact('page'));
     }
     /**
@@ -44,7 +44,7 @@ class HomeController extends Controller
      */
     public function terms()
     {
-        $page = Page::find(1);
+        $page = Page::firstOrCreate(['slug'=>'terminos-y-condiciones']);
         return view('terms', compact('page'));
     }
     /**
@@ -54,7 +54,7 @@ class HomeController extends Controller
      */
     public function privacy()
     {
-        $page = Page::find(2);
+        $page = Page::firstOrCreate(['slug'=>'politica-de-privacidad']);
         return view('privacy',compact('page'));
     }
     /**
@@ -64,7 +64,7 @@ class HomeController extends Controller
      */
     public function support()
     {
-        $page = Page::find(3);
+        $page = Page::firstOrCreate(['slug'=>'soporte']);
         return view('support',compact('page'));
     }
     /**
