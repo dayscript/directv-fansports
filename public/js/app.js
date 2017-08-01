@@ -1749,8 +1749,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
@@ -19499,7 +19497,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "medium-5 column"
   }, [_c('p', {
     staticClass: "nota"
-  }, [_vm._v("\n                        Ingrese su código Servientrega y duplique el valor de sus aciertos para las fechas de\n                        esta semana.")])])])])
+  }, [_vm._v("Ingrese su código Servientrega y duplique el valor de sus aciertos para las fechas de esta semana.")])])])])
 },function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "row columns encabezado hide-for-small-only"

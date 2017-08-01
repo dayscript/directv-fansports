@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Match;
 use App\Round;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use TCG\Voyager\Models\Page;
 
@@ -95,7 +97,14 @@ class HomeController extends Controller
     public function game()
     {
         $rounds = Round::orderBy('name')->get();
+        $matches = Match::orderBy('when')->get();
         $selected_round = $rounds->first();
+        foreach ($matches as $match){
+            if($match->when > Carbon::now()){
+                $selected_round = $match->round();
+                break;
+            }
+        }
         return view('game',compact('rounds','selected_round'));
     }
 }

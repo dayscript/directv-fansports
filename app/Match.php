@@ -21,6 +21,15 @@ class Match extends Model
         return $this->belongsTo(Round::class,'round_id');
     }
     /**
+     * Round relationship
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function round()
+    {
+        return $this->roundId;
+    }
+
+    /**
      * Local team relationship
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */

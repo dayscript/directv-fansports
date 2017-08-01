@@ -29,9 +29,7 @@
                         </label>
                     </div>
                     <div class="medium-5 column">
-                        <p class="nota">
-                            Ingrese su código Servientrega y duplique el valor de sus aciertos para las fechas de
-                            esta semana.</p>
+                        <p class="nota">Ingrese su código Servientrega y duplique el valor de sus aciertos para las fechas de esta semana.</p>
                     </div>
                 </div>
             </div>
