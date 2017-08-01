@@ -23,6 +23,9 @@ Route::get('ligas', 'HomeController@ligas');
 Route::get('ranking', 'HomeController@ranking');
 Route::resource('users','UsersController');
 
+Route::get('roundmatches/{round}','MatchesController@roundmatches');
+Route::post('predictions/{match}/update','MatchesController@updatePrediction');
+
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

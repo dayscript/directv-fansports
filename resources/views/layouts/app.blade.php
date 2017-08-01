@@ -9,9 +9,13 @@
     <title>{{ config('app.name', 'DirecTV Fansports') }}</title>
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/pnotify.css') }}" rel="stylesheet">
 </head>
 <body>
     @include('layouts.partials.googleanalytics')
+    <div class="reveal" id="loadingModal" data-reveal data-close-on-esc="false" data-overlay="true" data-close-on-click="false">
+        <img border="0" src="{{ asset('img/icons/loading-bgb.gif') }}" alt="Cargando">
+    </div>
     <div id="app">
         @include('layouts.partials.header')
         @yield('content')
@@ -19,8 +23,10 @@
     </div>
 
     <!-- Scripts -->
-    <script src="{{ mix('js/app.js') }}"></script>
-        <script src="{{ asset('js/foundation.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/foundation.min.js') }}"></script>
+    <script src="{{ asset('js/pnotify.js') }}"></script>
     <script> $(document).foundation();</script>
+    <script src="{{ mix('js/app.js') }}"></script>
 </body>
 </html>
