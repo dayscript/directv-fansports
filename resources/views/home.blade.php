@@ -21,7 +21,7 @@
                             </div>
                         </div>
                         <div class="small-3 medium-2 columns canal">
-                            <img class="logo" src="assets/img/directv-channel.png" alt="">600dtsc
+                            <img class="logo" src="{{ asset('img/logos/directv-channel.png') }}" alt="DirecTV">600dtsc
                         </div>
                     </div>
                     <hr>
@@ -36,7 +36,7 @@
                             </div>
                         </div>
                         <div class="small-3 medium-2 columns canal">
-                            <img class="logo" src="assets/img/directv-channel.png" alt="">600dtsc
+                            <img class="logo" src="{{ asset('img/logos/directv-channel.png') }}" alt="DirecTV">600dtsc
                         </div>
                     </div>
                     <hr>
@@ -51,7 +51,7 @@
                             </div>
                         </div>
                         <div class="small-3 medium-2 columns canal">
-                            <img class="logo" src="assets/img/directv-channel.png" alt="">600dtsc
+                            <img class="logo" src="{{ asset('img/logos/directv-channel.png') }}" alt="DirecTV">600dtsc
                         </div>
                     </div>
                     <hr>
@@ -66,7 +66,7 @@
                             </div>
                         </div>
                         <div class="small-3 medium-2 columns canal">
-                            <img class="logo" src="assets/img/directv-channel.png" alt="">600dtsc
+                            <img class="logo" src="{{ asset('img/logos/directv-channel.png') }}" alt="DirecTV">600dtsc
                         </div>
                     </div>
                     <hr>
@@ -81,7 +81,7 @@
                             </div>
                         </div>
                         <div class="small-3 medium-2 columns canal">
-                            <img class="logo" src="assets/img/directv-channel.png" alt="">600dtsc
+                            <img class="logo" src="{{ asset('img/logos/directv-channel.png') }}" alt="DirecTV">600dtsc
                         </div>
                     </div>
                     <hr>
@@ -96,7 +96,7 @@
                             </div>
                         </div>
                         <div class="small-3 medium-2 columns canal">
-                            <img class="logo" src="assets/img/directv-channel.png" alt="">600dtsc
+                            <img class="logo" src="{{ asset('img/logos/directv-channel.png') }}" alt="DirecTV">600dtsc
                         </div>
                     </div>
                     <hr>
@@ -111,7 +111,7 @@
                             </div>
                         </div>
                         <div class="small-3 medium-2 columns canal">
-                            <img class="logo" src="assets/img/directv-channel.png" alt="">600dtsc
+                            <img class="logo" src="{{ asset('img/logos/directv-channel.png') }}" alt="DirecTV">600dtsc
                         </div>
                     </div>
                     <hr>
@@ -126,7 +126,7 @@
                             </div>
                         </div>
                         <div class="small-3 medium-2 columns canal">
-                            <img class="logo" src="assets/img/directv-channel.png" alt="">600dtsc
+                            <img class="logo" src="{{ asset('img/logos/directv-channel.png') }}" alt="DirecTV">600dtsc
                         </div>
                     </div>
                     <hr>
@@ -141,7 +141,7 @@
                             </div>
                         </div>
                         <div class="small-3 medium-2 columns canal">
-                            <img class="logo" src="assets/img/directv-channel.png" alt="">600dtsc
+                            <img class="logo" src="{{ asset('img/logos/directv-channel.png') }}" alt="DirecTV">600dtsc
                         </div>
                     </div>
                     <hr>
@@ -156,7 +156,7 @@
                             </div>
                         </div>
                         <div class="small-3 medium-2 columns canal">
-                            <img class="logo" src="assets/img/directv-channel.png" alt="">600dtsc
+                            <img class="logo" src="{{ asset('img/logos/directv-channel.png') }}" alt="DirecTV">600dtsc
                         </div>
                     </div>
                     <hr>

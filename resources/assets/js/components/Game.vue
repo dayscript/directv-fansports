@@ -49,6 +49,11 @@
                     <div class="medium-1 columns text-center">Puntos</div>
                     <div class="medium-1 columns text-right"></div>
                 </div>
+                <div v-if="matches.length == 0" class="row item column gutter-small partido">
+                    <div class=" columns text-center status" style="min-height:300px;padding-top: 100px;">
+                        No hay partidos disponibles para esta fecha.
+                    </div>
+                </div>
                 <div class="row item column gutter-small partido" v-for="(match,index) in matches">
                     <div class="medium-1 columns fecha text-left">{{ match.when }}</div>
                     <div class="medium-1 columns text-center status">
