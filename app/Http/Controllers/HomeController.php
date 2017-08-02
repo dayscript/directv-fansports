@@ -25,7 +25,7 @@ class HomeController extends Controller
     public function index()
     {
         $selected_round = Round::getNearestRound();
-        $ranking = User::orderBy('points')->take(10)->get();
+        $ranking = User::orderByDesc('points')->take(10)->get();
         return view('home',compact('selected_round', 'ranking'));
     }
     /**
