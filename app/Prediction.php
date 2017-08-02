@@ -11,7 +11,7 @@ class Prediction extends Model
      *
      * @var array
      */
-    protected $fillable = ['match_id','user_id'];
+    protected $fillable = ['match_id','user_id','value','points'];
 
     /**
      * Match

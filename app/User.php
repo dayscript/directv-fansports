@@ -36,4 +36,28 @@ class User extends Authenticatable
     {
         return $this->name . ' ' . $this->last;
     }
+
+    /**
+     * Returns all predictions for this user
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function predictions()
+    {
+        return $this->hasMany(Prediction::class);
+    }
+
+    /**
+     * Updates total user points
+     * @return int
+     */
+    public function updatePoints()
+    {
+        $total = 0;
+        foreach ($this->predictions as $prediction){
+            $total += $prediction->points;
+        }
+        $this->points = $total;
+        $this->save();
+        return $total;
+    }
 }

@@ -43,7 +43,7 @@ class PredictionPolicy
      */
     public function update(User $user, Prediction $prediction)
     {
-        if($prediction->match && ($prediction->match->when < Carbon::now()))
+        if($prediction->match && ($prediction->match->when < Carbon::now()->addMinutes(10)))
             return false;
         return true;
     }

@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Match;
-use App\Prediction;
 use App\Round;
-use Illuminate\Http\Request;
+use App\Prediction;
+use App\Team;
+use GuzzleHttp\Client;
+use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Facades\Image;
 
 class MatchesController extends Controller
 {
@@ -25,6 +28,7 @@ class MatchesController extends Controller
             $match->prediction = $prediction->value;
             $match->points = $prediction->points;
             $match->editable = request()->user()->can('update',$prediction);
+            if($match->status == 'pending')$match->points = null;
             $results['matches'][] = $match;
         }
         $results['status'] = 'success';
@@ -41,6 +45,7 @@ class MatchesController extends Controller
     {
         $results = [];
         $prediction = Prediction::firstOrCreate(['user_id'=>request()->user()->id,'match_id'=>$match->id]);
+        $this->authorize('update', $prediction);
         if( ($value = request()->get('value')) && ($value != $prediction->value) ){
             if(request()->user()->can('update', $prediction)){
                 $prediction->value = $value;
@@ -54,8 +59,33 @@ class MatchesController extends Controller
             $match->editable = request()->user()->can('update',$prediction);
             $match->prediction = $prediction->value;
             $match->points = $prediction->points;
+            if($match->status == 'pending')$match->points = null;
         }
         $results['match'] = $match;
         return $results;
+    }
+
+    /**
+     * Calculates points for given match
+     * @param Match $match
+     * @return mixed
+     */
+    public function calculatepoints(Match $match)
+    {
+        $match->calculatePoints();
+        return $match->predictions;
+    }
+
+    /**
+     * Updates Match score
+     * @param Match $match
+     * @return mixed
+     */
+    public function updatescore(Match $match)
+    {
+        if($match->opta_id){
+            $match->updateOptaData();
+        }
+        return $match;
     }
 }

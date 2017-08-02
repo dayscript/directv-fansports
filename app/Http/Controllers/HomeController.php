@@ -2,10 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Match;
 use App\Round;
-use Carbon\Carbon;
-use Illuminate\Http\Request;
+use App\User;
 use TCG\Voyager\Models\Page;
 
 class HomeController extends Controller
@@ -13,7 +11,6 @@ class HomeController extends Controller
     /**
      * Create a new controller instance.
      *
-     * @return void
      */
     public function __construct()
     {
@@ -27,7 +24,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $selected_round = Round::getNearestRound();
+        $ranking = User::orderBy('points')->take(10)->get();
+        return view('home',compact('selected_round', 'ranking'));
     }
     /**
      * Show the application instructions
@@ -76,8 +75,10 @@ class HomeController extends Controller
      */
     public function ranking()
     {
+        $rounds = Round::orderBy('name')->get();
+        $leagues = collect([]);
         $page = Page::firstOrCreate(['slug'=>'ranking'],['title'=>'Ranking']);
-        return view('ranking',compact('page'));
+        return view('ranking',compact('page','rounds', 'leagues'));
     }
     /**
      * Show support page
@@ -97,14 +98,7 @@ class HomeController extends Controller
     public function game()
     {
         $rounds = Round::orderBy('name')->get();
-        $matches = Match::orderBy('when')->get();
-        $selected_round = $rounds->first();
-        foreach ($matches as $match){
-            if($match->when > Carbon::now()){
-                $selected_round = $match->round();
-                break;
-            }
-        }
+        $selected_round = Round::getNearestRound();
         return view('game',compact('rounds','selected_round'));
     }
 }

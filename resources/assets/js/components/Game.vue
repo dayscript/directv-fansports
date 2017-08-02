@@ -71,9 +71,9 @@
                     <div class="small-12 medium-3 medium-pull-2 columns text-center">
                         <div class="row text-center">
                             <fieldset class="text-center pronostico">
-                                <input :disabled="!match.editable" @change="updatePrediction('local',match.id, index)" type="radio" name="prediction" value="local" id="local" v-model="matches[index].prediction"><label for="local">Gana</label>
-                                <input :disabled="!match.editable" @change="updatePrediction('draw',match.id, index)" type="radio" name="prediction" value="draw" id="draw" v-model="matches[index].prediction"><label for="draw">Empate</label>
-                                <input :disabled="!match.editable" @change="updatePrediction('visit',match.id, index)" type="radio" name="prediction" value="visit" id="visit" v-model="matches[index].prediction"><label for="visit">Gana</label>
+                                <input :disabled="!match.editable" @change="updatePrediction('local',match.id, index)" type="radio" :name="'prediction'+index" value="local" :id="'local'+index" v-model="matches[index].prediction"><label :for="'local'+index">Gana</label>
+                                <input :disabled="!match.editable" @change="updatePrediction('draw',match.id, index)" type="radio" :name="'prediction'+index" value="draw" :id="'draw'+index" v-model="matches[index].prediction"><label :for="'draw'+index">Empate</label>
+                                <input :disabled="!match.editable" @change="updatePrediction('visit',match.id, index)" type="radio" :name="'prediction'+index" value="visit" :id="'visit'+index" v-model="matches[index].prediction"><label :for="'visit'+index">Gana</label>
                             </fieldset>
                         </div>
                     </div>
@@ -82,7 +82,7 @@
                     </div>
                     <div class="small-4 medium-1 columns text-center puntaje"><strong class="show-for-small-only">Puntos: </strong>{{ match.points }}</div>
                     <div class="small-4 medium-1 columns canal text-right">
-                        <img class="logo" src="/img/logos/directv-channel.png" alt="DirecTV">600dtsc
+                        <img class="logo" :src="'/img/channels/'+ match.channel +'.png'" alt="DirecTV">{{ match.channel }}
                     </div>
                 </div>
                 <hr>
@@ -90,8 +90,6 @@
                     <div class="text-center suma"> Puntaje total de fecha: <strong>{{ totalPoints }} Puntos</strong></div>
                 </div>
                 <hr>
-                <!--<hr class="light">-->
-                <!--<div class="text-center"><a href="#" class="button large">Guardar pronósticos</a></div>-->
             </div>
         </div>
     </div>

@@ -24,8 +24,10 @@ Route::get('ranking', 'HomeController@ranking');
 Route::resource('users','UsersController');
 
 Route::get('roundmatches/{round}','MatchesController@roundmatches');
+Route::get('predictions/{match}/calculatepoints','MatchesController@calculatepoints');
+Route::get('matches/{match}/updatescore','MatchesController@updatescore');
 Route::post('predictions/{match}/update','MatchesController@updatePrediction');
-
+Route::post('rankingdata/{page}','UsersController@ranking');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
