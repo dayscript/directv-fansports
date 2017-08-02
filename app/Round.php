@@ -44,4 +44,24 @@ class Round extends Model
         }
         return $selected_round;
     }
+
+    /**
+     * Format Start date
+     * @param $date
+     * @return string
+     */
+    public function getStartAttribute($date)
+    {
+        return Carbon::parse($date)->toDateString();
+    }
+
+    /**
+     * Format End date
+     * @param $date
+     * @return string
+     */
+    public function getEndAttribute($date)
+    {
+        return Carbon::parse($date)->toDateString();
+    }
 }
