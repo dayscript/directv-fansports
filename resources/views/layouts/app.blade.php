@@ -28,5 +28,6 @@
     <script src="{{ asset('js/pnotify.js') }}"></script>
     <script> $(document).foundation();</script>
     <script src="{{ mix('js/app.js') }}"></script>
+    <script> $(document).foundation();</script>
 </body>
 </html>

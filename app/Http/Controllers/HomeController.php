@@ -66,7 +66,8 @@ class HomeController extends Controller
     public function ligas()
     {
         $page = Page::firstOrCreate(['slug'=>'ligas'],['title'=>'Ligas']);
-        return view('ligas',compact('page'));
+        $leagues = auth()->user()->leagues()->withCount('users')->get()->each->appends('user_points');
+        return view('ligas',compact('page','leagues'));
     }
     /**
      * Show Ranking page

@@ -60,4 +60,21 @@ class User extends Authenticatable
         $this->save();
         return $total;
     }
+
+    /**
+     * Leagues owned by this user
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function myleagues()
+    {
+        return $this->hasMany(League::class);
+    }
+    /**
+     * Leagues of this user
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function leagues()
+    {
+        return $this->belongsToMany(League::class)->withTimestamps();
+    }
 }
