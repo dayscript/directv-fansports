@@ -1,0 +1,68 @@
+h1,h2,h3,h4,h5,h6{
+  text-transform: uppercase;
+  &.title{
+    border-bottom: 6px solid $primary-color;
+    padding-bottom: 10px;
+    strong{
+      font-weight: normal;
+      font-size: 0.6em;
+      color: $primary-color;
+    }
+  }
+  &.seccion{
+    color: $primary-color;
+    margin: 0;
+  }
+  &.light{
+    color: white;
+    margin-bottom: 8px;
+  }
+}
+body{
+  font-size: 0.9em;
+}
+.button{
+  text-transform: uppercase;
+  &.facebook{
+    background-color: #134992;
+    &:hover{
+      background-color: #102B57;
+    }
+  }
+}
+hr{
+  margin: 0 !important;
+  padding: 0;
+  &.light{
+    border: none;
+    padding: 18px 0;
+  }
+  &.green{
+    border:2px solid $primary-color;
+    margin-bottom: 20px !important;
+  }
+}
+select{
+  font-size: 0.9em !important;
+}
+label{
+  text-transform: uppercase;
+}
+
+.tabs{
+  text-transform: uppercase;
+  font-family: $font-bold;
+  .tabs-title {
+    float: left;
+    width: 33.3%;
+    text-align: center;
+  }
+}
+
+.reveal{
+  top:40% !important;
+  background: none;
+  border: none;
+  text-align: center;
+  user-select: none;
+}
