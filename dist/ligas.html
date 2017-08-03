@@ -1,0 +1,229 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation for Sites</title>
+    <link rel="stylesheet" href="assets/css/app.css">
+  </head>
+  <body>
+
+    <div class="header sticky" data-sticky data-margin-top="0">
+        <div class="row">
+            <div class="small-9 medium-5 columns">
+                <a href="/"><img class="logo" src="assets/img/fansports-servientrega.png" alt="Fansports Setvientrega"></a>
+            </div>
+            <div class="small-3 medium-7 columns text-right">
+                <div class="barra" data-responsive-toggle="menu-fan" data-hide-for="medium">
+                    <button class="menu-icon" type="button" data-toggle="menu-fan"></button>
+                    <!--<div class="title-bar-title">Menu</div>-->
+                </div>
+    
+                <div class="" id="menu-fan">
+                    <div class="top-bar-left">
+                        <ul class="vertical medium-horizontal menu align-right" data-dropdown-menu>
+                            <li class="is-active"><a href="/">Inicio</a></li>
+                            <li><a href="pronosticos.html">Mis pronosticos</a></li>
+                            <li><a href="ligas.html">Ligas</a></li>
+                            <li><a href="ranking.html">Ranking</a></li>
+                            <li><a href="como-jugar.html">Cómo jugar</a></li>
+                            <a href="#" class="button">Jugar</a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--
+    <div class="login">
+        <div class="row condensed">
+            <div class="medium-6 columns condensed">
+                <div class="login-title">Iniciar sesión</div>
+                <strong>¿Ya tiene cuenta en Fansports?</strong>
+                <input type="text" placeholder="Email"/>
+                <input type="text" placeholder="Contraseña"/>
+                <a href="#" class="button expanded">Iniciar sesión</a>
+                <div class="text-center"><a href="#">Olvide mi contraseña</a></div>
+                <hr class="light">
+                <p class="text-center">Ó ingrese usando su cuenta en Faceebok</p>
+                <a href="#" class="button facebook expanded"><i class="fi-social-facebook"></i> Iniciar sesión en Facebook</a>
+                <hr class="light">
+            </div>
+            <div class="medium-6 columns condensed">
+                <div class="row">
+                    <div class="login-title">Registro</div>
+                    <strong>¿Aun no es miembro?</strong>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sagittis
+                        ultricies lectus at posuere. Nulla quis justo magna. Etiam placerat
+                        velit at arcu semper, ac fringilla quam cursus.
+                    </p>
+                    <a href="registro.html" class="button expanded">Crear cuenta</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    -->
+    
+    <!--
+    <div class="login in">
+        <div class="row">
+            <div class="medium-3 columns">
+                <div class="usuario">Hola: <strong>Julián Cárdenas</strong></div>
+            </div>
+            <div class="medium-2 columns">
+                <a href="mi-cuenta.html" class="button expanded"><i class="fi-torso"> </i> Mi cuenta</a>
+            </div>
+            <div class="medium-2 columns end">
+                <a href="#" class="button warning expanded"><i class="fi-x-circle"> </i> Cerrar sesión</a>
+            </div>
+        </div>
+        <hr class="light">
+    </div>
+    -->
+    <div class="section-title">
+        <div class="row columns">
+            <h1>Mis ligas</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="medium-9 columns">
+            <ul class="tabs" data-responsive-accordion-tabs="tabs small-accordion medium-tabs" id="ligas-tabs">
+                <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Mis ligas</a></li>
+                <li class="tabs-title"><a href="#panel2">Crear liga</a></li>
+                <li class="tabs-title"><a href="#panel3">Unirme a una liga</a></li>
+            </ul>
+    
+            <div class="tabs-content" data-tabs-content="ligas-tabs">
+                <div class="tabs-panel is-active" id="panel1">
+                    <div class="row">
+                        <div class="row columns encabezado hide-for-small-only">
+                            <div class="medium-6 columns text-center">Liga</div>
+                            <div class="medium-2 columns text-center">No. usuarios</div>
+                            <div class="medium-2 columns text-center">Posición</div>
+                            <div class="medium-2 columns text-center">Abandonar</div>
+                        </div>
+                    </div>
+                    <div class="row item liga column">
+                        <div class="medium-6 columns text-center item-liga">Liga Fansports Servientrega</div>
+                        <div class="small-6 medium-2 columns text-center item-liga"> <strong class="show-for-small-only">Usuarios: </strong> 120000</div>
+                        <div class="small-6 medium-2 columns text-right item-liga"><strong class="show-for-small-only">Puntos: </strong>200</div>
+                        <div class="medium-2 columns text-center close "><i class="fi-x-circle"></i> <strong class="show-for-small-only">Abandonar</strong></div>
+                    </div>
+                    <hr>
+    
+                </div>
+                <div class="tabs-panel" id="panel2">
+                    <div class="row">
+                        <div class="medium-12 columns">
+                            <h5 class="title">1. Datos de la liga</h5>
+    
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut libero et tellus
+                                sollicitudin aliquam in eget mauris. Proin quis efficitur urna. Nulla ultricies vitae enim
+                                vitae consectetur. Etiam interdum massa urna. Curabitur ut vulputate nulla, at bibendum
+                                nisl. Duis vulputate semper nunc vel commodo.
+                            </p>
+                        </div>
+                        <div class="medium-6 columns">
+                            <label>Nombre de la liga
+                                <input type="text">
+                            </label>
+                        </div>
+                        <div class="medium-6 columns">
+                            <label>Código de invitación
+                                <input type="text">
+                            </label>
+                        </div>
+                        <div class="medium-12 columns">
+                            <label>Descripción
+                                <input type="text">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="medium-12 columns">
+                            <h5 class="title">2. Invita a tus amgos</h5>
+                        </div>
+                        <div class="medium-6 columns">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut libero et tellus
+                                sollicitudin aliquam in eget mauris. Proin quis efficitur urna. Nulla ultricies vitae enim
+                                vitae consectetur.
+                            </p>
+    
+                            <textarea placeholder="Tu lista de amigos"></textarea>
+                            <a href="#" class="button expanded">Invitar</a>
+                        </div>
+                        <div class="medium-6 columns">
+                            <p>
+                                Puedes invitar a tus amigos usando tu cuenta de Facebook.
+                            </p>
+                            <a href="#" class="button facebook expanded"><i class="fi-social-facebook"></i> Invitar amigos</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabs-panel" id="panel3">
+                    <div class="row">
+                        <div class="medium-6 columns">
+                            <h5>¡Unirse es muy fácil!</h5>
+    
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sagittis
+                                ultricies lectus at posuere. Nulla quis justo magna. Etiam placerat
+                                velit at arcu semper, ac fringilla quam cursus.
+                            </p>
+                        </div>
+                        <div class="medium-6 columns">
+                            <label>Código de invitación
+                                <input type="text">
+                            </label>
+                            <a href="registro.html" class="button expanded">Unirse</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="medium-3 columns text-center">
+            <img src="assets/img/pauta/servientrega.jpg" alt="" class="pauta">    </div>
+    </div>
+    <div class="footer-ligas">
+        <div class="row">
+            <div class="large-8 large-offset-4 columns text-center">
+                <h3 class="light">Las mejores ligas</h3>
+            </div>
+            <div class="row">
+                <div class="medium-4 large-3 large-offset-3 columns text-center">
+                    <img class="logo" src="assets/img/Premier_League_Logo.png" alt="Premier League">
+                </div>
+                <div class="medium-4 large-3 columns text-center">
+                    <img class="logo" src="assets/img/la-liga.png" alt="La Liga">
+                </div>
+                <div class="medium-4 large-3 columns text-center">
+                    <img class="logo" src="assets/img/ligue-1.png" alt="Ligue 1">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="row">
+            <div class="medium-7 columns">
+                <img src="assets/img/fansports.png" alt="">
+                <div class="footer-links">Copyright 2014 <a href="terminos-y-condiciones.html">Términos y condiciones</a>   | <a href="privacidad.html">Politica de privacidad </a>   |
+                    <a href="contacto.html">Soporte</a>  </div>
+            </div>
+            <div class="medium-5 columns">
+                <div class="footer-links">Patrocinan:</div>
+                <a href="https://www.directv.com.co" target="_blank"><img src="assets/img/directv.png" alt="" class="patrocina"></a> <a href="https://www.servientrega.com" target="_blank"><img src="assets/img/servientrega.png" alt="" class="patrocina"></a>
+            </div>
+            <div class="medium-12 columns day">
+                <a href="http://www.dayscript.com" target="_blank"><img src="assets/img/by-day.png" alt="By Dayscript"></a>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
