@@ -9,98 +9,42 @@
     <div class="row">
         <div class="medium-9 columns">
             <ul class="tabs" data-responsive-accordion-tabs="tabs small-accordion medium-tabs" id="ligas-tabs">
-                <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Mis ligas</a></li>
-                <li class="tabs-title"><a href="#panel2">Crear liga</a></li>
+                <li class="tabs-title {{ !$edit_league?'is-active':'' }}"><a href="#panel1" aria-selected="{{ !$edit_league?'true':'false' }}">Mis ligas</a></li>
+                <li class="tabs-title {{ $edit_league?'is-active':'' }}"><a href="#panel2" aria-selected="{{ $edit_league?'true':'false' }}">Crear/Editar liga</a></li>
                 <li class="tabs-title"><a href="#panel3">Unirme a una liga</a></li>
             </ul>
             <div class="tabs-content" data-tabs-content="ligas-tabs">
-                <div class="tabs-panel is-active" id="panel1">
+                <div class="tabs-panel {{ !$edit_league?'is-active':'' }}" id="panel1">
                     <div class="row">
                         <div class="row columns encabezado hide-for-small-only">
-                            <div class="medium-6 columns text-center">Liga</div>
+                            <div class="medium-6 columns text-left">Liga</div>
                             <div class="medium-2 columns text-center">No. usuarios</div>
-                            <div class="medium-2 columns text-center">Posición</div>
-                            <div class="medium-2 columns text-center">Abandonar</div>
+                            <div class="medium-2 columns text-center">Puntos</div>
+                            <div class="medium-2 columns text-center">Opciones</div>
                         </div>
                     </div>
                     @forelse($leagues as $league)
-                        <league-summary :league="{{ $league }}"></league-summary>
+                        @can('update', $league)
+                            <league-summary :league="{{ $league }}" :editable="true"></league-summary>
+                        @elsecannot('update',$league)
+                            <league-summary :league="{{ $league }}" :editable="false"></league-summary>
+                        @endcan
                         <hr>
                     @empty
                         <div class="row item liga column" style="min-height: 100px;">
                             <div class="medium-12 columns text-center item-liga">No te has unido a ninguna liga todavía.</div>
                         </div>
                     @endforelse
-
                 </div>
-                <div class="tabs-panel" id="panel2">
-                    <div class="row">
-                        <div class="medium-12 columns">
-                            <h5 class="title">1. Datos de la liga</h5>
-
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut libero et tellus
-                                sollicitudin aliquam in eget mauris. Proin quis efficitur urna. Nulla ultricies vitae enim
-                                vitae consectetur. Etiam interdum massa urna. Curabitur ut vulputate nulla, at bibendum
-                                nisl. Duis vulputate semper nunc vel commodo.
-                            </p>
-                        </div>
-                        <div class="medium-6 columns">
-                            <label>Nombre de la liga
-                                <input type="text">
-                            </label>
-                        </div>
-                        <div class="medium-6 columns">
-                            <label>Código de invitación
-                                <input type="text">
-                            </label>
-                        </div>
-                        <div class="medium-12 columns">
-                            <label>Descripción
-                                <input type="text">
-                            </label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="medium-12 columns">
-                            <h5 class="title">2. Invita a tus amgos</h5>
-                        </div>
-                        <div class="medium-6 columns">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut libero et tellus
-                                sollicitudin aliquam in eget mauris. Proin quis efficitur urna. Nulla ultricies vitae enim
-                                vitae consectetur.
-                            </p>
-
-                            <textarea placeholder="Tu lista de amigos"></textarea>
-                            <a href="#" class="button expanded">Invitar</a>
-                        </div>
-                        <div class="medium-6 columns">
-                            <p>
-                                Puedes invitar a tus amigos usando tu cuenta de Facebook.
-                            </p>
-                            <a href="#" class="button facebook expanded"><i class="fi-social-facebook"></i> Invitar amigos</a>
-                        </div>
-                    </div>
+                <div class="tabs-panel {{ $edit_league?'is-active':'' }}" id="panel2">
+                    @if($edit_league)
+                        <league-create :league="{{ $edit_league }}"></league-create>
+                    @else
+                        <league-create></league-create>
+                    @endif
                 </div>
                 <div class="tabs-panel" id="panel3">
-                    <div class="row">
-                        <div class="medium-6 columns">
-                            <h5>¡Unirse es muy fácil!</h5>
-
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sagittis
-                                ultricies lectus at posuere. Nulla quis justo magna. Etiam placerat
-                                velit at arcu semper, ac fringilla quam cursus.
-                            </p>
-                        </div>
-                        <div class="medium-6 columns">
-                            <label>Código de invitación
-                                <input type="text">
-                            </label>
-                            <a href="registro.html" class="button expanded">Unirse</a>
-                        </div>
-                    </div>
+                    <league-join></league-join>
                 </div>
             </div>
         </div>

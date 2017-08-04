@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\League;
 use App\Round;
 use App\User;
 use TCG\Voyager\Models\Page;
@@ -65,9 +66,14 @@ class HomeController extends Controller
      */
     public function ligas()
     {
+        $edit_league = null;
+        $editable = false;
+        if($edit_id = request()->get('edit')){
+            $edit_league = League::find($edit_id);
+        }
         $page = Page::firstOrCreate(['slug'=>'ligas'],['title'=>'Ligas']);
-        $leagues = auth()->user()->leagues()->withCount('users')->get()->each->appends('user_points');
-        return view('ligas',compact('page','leagues'));
+        $leagues = auth()->user()->leagues()->withCount('users')->get()->each->append('users_points');
+        return view('ligas',compact('page','leagues', 'edit_league','editable'));
     }
     /**
      * Show Ranking page

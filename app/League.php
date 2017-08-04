@@ -7,6 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 class League extends Model
 {
     /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = ['name','description','code'];
+    /**
      * Users of this league
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
@@ -19,7 +25,7 @@ class League extends Model
      * Total sum of users points
      * @return mixed
      */
-    public function getUserPointsAttribute()
+    public function getUsersPointsAttribute()
     {
         return $this->users->sum('points');
     }
