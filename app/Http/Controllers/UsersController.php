@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\League;
-use App\Round;
 use App\User;
+use App\Round;
+use App\League;
 use Illuminate\Http\Request;
-use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Validator;
+use App\Notifications\LeagueInviteNotification;
 
 class UsersController extends Controller
 {
@@ -141,6 +142,7 @@ class UsersController extends Controller
         // ['required','min:5',Rule::unique('leagues')->ignore($user->id),]
         $results = [];
         $league = auth()->user()->myleagues()->create(request()->all());
+        auth()->user()->leagues()->detach($league->id);
         auth()->user()->leagues()->attach($league->id);
         $results['id'] = $league->id;
         $results['status'] = 'success';
@@ -183,6 +185,7 @@ class UsersController extends Controller
         $results = [];
         if ($code = request()->get('code')) {
             if ($league = League::where('code', $code)->first()) {
+                $league->users()->detach(auth()->user()->id);
                 $league->users()->attach(auth()->user()->id);
                 $results['status'] = 'success';
                 $results['message'] = 'Te has unido a la liga';
@@ -194,6 +197,50 @@ class UsersController extends Controller
             $results['status'] = 'error';
             $results['message'] = 'No se encontró una liga!';
         }
+        return $results;
+    }
+
+    /**
+     * Invite users to given league
+     * @param League $league
+     * @return array
+     */
+    public function inviteLeague(League $league)
+    {
+        $results = [];
+        $errors  = [];
+        $success = [];
+        $list = request()->get('list');
+        $list = str_replace('\r\n', ',', $list);
+        $list = str_replace('\n', ',', $list);
+        $list = str_replace('\r', ',', $list);
+        $list = str_replace(' ', '', $list);
+        $list = str_replace('
+', ',', $list);
+        if ($list != "") {
+            $emails  = explode(',', $list);
+            foreach ($emails as $email) {
+                $email     = strtolower(trim($email));
+                $validator = Validator::make(['email' => $email], [
+                    'email' => 'required|email',
+                ]);
+                if ($validator->fails()) {
+                    $errors[] = $email;
+                } else {
+                    $success[] = $email;
+                    if (!($us = User::where('email', $email)->first())) {
+                        $us = User::create(['email' => $email, 'name' => substr($email, 0, strpos($email, '@'))]);
+                    }
+//                    $us->leagues()->detach($league->id);
+//                    $us->leagues()->attach($league->id);
+                    $us->notify(new LeagueInviteNotification($league));
+                }
+            }
+        }
+        $results['errors'] = $errors;
+        $results['success'] = $success;
+        $results['status'] = 'success';
+        $results['message'] = count($success) . ' invitaciones enviadas';
         return $results;
     }
 }

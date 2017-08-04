@@ -29,6 +29,7 @@ Route::get('matches/{match}/updatescore','MatchesController@updatescore');
 Route::post('predictions/{match}/update','MatchesController@updatePrediction');
 Route::post('rankingdata/{page}','UsersController@ranking');
 Route::post('leagues/{league}/leave','UsersController@leaveLeague');
+Route::post('leagues/{league}/invite','UsersController@inviteLeague');
 Route::post('leagues/join','UsersController@joinLeague');
 Route::post('leagues','UsersController@createLeague');
 Route::delete('leagues/{league}','UsersController@deleteLeague');

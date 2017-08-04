@@ -39,26 +39,8 @@
                 <a v-if="id" class="button alert expanded" @click="deleteLeague">Eliminar</a>
             </div>
         </div>
-        <div class="row" v-if="id">
-            <div class="medium-12 columns">
-                <h5 class="title">2. Invita a tus amigos</h5>
-            </div>
-            <div class="medium-6 columns">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut libero et tellus
-                    sollicitudin aliquam in eget mauris. Proin quis efficitur urna. Nulla ultricies vitae enim
-                    vitae consectetur.
-                </p>
-
-                <textarea placeholder="Tu lista de amigos"></textarea>
-                <a href="#" class="button expanded">Invitar</a>
-            </div>
-            <div class="medium-6 columns">
-                <p>
-                    Puedes invitar a tus amigos usando tu cuenta de Facebook.
-                </p>
-                <a href="#" class="button facebook expanded"><i class="fi-social-facebook"></i> Invitar amigos</a>
-            </div>
+        <div v-if="id">
+            <league-invite :id="id"></league-invite>
         </div>
     </div>
 </template>

@@ -14,8 +14,8 @@
                         <li class="{{ request()->is('/')?'is-active':'' }}"><a href="/">Inicio</a></li>
                         @auth
                             <li class="{{ request()->is('pronosticos')?'is-active':'' }}"><a href="pronosticos">Mis pronósticos</a></li>
-                            <li class="{{ request()->is('ligas')?'is-active':'' }}"><a href="ligas">Ligas</a></li>
                         @endauth
+                        <li class="{{ request()->is('ligas')?'is-active':'' }}"><a href="ligas">Ligas</a></li>
                         <li class="{{ request()->is('ranking')?'is-active':'' }}"><a href="ranking">Ranking</a></li>
                         <li class="{{ request()->is('como-jugar')?'is-active':'' }}"><a href="como-jugar">Cómo jugar</a></li>
                         @auth

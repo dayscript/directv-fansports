@@ -21,6 +21,7 @@ Vue.component('ranking', require('./components/Ranking.vue'));
 Vue.component('league-summary', require('./components/leagues/Summary.vue'));
 Vue.component('league-create', require('./components/leagues/Create.vue'));
 Vue.component('league-join', require('./components/leagues/Join.vue'));
+Vue.component('league-invite', require('./components/leagues/Invite.vue'));
 
 const app = new Vue({
     el: '#app'

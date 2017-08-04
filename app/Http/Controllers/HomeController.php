@@ -15,7 +15,13 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-//        $this->middleware('auth');
+        $this->middleware('auth')->except([
+            'index',
+            'instructions',
+            'terms',
+            'privacy',
+            'support',
+        ]);
     }
 
     /**
@@ -71,9 +77,10 @@ class HomeController extends Controller
         if($edit_id = request()->get('edit')){
             $edit_league = League::find($edit_id);
         }
+        $join_code = request()->get('join',null);
         $page = Page::firstOrCreate(['slug'=>'ligas'],['title'=>'Ligas']);
         $leagues = auth()->user()->leagues()->withCount('users')->get()->each->append('users_points');
-        return view('ligas',compact('page','leagues', 'edit_league','editable'));
+        return view('ligas',compact('page','leagues', 'edit_league','editable','join_code'));
     }
     /**
      * Show Ranking page
