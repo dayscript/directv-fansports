@@ -228,12 +228,19 @@ class UsersController extends Controller
                     $errors[] = $email;
                 } else {
                     $success[] = $email;
+                    $password = false;
                     if (!($us = User::where('email', $email)->first())) {
-                        $us = User::create(['email' => $email, 'name' => substr($email, 0, strpos($email, '@'))]);
+                        $name = substr($email, 0, strpos($email, '@'));
+                        $password = $name . rand(1000,9999);
+                        $us = User::create([
+                            'email' => $email,
+                            'name' => $name,
+                            'password' => bcrypt($password)
+                        ]);
                     }
 //                    $us->leagues()->detach($league->id);
 //                    $us->leagues()->attach($league->id);
-                    $us->notify(new LeagueInviteNotification($league));
+                    $us->notify(new LeagueInviteNotification($league, $password));
                 }
             }
         }

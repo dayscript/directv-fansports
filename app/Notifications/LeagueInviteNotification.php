@@ -17,21 +17,27 @@ class LeagueInviteNotification extends Notification implements ShouldQueue
      * @var League
      */
     public $league;
+    /**
+     * New user password
+     */
+    public $password;
 
     /**
      * Create a new notification instance.
      *
      * @param League $league
+     * @param $password
      */
-    public function __construct(League $league)
+    public function __construct(League $league, $password)
     {
-        $this->league = $league;
+        $this->league   = $league;
+        $this->password = $password;
     }
 
     /**
      * Get the notification's delivery channels.
      *
-     * @param  mixed  $notifiable
+     * @param  mixed $notifiable
      * @return array
      */
     public function via($notifiable)
@@ -42,21 +48,26 @@ class LeagueInviteNotification extends Notification implements ShouldQueue
     /**
      * Get the mail representation of the notification.
      *
-     * @param  mixed  $notifiable
+     * @param  mixed $notifiable
      * @return \Illuminate\Notifications\Messages\MailMessage
      */
     public function toMail($notifiable)
     {
-        $url = url('/ligas?join='.$this->league->code);
+        $url = url('/ligas?join=' . $this->league->code);
         return (new MailMessage)
             ->subject('Te han invitado a una liga en Fansports')
-            ->markdown('notifications.leagues.invite',['url' => $url, 'league'=>$this->league]);
+            ->markdown('notifications.leagues.invite', [
+                'url'      => $url,
+                'league'   => $this->league,
+                'password' => $this->password,
+                'email'    => $notifiable->email
+            ]);
     }
 
     /**
      * Get the array representation of the notification.
      *
-     * @param  mixed  $notifiable
+     * @param  mixed $notifiable
      * @return array
      */
     public function toArray($notifiable)
