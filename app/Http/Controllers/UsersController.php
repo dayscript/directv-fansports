@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ContactMail;
 use App\User;
 use App\Round;
 use App\League;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 use App\Notifications\LeagueInviteNotification;
 
@@ -255,6 +257,11 @@ class UsersController extends Controller
         return $results;
     }
 
+    /**
+     * Updates league data
+     * @param League $league
+     * @return array
+     */
     public function updateLeague(League $league)
     {
         $this->authorize('update', $league);
@@ -265,4 +272,5 @@ class UsersController extends Controller
 
         return $results;
     }
+
 }

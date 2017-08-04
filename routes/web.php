@@ -34,7 +34,7 @@ Route::post('leagues/join','UsersController@joinLeague');
 Route::post('leagues','UsersController@createLeague');
 Route::put('leagues/{league}','UsersController@updateLeague');
 Route::delete('leagues/{league}','UsersController@deleteLeague');
-
+Route::post('contact','HomeController@contact');
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });

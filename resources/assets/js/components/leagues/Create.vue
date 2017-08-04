@@ -87,7 +87,10 @@
                 ).catch(function (error){
                     $('#loadingModal').foundation('close');
                     if (error.response) {
-                        if (error.response.status == 403) {
+                        if (error.response.status == 422) {
+                            var data = error.response.data;
+                            this.errors = data;
+                        } else if (error.response.status == 403) {
                             new PNotify({
                                 text: 'No estas autorizad@ a realizar esta acción.',
                                 type: 'error',
