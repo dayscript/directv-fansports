@@ -32,6 +32,7 @@ Route::post('leagues/{league}/leave','UsersController@leaveLeague');
 Route::post('leagues/{league}/invite','UsersController@inviteLeague');
 Route::post('leagues/join','UsersController@joinLeague');
 Route::post('leagues','UsersController@createLeague');
+Route::put('leagues/{league}','UsersController@updateLeague');
 Route::delete('leagues/{league}','UsersController@deleteLeague');
 
 Route::group(['prefix' => 'admin'], function () {

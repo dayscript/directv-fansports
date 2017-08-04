@@ -70,6 +70,38 @@
             }
         },
         methods: {
+            updateLeague(){
+                $('#loadingModal').foundation('open');
+                axios.put('/leagues/'+this.id, {name: this.name, description: this.description, code: this.code}).then(
+                    ({data})=>{
+                        if (data.message) {
+                            new PNotify({
+                                text: data.message,
+                                type: data.status,
+                                animation: 'fade',
+                                delay: 2000
+                            });
+                        }
+                        $('#loadingModal').foundation('close');
+                    }
+                ).catch(function (error){
+                    $('#loadingModal').foundation('close');
+                    if (error.response) {
+                        if (error.response.status == 403) {
+                            new PNotify({
+                                text: 'No estas autorizad@ a realizar esta acción.',
+                                type: 'error',
+                                animation: 'fade',
+                                delay: 2000
+                            });
+                        } else {
+                            console.log(error.response.status);
+                        }
+                    } else {
+                        console.log('Error', error.message);
+                    }
+                });
+            },
             createLeague() {
                 $('#loadingModal').foundation('open');
                 axios.post('/leagues', {name: this.name, description: this.description, code: this.code}).then(

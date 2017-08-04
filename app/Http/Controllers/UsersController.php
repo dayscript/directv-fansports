@@ -243,4 +243,15 @@ class UsersController extends Controller
         $results['message'] = count($success) . ' invitaciones enviadas';
         return $results;
     }
+
+    public function updateLeague(League $league)
+    {
+        $this->authorize('update', $league);
+        $league->update(request()->all());
+        $results = [];
+        $results['status'] = 'success';
+        $results['message'] = 'Información actualizada';
+
+        return $results;
+    }
 }
