@@ -90,7 +90,7 @@ class HomeController extends Controller
     public function ranking()
     {
         $rounds = Round::orderBy('name')->get();
-        $leagues = collect([]);
+        $leagues = auth()->user()->leagues;
         $page = Page::firstOrCreate(['slug'=>'ranking'],['title'=>'Ranking']);
         return view('ranking',compact('page','rounds', 'leagues'));
     }

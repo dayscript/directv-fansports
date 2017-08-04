@@ -95,10 +95,15 @@ class UsersController extends Controller
      */
     public function ranking($page = 1)
     {
-        $ligue = request()->get('league', 0);
+        $league = request()->get('league', 0);
         $round = request()->get('round', 0);
         $results = [];
-        $users = User::orderByDesc('points')->get();
+        if($league){
+            $lg = League::find($league);
+            $users = $lg->users()->orderByDesc('points')->get();
+        } else {
+            $users = User::orderByDesc('points')->get();
+        }
         $results['pagination']['total'] = $users->count();
         $results['pagination']['page'] = $page;
         $results['pagination']['items'] = 10;
@@ -107,7 +112,6 @@ class UsersController extends Controller
         $results['pagination']['next'] = ($page < $results['pagination']['pages'] ? $page + 1 : null);
         if ($round) {
             $rnd = Round::find($round);
-
             foreach ($users as $key => $user) {
                 $users[$key]->points = $user->predictions()->whereHas('match', function ($query) use ($round) {
                     $query->where('round_id', $round);
