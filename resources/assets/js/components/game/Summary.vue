@@ -81,7 +81,7 @@
             loadSummary(){
                 if(this.round.id){
                     $('#loadingModal').foundation('open');
-                    axios.post('/roundmatches/' + this.round.id,{'league_id':this.league.id}).then(
+                    axios.post('/roundmatches/' + this.round.id,{'league_id':this.league.id,'user_id':this.userid}).then(
                         ({data}) => {
                             if (data.matches) this.matches = data.matches;
                             if(data.position)this.position = data.position;
