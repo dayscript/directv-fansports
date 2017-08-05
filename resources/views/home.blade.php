@@ -50,7 +50,7 @@
                     </h3>
                     @forelse($ranking as $row)
                         <div class="row item column">
-                            <div class="small-10 columns user"><strong>{{ $loop->iteration }}.</strong>{{ $row->name }} {{ $row->last }}</div>
+                            <div class="small-10 columns user"><strong>{{ $loop->iteration }}.</strong><a href="/users/{{ $row->id }}">{{ $row->name }} {{ $row->last }}</a></div>
                             <div class="small-2 columns text-right puntos">{{ $row->points }}</div>
                         </div>
                         <hr>

@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\League;
 use App\Match;
 use App\Round;
 use App\Prediction;
 use App\Team;
+use App\User;
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
@@ -30,6 +32,17 @@ class MatchesController extends Controller
             $match->editable = request()->user()->can('update',$prediction);
             if($match->status == 'pending')$match->points = null;
             $results['matches'][] = $match;
+        }
+        $user_id = request()->get('user_id',auth()->user()->id);
+        if($league_id = request()->get('league_id')){
+            $lg = League::find($league_id);
+            $users = $lg->users()->orderByDesc('points')->get();
+            $users = collect($users->pluck('id')->toArray());
+            $results['position'] = $users->search($user_id)+1;
+        } else {
+            $users = User::orderByDesc('points')->get();
+            $users = collect($users->pluck('id')->toArray());
+            $results['position'] = $users->search($user_id)+1;
         }
         $results['status'] = 'success';
         $results['message'] = 'Ronda cargada';

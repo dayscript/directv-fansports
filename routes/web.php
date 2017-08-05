@@ -23,7 +23,7 @@ Route::get('ligas', 'HomeController@ligas');
 Route::get('ranking', 'HomeController@ranking');
 Route::resource('users','UsersController');
 
-Route::get('roundmatches/{round}','MatchesController@roundmatches');
+Route::any('roundmatches/{round}','MatchesController@roundmatches');
 Route::get('predictions/{match}/calculatepoints','MatchesController@calculatepoints');
 Route::get('matches/{match}/updatescore','MatchesController@updatescore');
 Route::post('predictions/{match}/update','MatchesController@updatePrediction');
@@ -35,6 +35,9 @@ Route::post('leagues','UsersController@createLeague');
 Route::put('leagues/{league}','UsersController@updateLeague');
 Route::delete('leagues/{league}','UsersController@deleteLeague');
 Route::post('contact','HomeController@contact');
+Route::get('mi-cuenta','UsersController@account');
+Route::post('users/updatepassword','UsersController@updatePassword');
+
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });

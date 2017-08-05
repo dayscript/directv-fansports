@@ -14,6 +14,14 @@ use App\Notifications\LeagueInviteNotification;
 class UsersController extends Controller
 {
     /**
+     * Create a new controller instance.
+     *
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -47,12 +55,15 @@ class UsersController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int $id
+     * @param User $user
      * @return \Illuminate\Http\Response
      */
     public function show(User $user)
     {
-        return $user;
+        $rounds = Round::orderBy('name')->get();
+        $leagues = auth()->user()->leagues;
+
+        return view('users.show', compact('user','rounds','leagues'));
     }
 
     /**
@@ -271,6 +282,38 @@ class UsersController extends Controller
         $results['message'] = 'Información actualizada';
 
         return $results;
+    }
+
+    /**
+     * Displays user account page
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function account()
+    {
+        $user = auth()->user();
+        $rounds = Round::orderBy('name')->get();
+        $leagues = auth()->user()->leagues;
+
+        return view('users.account', compact('user','rounds','leagues'));
+    }
+
+    /**
+     * Updates user password
+     */
+    public function updatePassword()
+    {
+        $this->validate(request(),[
+            'password' => 'required|string|min:6|confirmed',
+        ]);
+        $user =auth()->user();
+        $user->password = bcrypt(request()->get('password'));
+        $user->save();
+        $results = [];
+        $results['status']  = 'success';
+        $results['message']  = 'Contraseña actualizada';
+
+        return $results;
+
     }
 
 }

@@ -16,13 +16,15 @@ window.Vue = require('vue');
  */
 
 Vue.component('example', require('./components/Example.vue'));
-Vue.component('game', require('./components/Game.vue'));
+Vue.component('game', require('./components/game/Play.vue'));
+Vue.component('game-summary', require('./components/game/Summary.vue'));
 Vue.component('ranking', require('./components/Ranking.vue'));
 Vue.component('league-summary', require('./components/leagues/Summary.vue'));
 Vue.component('league-create', require('./components/leagues/Create.vue'));
 Vue.component('league-join', require('./components/leagues/Join.vue'));
 Vue.component('league-invite', require('./components/leagues/Invite.vue'));
 Vue.component('contact', require('./components/utils/Contact.vue'));
+Vue.component('change-password', require('./components/users/ChangePassword.vue'));
 
 const app = new Vue({
     el: '#app'
