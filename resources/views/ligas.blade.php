@@ -44,7 +44,7 @@
                     @endif
                 </div>
                 <div class="tabs-panel {{ $join_code?'is-active':'' }}" id="panel3">
-                    <league-join :initialcode="{{ $join_code??'null' }}"></league-join>
+                    <league-join :initialcode="'{{ $join_code??'null' }}'"></league-join>
                 </div>
             </div>
         </div>
