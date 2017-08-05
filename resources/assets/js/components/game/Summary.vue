@@ -34,12 +34,12 @@
                 </div>
                 <div class="row item column gutter-small partido" v-for="match in matches">
                     <div class="medium-2 columns fecha text-left"> {{ match.when }}</div>
-                    <div class="medium-4 columns text-right">
+                    <div class="small-6 medium-4 columns text-right">
                         {{ match.local_id.name }}
                         <img :src="'/storage/'+match.local_id.small_image" :alt="match.local_id.name">
                         {{ match.local_score }}
                     </div>
-                    <div class="medium-4 columns left">
+                    <div class="small-6 medium-4 columns left">
                         {{ match.visit_score }}
                         <img :src="'/storage/'+match.visit_id.small_image" :alt="match.visit_id.name">
                         {{ match.visit_id.name }}
