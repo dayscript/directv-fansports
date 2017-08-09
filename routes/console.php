@@ -19,6 +19,7 @@ use Illuminate\Foundation\Inspiring;
 Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->describe('Display an inspiring quote');
+
 Artisan::command('matches:create', function () {
     $ids = [942808,942807,942800,942802,942803,
         918893,918901,918902,918900,918897,
