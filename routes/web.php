@@ -37,6 +37,7 @@ Route::delete('leagues/{league}','UsersController@deleteLeague');
 Route::post('contact','HomeController@contact');
 Route::get('mi-cuenta','UsersController@account');
 Route::post('users/updatepassword','UsersController@updatePassword');
+Route::post('codes/apply','UsersController@applyCode');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

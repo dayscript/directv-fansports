@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Code;
 use App\Mail\ContactMail;
 use App\User;
 use App\Round;
 use App\League;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
@@ -314,6 +316,41 @@ class UsersController extends Controller
 
         return $results;
 
+    }
+
+    /**
+     * Apply code to user
+     * @return array
+     */
+    public function applyCode()
+    {
+        $this->validate(request(),[
+            'code'=>'required|size:5|alpha_num|exists:codes',
+            'round'=>'required'
+        ]);
+        $round_id = request()->get('round');
+        $round = Round::find($round_id);
+        $this->authorize('applycode',$round);
+        $results = [];
+        $code = Code::where('code',request()->get('code'))->first();
+        if($code->applied){
+            $results['error'] = true;
+            $results['code']  = ['Este código ya ha sido usado'];
+        } else {
+
+            $code->user()->associate(auth()->user());
+            $code->round()->associate($round_id);
+            $code->applied = Carbon::now();
+            $code->save();
+
+            $matches = $round->matches;
+            foreach($matches as $match){
+                $match->calculatePoints();
+            }
+            $results['message'] = 'Código aplicado correctamente!';
+            $results['status'] = 'success';
+        }
+        return $results;
     }
 
 }

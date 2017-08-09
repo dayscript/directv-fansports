@@ -1,5 +1,6 @@
 <?php
 
+use App\Code;
 use App\User;
 use Faker\Factory;
 use Illuminate\Foundation\Inspiring;
@@ -42,12 +43,10 @@ Artisan::command('matches:create', function () {
         $round->save();
         $match->roundId()->associate($round);
         $match->save();
-
-
     }
 })->describe('Creates demo matches');
+
 Artisan::command('users:create {limit?}', function ($limit = 1) {
-//    $faker = Factory::create();
     $rounds = \App\Round::all();
     factory(User::class, $limit)->create()->each(function ($u) use($rounds) {
         foreach ($rounds as $round){
@@ -63,3 +62,22 @@ Artisan::command('users:create {limit?}', function ($limit = 1) {
         }
     }
 })->describe('Creates demo users with predictions');
+
+Artisan::command('codes:create {limit?}', function ($limit = 1) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $count = 0;
+    while( $count < $limit ){
+        $randstring = '';
+        for ($i = 0; $i < 5; $i++) {
+            $randstring .= $characters[rand(0, strlen($characters)-1)];
+        }
+        $code = Code::firstOrNew(['code'=>$randstring]);
+        if($code->id){
+            $this->error('Code: '. $randstring) . ' in use';
+        } else {
+            $count++;
+            $code->save();
+            $this->info('Code: '. $randstring . ' saved');
+        }
+    }
+})->describe('Creates new codes');

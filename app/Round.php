@@ -27,7 +27,14 @@ class Round extends Model
     {
         return $this->hasMany(Match::class);
     }
-
+    /**
+     * Returns all codes for this round
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function codes()
+    {
+        return $this->hasMany(Code::class);
+    }
     /**
      * Get nearest round
      */

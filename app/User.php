@@ -45,7 +45,14 @@ class User extends Authenticatable
     {
         return $this->hasMany(Prediction::class);
     }
-
+    /**
+     * Returns all codes for this user
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function codes()
+    {
+        return $this->hasMany(Code::class);
+    }
     /**
      * Updates total user points
      * @return int
