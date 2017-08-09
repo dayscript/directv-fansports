@@ -2354,8 +2354,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {},
@@ -21427,14 +21425,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 },function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "medium-6 columns"
-  }, [_c('p', [_vm._v("\n            Puedes invitar a tus amigos usando tu cuenta de Facebook.\n        ")]), _vm._v(" "), _c('a', {
-    staticClass: "button facebook expanded",
-    attrs: {
-      "href": "#"
-    }
-  }, [_c('i', {
-    staticClass: "fi-social-facebook"
-  }), _vm._v(" Invitar amigos")])])
+  }, [_c('p')])
 }]}
 module.exports.render._withStripped = true
 if (false) {
