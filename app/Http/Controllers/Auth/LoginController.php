@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Round;
 use App\User;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Laravel\Socialite\Facades\Socialite;
 
 class LoginController extends Controller
 {
@@ -32,11 +33,10 @@ class LoginController extends Controller
     /**
      * Create a new controller instance.
      *
-     * @return void
      */
     public function __construct()
     {
-        $this->middleware('guest')->except('logout');
+        $this->middleware('guest')->except(['logout','redirectToProvider', 'handleProviderCallback']);
     }
     /**
      * Show the application's login form.
@@ -48,5 +48,44 @@ class LoginController extends Controller
         $selected_round = Round::getNearestRound();
         $ranking = User::orderByDesc('points')->take(10)->get();
         return view('auth.login',compact('selected_round', 'ranking'));
+    }
+
+    /**
+     * Redirect the user to the Facebook authentication page.
+     *
+     * @return Response
+     */
+    public function redirectToProvider()
+    {
+        return Socialite::driver('facebook')
+            ->scopes(['email', 'user_friends','name'])
+            ->redirect();
+    }
+
+    /**
+     * Obtain the user information from Facebook.
+     *
+     * @return Response
+     */
+    public function handleProviderCallback()
+    {
+        $user = Socialite::driver('facebook')->user();
+        if ($user && $user->getEmail()) {
+            if (auth()->check() && ( auth()->user()->email == $user->getEmail() )) {
+                $us = auth()->user();
+            } else {
+                $us = User::where('email', $user->getEmail())->first();
+                if ($us){
+                    auth()->login($us);
+                }else {
+                    $us = User::create(['email' => $user->getEmail(), 'name' => $user->getName()]);
+                    auth()->login($us);
+                }
+            }
+            return redirect()->intended($this->redirectPath());
+        } else {
+            return redirect('/login');
+        }
+
     }
 }

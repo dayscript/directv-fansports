@@ -12,6 +12,8 @@
 */
 
 Auth::routes();
+Route::get('login/facebook', 'Auth\LoginController@redirectToProvider');
+Route::get('login/facebook/callback', 'Auth\LoginController@handleProviderCallback');
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('como-jugar', 'HomeController@instructions');
