@@ -12,7 +12,7 @@
         <div class="row">
             <div class="medium-9 columns">
                 <p>Puede registrarse o iniciar sesión usando su cuenta de Facebook</p>
-                <a href="#" class="button facebook"><i class="fi-social-facebook"></i> Iniciar sesión en Facebook</a>
+                <a href="/login/facebook" class="button facebook"><i class="fi-social-facebook"></i> Iniciar sesión en Facebook</a>
                 <hr class="green">
                 <div class="row">
                     <div class="medium-6 columns">

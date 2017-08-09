@@ -12,6 +12,8 @@
 */
 
 Auth::routes();
+Route::get('login/facebook', 'Auth\LoginController@redirectToProvider');
+Route::get('login/facebook/callback', 'Auth\LoginController@handleProviderCallback');
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('como-jugar', 'HomeController@instructions');
@@ -37,6 +39,7 @@ Route::delete('leagues/{league}','UsersController@deleteLeague');
 Route::post('contact','HomeController@contact');
 Route::get('mi-cuenta','UsersController@account');
 Route::post('users/updatepassword','UsersController@updatePassword');
+Route::post('codes/apply','UsersController@applyCode');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

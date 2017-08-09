@@ -19,17 +19,28 @@
                 <h2 class="fecha-title" v-if="round">{{ round.name }}</h2>
             </div>
             <div class="medium-4 columns">
-                <div class="row">
-                    <div class="medium-7 column comodin">
+                <div class="row" v-if="round.special">
+                    <div class="medium-7 column comodin" v-if="!round.code && round.editable">
                         <label>Comodín <img src="/img/logos/servientrega.png" alt="Comodín Servientrega" class="comodin-img">
                             <div class="input-group">
-                                <input class="input-group-field" type="text" placeholder="Ingrese su código">
-                                <div class="input-group-button"><input type="submit" class="button" value="Enviar"></div>
+                                <input class="input-group-field" type="text" placeholder="Ingrese su código" v-model="code" v-on:keyup="resetErrors('code')" :class="{ 'is-invalid-input' : errors.code }">
+                                <div class="input-group-button">
+                                    <input type="button" class="button" value="Enviar" @click="applyCode"></div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="medium-7 column comodin" v-else>
+                        <label>Comodín <img src="/img/logos/servientrega.png" alt="Comodín Servientrega" class="comodin-img">
+                            <div class="input-group">
+                                <input disabled class="input-group-field" type="text" placeholder="Ingrese su código" v-model="code">
+                                <div class="input-group-button">
+                                    <input disabled type="button" class="button" value="Enviar" @click="applyCode"></div>
                             </div>
                         </label>
                     </div>
                     <div class="medium-5 column">
-                        <p class="nota">Ingrese su código Servientrega y duplique el valor de sus aciertos para las fechas de esta semana.</p>
+                        <p class="nota">
+                            Ingrese su código Servientrega y duplique el valor de sus aciertos para las fechas de esta semana.</p>
                     </div>
                 </div>
             </div>
@@ -81,15 +92,25 @@
                     <div class="small-6 medium-1 columns text-center marcador"><strong class="show-for-small-only">Marcador: </strong>
                         {{ match.local_score }} - {{ match.visit_score }}
                     </div>
+<<<<<<< HEAD
                     <div class="small-6 medium-1 columns text-center puntaje"><strong class="show-for-small-only">Puntos: </strong>{{ match.points }}</div>
                     <div class="medium-1 columns canal">
                         <img class="logo" :src="'/img/channels/'+ match.channel +'.png'" alt="DirecTV">{{ match.channel }}
+=======
+                    <div class="small-4 medium-1 columns text-center puntaje"><strong class="show-for-small-only">Puntos: </strong>{{ match.points
+                        }}
+                    </div>
+                    <div class="small-4 medium-1 columns canal text-right">
+                        <img class="logo" :src="'/img/channels/'+ match.channel +'.png'" alt="DirecTV">{{ match.channel
+                        }}
+>>>>>>> a73271d3d5c9a6dbab13a4cceee53cd02a63fccd
                     </div>
                 </div>
                 <hr>
                 <hr>
                 <div class="row columns gutter-small">
-                    <div class="text-center suma"> Puntaje total de fecha: <strong>{{ totalPoints }} Puntos</strong></div>
+                    <div class="text-center suma"> Puntaje total <span v-if="round.code" style="color:#009F33;font-weight: bold;">X2</span> de fecha: <strong>{{ totalPoints }} Puntos</strong>
+                    </div>
                 </div>
                 <hr>
             </div>
@@ -107,26 +128,32 @@
         data() {
             return {
                 round: {
-                    id:null,
-                    name:''
+                    id: null,
+                    name: ''
                 },
-                matches:[]
+                matches: [],
+                errors: [
+                    code => '',
+                ],
+                code: ''
             }
         },
         props: ['rounds', 'selected_round'],
         methods: {
             loadRound() {
                 var round_id = null;
-                if(this.round && this.round.id)round_id = this.round.id;
-                else if(this.selected_round)round_id = this.selected_round;
-                if(round_id){
+                if (this.round && this.round.id) round_id = this.round.id;
+                else if (this.selected_round) round_id = this.selected_round;
+                if (round_id) {
                     $('#loadingModal').foundation('open');
                     axios.get('/roundmatches/' + round_id).then(
                         ({data}) => {
                             if (data.round) this.round = data.round;
+                            if(data.round.code)this.code =data.round.code;
+                            else this.code = '';
                             if (data.matches) this.matches = data.matches;
                             $('#loadingModal').foundation('close');
-                            if(data.message){
+                            if (data.message) {
                                 new PNotify({
                                     text: data.message,
                                     type: data.status,
@@ -140,13 +167,13 @@
                     });
                 }
             },
-            updatePrediction(value, match_id, index){
+            updatePrediction(value, match_id, index) {
                 $('#loadingModal').foundation('open');
-                axios.post('/predictions/'+match_id + '/update',{'value':value}).then(
-                    ({data})=>{
+                axios.post('/predictions/' + match_id + '/update', {'value': value}).then(
+                    ({data}) => {
                         $('#loadingModal').foundation('close');
-                        if(data.match) Vue.set(this.matches,index,data.match);
-                        if(data.message){
+                        if (data.match) Vue.set(this.matches, index, data.match);
+                        if (data.message) {
                             new PNotify({
                                 text: data.message,
                                 type: data.status,
@@ -155,13 +182,66 @@
                             });
                         }
                     }
-                ).catch(function(error){$('#loadingModal').foundation('close');});
-            }
+                ).catch(function (error) {
+                    $('#loadingModal').foundation('close');
+                });
+            },
+            applyCode() {
+                axios.post('/codes/apply', {'code': this.code, 'round':this.round.id}).then(
+                    ({data}) => {
+                        if(data.status=='success'){
+                            this.round.code = this.code;
+                            this.loadRound();
+                        }
+                        if (data.message) {
+                            new PNotify({
+                                text: data.message,
+                                type: data.status,
+                                animation: 'fade',
+                                delay: 2000
+                            });
+                        }
+                        if(data.error){
+                            this.errors.code = data.code;
+                            this.errors.code.forEach(function (val) {
+                                new PNotify({
+                                    text: val,
+                                    type: 'error',
+                                    animation: 'fade',
+                                    delay: 2000
+                                });
+                            });
+                        }
+                    }
+                ).catch(function (error) {
+                    if (error.response) {
+                        if (error.response.status == 422) {
+                            var data = error.response.data;
+                            this.errors = data;
+                            this.errors.code.forEach(function (val) {
+                                new PNotify({
+                                    text: val,
+                                    type: 'error',
+                                    animation: 'fade',
+                                    delay: 2000
+                                });
+                            });
+                        } else {
+                            console.log(error.response.status);
+                        }
+                    } else {
+                        console.log('Error', error.message);
+                    }
+                }.bind(this));
+            },
+            resetErrors(field) {
+                Vue.delete(this.errors, field);
+            },
         },
-        computed:{
-            totalPoints(){
+        computed: {
+            totalPoints() {
                 var total = 0;
-                this.matches.forEach(function(val){
+                this.matches.forEach(function (val) {
                     total += val.points;
                 });
                 return total;

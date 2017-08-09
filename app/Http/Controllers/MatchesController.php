@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Code;
 use App\League;
 use App\Match;
 use App\Round;
@@ -22,10 +23,16 @@ class MatchesController extends Controller
     public function roundmatches(Round $round)
     {
         $results = [];
-        $results['round'] = $round;
+        if ($code = Code::where('round_id',$round->id)->where('user_id',auth()->user()->id)->first()){
+            $round->code = $code->code;
+        } else {
+            $round->code = null;
+        }
+
         $matches = $round->matches;
         $results['matches'] = [];
         $user_id = request()->get('user_id',auth()->user()->id);
+        $round->editable = false;
         foreach ($matches as $match){
             $prediction = Prediction::firstOrCreate(['user_id'=>$user_id,'match_id'=>$match->id]);
             $match->prediction = $prediction->value;
@@ -33,8 +40,8 @@ class MatchesController extends Controller
             $match->editable = request()->user()->can('update',$prediction);
             if($match->status == 'pending')$match->points = null;
             $results['matches'][] = $match;
+            if($match->editable)$round->editable = true;
         }
-
         if($league_id = request()->get('league_id')){
             $lg = League::find($league_id);
             $users = $lg->users()->orderByDesc('points')->get();
@@ -45,6 +52,7 @@ class MatchesController extends Controller
             $users = collect($users->pluck('id')->toArray());
             $results['position'] = $users->search($user_id)+1;
         }
+        $results['round'] = $round;
         $results['status'] = 'success';
         $results['message'] = 'Ronda cargada';
 

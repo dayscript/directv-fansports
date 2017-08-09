@@ -13,9 +13,7 @@
         </div>
         <div class="medium-6 columns">
             <p>
-                Puedes invitar a tus amigos usando tu cuenta de Facebook.
             </p>
-            <a href="#" class="button facebook expanded"><i class="fi-social-facebook"></i> Invitar amigos</a>
         </div>
     </div>
 </template>

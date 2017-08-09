@@ -1,6 +1,11 @@
 {
+<<<<<<< HEAD
     "/js/app.js": "/js/app.js?id=e5f13a36709247fa030c",
     "/css/app.css": "/css/app.css?id=d9f9c06d007265d5277f",
+=======
+    "/js/app.js": "/js/app.js?id=c4795adc19938e7367fb",
+    "/css/app.css": "/css/app.css?id=0c196f3f0c1bf56b2669",
+>>>>>>> a73271d3d5c9a6dbab13a4cceee53cd02a63fccd
     "/js/foundation.min.js": "/js/foundation.min.js?id=95ea0633e7fe4813ce7c",
     "/js/jquery.min.js": "/js/jquery.min.js?id=c9f5aeeca3ad37bf2aa0",
     "/js/pnotify.js": "/js/pnotify.js?id=c9f8adcb39f73312ee0f",
