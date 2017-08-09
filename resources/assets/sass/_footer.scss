@@ -12,8 +12,8 @@
     background-repeat: no-repeat;
   }
   .logo {
-    margin: 14px;
-    width: 50%;
+    margin: 24px 14px 14px 14px;
+    width: 40%;
     @include breakpoint(medium) {
       width: auto;
     }
@@ -40,4 +40,8 @@
   @include breakpoint(medium) {
     text-align: left;
   }
+}
+.patrocinio{
+  width: 40%;
+  padding: 8px;
 }

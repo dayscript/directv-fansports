@@ -8429,12 +8429,12 @@ label {
 }
 
 .item {
-  padding: 2px 0;
+  padding: 10px 0;
 }
 
 @media print, screen and (min-width: 40em) {
   .item {
-    padding: 7px 0;
+    padding: 6px 0;
   }
 }
 
@@ -8472,7 +8472,6 @@ label {
 .item .equipos .versus {
   font-size: 0.9em;
   color: #009F33;
-  margin: 12px 0 0 0;
 }
 
 .item .equipos .home {
@@ -8497,16 +8496,8 @@ label {
   text-align: center;
 }
 
-@media print, screen and (min-width: 40em) {
-  .item .fecha {
-    text-align: left;
-    margin-top: 12px;
-  }
-}
-
 .item .canal {
   font-size: 0.6em;
-  margin-top: 0px;
   text-transform: uppercase;
   line-height: 0.6em;
   font-family: "Raleway-Bold";
@@ -8522,7 +8513,6 @@ label {
 @media print, screen and (min-width: 40em) {
   .item .canal {
     text-align: right;
-    margin-top: 10px;
   }
 }
 
@@ -8672,27 +8662,46 @@ h2.section {
 
 .partido {
   margin: 10px 0;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 8px 0;
 }
 
 .partido .home,
 .partido .away {
   font-family: "Raleway-Bold";
   font-size: 0.9em;
+  margin-top: 10px;
 }
 
-.partido .marcador,
+.partido .marcador {
+  font-family: "Raleway-Bold";
+  color: #132029;
+  margin-top: 0px;
+  font-size: 0.9em;
+  text-align: right;
+}
+
+@media print, screen and (min-width: 40em) {
+  .partido .marcador {
+    margin-top: 6px;
+    font-size: 1.2em;
+    text-align: center;
+  }
+}
+
 .partido .puntaje {
   font-family: "Raleway-Bold";
   color: #132029;
   margin-top: 0px;
   font-size: 0.9em;
+  text-align: left;
 }
 
 @media print, screen and (min-width: 40em) {
-  .partido .marcador,
   .partido .puntaje {
     margin-top: 6px;
     font-size: 1.2em;
+    text-align: center;
   }
 }
 
@@ -8717,6 +8726,31 @@ h2.section {
   }
 }
 
+.partido .fecha {
+  color: #009F33;
+  font-size: 0.8em;
+  font-family: "HelveticaNeueLTStd-Cn" !important;
+  margin-top: 6px;
+  text-align: center;
+}
+
+.partido .canal {
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+@media print, screen and (min-width: 40em) {
+  .partido .canal {
+    margin-bottom: 0px;
+  }
+}
+
+.partido .versus {
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #009F33;
+}
+
 .suma {
   padding: 12px 0;
   font-family: "Raleway-Bold";
@@ -8729,6 +8763,10 @@ h2.section {
   font-size: 1.2em;
   margin: 0 10px;
   color: #009F33;
+}
+
+.suma strong.versus {
+  margin-left: 10px;
 }
 
 @media print, screen and (min-width: 40em) {
@@ -8837,6 +8875,12 @@ h2.section {
   text-transform: uppercase;
 }
 
+.reset .login-title {
+  font-family: "Raleway-Bold";
+  font-size: 1.6em;
+  margin-bottom: 10px;
+}
+
 .footer-ligas {
   background-color: #020514;
   margin-top: 60px;
@@ -8854,8 +8898,8 @@ h2.section {
 }
 
 .footer-ligas .logo {
-  margin: 14px;
-  width: 50%;
+  margin: 24px 14px 14px 14px;
+  width: 40%;
 }
 
 @media print, screen and (min-width: 40em) {
@@ -8892,6 +8936,11 @@ h2.section {
   .footer {
     text-align: left;
   }
+}
+
+.patrocinio {
+  width: 40%;
+  padding: 8px;
 }
 
 .partido .status i {

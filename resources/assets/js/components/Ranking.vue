@@ -3,7 +3,7 @@
         <div class="row">
             <div class="medium-6 columns">
                 <label>Ligas
-                    <select name="ligue" id="ligue" @change="loadRanking(1)" v-model="ligue.id" autofocus>
+                    <select name="league" id="league" @change="loadRanking(1)" v-model="league.id" autofocus>
                         <option value="0">Clasificación General</option>
                         <option v-for="lg in leagues" :value="lg.id">{{ lg.name }}</option>
                     </select>
@@ -31,7 +31,7 @@
                 <div class="small-1 columns text-left puntos">{{ parseInt(index) + 1 }}</div>
                 <div class="small-9 columns user">
                     <i class="fi-torso" v-if="userid==user.id"></i>
-                    {{ user.name + ' ' + user.last }}
+                    <a :href="'/users/'+user.id">{{ user.name + ' ' + user.last }}</a>
                 </div>
                 <div class="small-2 columns text-right puntos">{{ user.points }}</div>
             </div>
@@ -65,7 +65,7 @@
                     id: 0,
                     name: 'Acumulado'
                 },
-                ligue: {
+                league: {
                     id: 0,
                     name: 'Clasificación General'
                 },
@@ -84,7 +84,7 @@
         methods: {
             loadRanking(page) {
                 $('#loadingModal').foundation('open');
-                axios.post('/rankingdata/'+page,{'round':this.round.id}).then(
+                axios.post('/rankingdata/'+page,{'round':this.round.id,'league':this.league.id}).then(
                     ({data}) => {
                         if (data.users) this.users = data.users;
                         if (data.pagination) this.pagination= data.pagination;

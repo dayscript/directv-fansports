@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\League;
+use App\Policies\LeaguePolicy;
 use App\Policies\PredictionPolicy;
 use App\Prediction;
 use Illuminate\Support\Facades\Gate;
@@ -16,6 +18,7 @@ class AuthServiceProvider extends ServiceProvider
      */
     protected $policies = [
         Prediction::class => PredictionPolicy::class,
+        League::class => LeaguePolicy::class,
     ];
 
     /**

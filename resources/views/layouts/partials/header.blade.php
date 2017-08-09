@@ -13,11 +13,11 @@
                     <ul class="vertical medium-horizontal menu align-right" data-dropdown-menu>
                         <li class="{{ request()->is('/')?'is-active':'' }}"><a href="/">Inicio</a></li>
                         @auth
-                            <li class="{{ request()->is('pronosticos')?'is-active':'' }}"><a href="pronosticos">Mis pronósticos</a></li>
-                            <li class="{{ request()->is('ligas')?'is-active':'' }}"><a href="ligas">Ligas</a></li>
+                            <li class="{{ request()->is('pronosticos')?'is-active':'' }}"><a href="/pronosticos">Mis pronósticos</a></li>
                         @endauth
-                        <li class="{{ request()->is('ranking')?'is-active':'' }}"><a href="ranking">Ranking</a></li>
-                        <li class="{{ request()->is('como-jugar')?'is-active':'' }}"><a href="como-jugar">Cómo jugar</a></li>
+                        <li class="{{ request()->is('ligas')?'is-active':'' }}"><a href="/ligas">Ligas</a></li>
+                        <li class="{{ request()->is('ranking')?'is-active':'' }}"><a href="/ranking">Ranking</a></li>
+                        <li class="{{ request()->is('como-jugar')?'is-active':'' }}"><a href="/como-jugar">Cómo jugar</a></li>
                         @auth
                             <a href="#" class="button" onclick="$('.login.in').slideToggle();"><i class="fi-torso"> </i> {{ Auth::user()->name }}</a>
                         @endauth
@@ -37,7 +37,7 @@
             <div class="usuario">Hola: <strong>{{ Auth::user()->fullName }}</strong></div>
         </div>
         <div class="medium-2 columns">
-            <a href="/users/{{ Auth::user()->id }}" class="button expanded"><i class="fi-torso"> </i> Mi cuenta</a>
+            <a href="/mi-cuenta" class="button expanded"><i class="fi-torso"> </i> Mi cuenta</a>
         </div>
         <div class="medium-2 columns end">
             <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();" class="button warning expanded"><i class="fi-x-circle"> </i> Cerrar sesión</a>

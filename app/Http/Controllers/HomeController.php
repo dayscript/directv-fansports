@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\League;
+use App\Mail\ContactMail;
 use App\Round;
 use App\User;
+use Illuminate\Support\Facades\Mail;
 use TCG\Voyager\Models\Page;
 
 class HomeController extends Controller
@@ -14,7 +17,14 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-//        $this->middleware('auth');
+        $this->middleware('auth')->except([
+            'index',
+            'instructions',
+            'terms',
+            'privacy',
+            'support',
+            'contact',
+        ]);
     }
 
     /**
@@ -65,9 +75,15 @@ class HomeController extends Controller
      */
     public function ligas()
     {
+        $edit_league = null;
+        $editable = false;
+        if($edit_id = request()->get('edit')){
+            $edit_league = League::find($edit_id);
+        }
+        $join_code = request()->get('join',null);
         $page = Page::firstOrCreate(['slug'=>'ligas'],['title'=>'Ligas']);
-        $leagues = auth()->user()->leagues()->withCount('users')->get()->each->appends('user_points');
-        return view('ligas',compact('page','leagues'));
+        $leagues = auth()->user()->leagues()->withCount('users')->get()->each->append('users_points');
+        return view('ligas',compact('page','leagues', 'edit_league','editable','join_code'));
     }
     /**
      * Show Ranking page
@@ -77,7 +93,7 @@ class HomeController extends Controller
     public function ranking()
     {
         $rounds = Round::orderBy('name')->get();
-        $leagues = collect([]);
+        $leagues = auth()->user()->leagues;
         $page = Page::firstOrCreate(['slug'=>'ranking'],['title'=>'Ranking']);
         return view('ranking',compact('page','rounds', 'leagues'));
     }
@@ -101,5 +117,26 @@ class HomeController extends Controller
         $rounds = Round::orderBy('name')->get();
         $selected_round = Round::getNearestRound();
         return view('game',compact('rounds','selected_round'));
+    }
+
+    /**
+     * Mail contact form
+     * @return array
+     */
+    public function contact()
+    {
+        $this->validate(request(),[
+            'name'=>'required|min:3',
+            'email'=>'required|email',
+            'message'=>'required|min:5',
+        ]);
+        $data = request()->all();
+        Mail::to('jcardenas@dayscript.com')->send(new ContactMail($data));
+        $results = [];
+        $results['status'] = 'success';
+        $results['message'] = 'Información enviada correctamente!';
+
+        return $results;
+
     }
 }

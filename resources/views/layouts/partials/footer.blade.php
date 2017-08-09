@@ -1,7 +1,7 @@
 <div class="footer-ligas">
     <div class="row">
         <div class="large-8 large-offset-4 columns text-center">
-            <h3 class="light">Las mejores ligas</h3>
+            <h3 class="light show-for-small-only">Las mejores ligas</h3>
         </div>
         <div class="row">
             <div class="medium-4 large-3 large-offset-3 columns text-center">
@@ -25,8 +25,8 @@
         </div>
         <div class="medium-5 columns">
             <div class="footer-links">Patrocinan:</div>
-            <a href="https://www.directv.com.co" target="_blank"><img src="{{ asset('img/logos/directv.png') }}" alt="" class="DirecTV"></a>
-            <a href="https://www.servientrega.com" target="_blank"><img src="{{ asset('img/logos/servientrega.png') }}" alt="" class="Servientrega"></a>
+            <a href="https://www.directv.com.co" target="_blank"><img src="{{ asset('img/logos/directv.png') }}" alt="" class="patrocinio"></a>
+            <a href="https://www.servientrega.com" target="_blank"><img src="{{ asset('img/logos/servientrega.png') }}" alt="" class="patrocinio"></a>
         </div>
         <div class="medium-12 columns day">
             <a href="http://www.dayscript.com" target="_blank"><img src="{{ asset('img/logos/by-day.png') }}" alt="By Dayscript"></a>

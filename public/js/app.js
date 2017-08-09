@@ -1645,11 +1645,122 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/Game.vue":
+/***/ "./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/Ranking.vue":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    mounted: function mounted() {
+        this.loadRanking(1);
+    },
+    data: function data() {
+        return {
+            round: {
+                id: 0,
+                name: 'Acumulado'
+            },
+            league: {
+                id: 0,
+                name: 'Clasificación General'
+            },
+            users: [],
+            pagination: {
+                page: 1,
+                pages: 1,
+                prev: null,
+                next: null,
+                total: 0,
+                items: 10
+            }
+        };
+    },
+
+    props: ['rounds', 'leagues', 'userid'],
+    methods: {
+        loadRanking: function loadRanking(page) {
+            var _this = this;
+
+            $('#loadingModal').foundation('open');
+            axios.post('/rankingdata/' + page, { 'round': this.round.id, 'league': this.league.id }).then(function (_ref) {
+                var data = _ref.data;
+
+                if (data.users) _this.users = data.users;
+                if (data.pagination) _this.pagination = data.pagination;
+                $('#loadingModal').foundation('close');
+            }).catch(function (error) {
+                $('#loadingModal').foundation('close');
+            });
+        }
+    }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/game/Play.vue":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
 //
 //
 //
@@ -1827,7 +1938,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/Ranking.vue":
+/***/ "./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/game/Summary.vue":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1888,48 +1999,386 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
-        this.loadRanking(1);
+        this.loadSummary();
     },
     data: function data() {
         return {
             round: {
                 id: 0,
-                name: 'Acumulado'
+                name: 'Seleccione'
             },
-            ligue: {
+            league: {
                 id: 0,
                 name: 'Clasificación General'
             },
-            users: [],
-            pagination: {
-                page: 1,
-                pages: 1,
-                prev: null,
-                next: null,
-                total: 0,
-                items: 10
-            }
+            matches: [],
+            position: ''
         };
     },
 
-    props: ['rounds', 'leagues', 'userid'],
+    props: ['rounds', 'leagues', 'userid', 'userpoints'],
     methods: {
-        loadRanking: function loadRanking(page) {
+        loadSummary: function loadSummary() {
+            var _this = this;
+
+            if (this.round.id) {
+                $('#loadingModal').foundation('open');
+                axios.post('/roundmatches/' + this.round.id, { 'league_id': this.league.id, 'user_id': this.userid }).then(function (_ref) {
+                    var data = _ref.data;
+
+                    if (data.matches) _this.matches = data.matches;
+                    if (data.position) _this.position = data.position;
+                    $('#loadingModal').foundation('close');
+                    if (data.message) {
+                        new PNotify({
+                            text: data.message,
+                            type: data.status,
+                            animation: 'fade',
+                            delay: 2000
+                        });
+                    }
+                }).catch(function (error) {
+                    $('#loadingModal').foundation('close');
+                });
+            }
+        }
+    }, computed: {
+        totalPoints: function totalPoints() {
+            var total = 0;
+            this.matches.forEach(function (val) {
+                total += val.points;
+            });
+            return total;
+        }
+    }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/leagues/Create.vue":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    mounted: function mounted() {
+        if (this.league) {
+            this.id = this.league.id;
+            this.name = this.league.name;
+            this.description = this.league.description;
+            this.code = this.league.code;
+        }
+    },
+
+    props: ['league'],
+    data: function data() {
+        return {
+            id: null,
+            name: '',
+            description: '',
+            code: '',
+            errors: [function (name) {
+                return null;
+            }, function (description) {
+                return null;
+            }, function (code) {
+                return null;
+            }]
+        };
+    },
+
+    methods: {
+        updateLeague: function updateLeague() {
+            $('#loadingModal').foundation('open');
+            axios.put('/leagues/' + this.id, { name: this.name, description: this.description, code: this.code }).then(function (_ref) {
+                var data = _ref.data;
+
+                if (data.message) {
+                    new PNotify({
+                        text: data.message,
+                        type: data.status,
+                        animation: 'fade',
+                        delay: 2000
+                    });
+                }
+                $('#loadingModal').foundation('close');
+            }).catch(function (error) {
+                $('#loadingModal').foundation('close');
+                if (error.response) {
+                    if (error.response.status == 422) {
+                        var data = error.response.data;
+                        this.errors = data;
+                    } else if (error.response.status == 403) {
+                        new PNotify({
+                            text: 'No estas autorizad@ a realizar esta acción.',
+                            type: 'error',
+                            animation: 'fade',
+                            delay: 2000
+                        });
+                    } else {
+                        console.log(error.response.status);
+                    }
+                } else {
+                    console.log('Error', error.message);
+                }
+            });
+        },
+        createLeague: function createLeague() {
             var _this = this;
 
             $('#loadingModal').foundation('open');
-            axios.post('/rankingdata/' + page, { 'round': this.round.id }).then(function (_ref) {
+            axios.post('/leagues', { name: this.name, description: this.description, code: this.code }).then(function (_ref2) {
+                var data = _ref2.data;
+
+                if (data.id) _this.id = data.id;
+                if (data.message) {
+                    new PNotify({
+                        text: data.message,
+                        type: data.status,
+                        animation: 'fade',
+                        delay: 2000
+                    });
+                }
+                $('#loadingModal').foundation('close');
+            }).catch(function (error) {
+                $('#loadingModal').foundation('close');
+                if (error.response) {
+                    if (error.response.status == 422) {
+                        var data = error.response.data;
+                        this.errors = data;
+                    } else {
+                        console.log(error.response.status);
+                    }
+                } else {
+                    console.log('Error', error.message);
+                }
+            }.bind(this));
+        },
+        deleteLeague: function deleteLeague() {
+            var _this2 = this;
+
+            if (confirm('¿Estás segur@ que quieres eliminar esta liga?')) {
+                $('#loadingModal').foundation('open');
+                axios.delete('/leagues/' + this.id).then(function (_ref3) {
+                    var data = _ref3.data;
+
+                    if (data.message) {
+                        if (data.status == 'success') {
+                            _this2.id = null;
+                            _this2.name = '';
+                            _this2.description = '';
+                            _this2.code = '';
+                        }
+                        new PNotify({
+                            text: data.message,
+                            type: data.status,
+                            animation: 'fade',
+                            delay: 2000
+                        });
+                    }
+                    $('#loadingModal').foundation('close');
+                }).catch(function (error) {
+                    $('#loadingModal').foundation('close');
+                    if (error.response) {
+                        if (error.response.status == 403) {
+                            new PNotify({
+                                text: 'No estas autorizad@ a realizar esta acción.',
+                                type: 'error',
+                                animation: 'fade',
+                                delay: 2000
+                            });
+                        } else {
+                            console.log(error.response.status);
+                        }
+                    } else {
+                        console.log('Error', error.message);
+                    }
+                });
+            }
+        },
+        resetErrors: function resetErrors(field) {
+            Vue.delete(this.errors, field);
+        }
+    }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/leagues/Invite.vue":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    mounted: function mounted() {},
+
+    props: ['id'],
+    data: function data() {
+        return {
+            list: ''
+        };
+    },
+
+    methods: {
+        sendInvites: function sendInvites() {
+            var _this = this;
+
+            $('#loadingModal').foundation('open');
+            axios.post('/leagues/' + this.id + '/invite', { list: this.list }).then(function (_ref) {
                 var data = _ref.data;
 
-                if (data.users) _this.users = data.users;
-                if (data.pagination) _this.pagination = data.pagination;
+                if (data.message) {
+                    new PNotify({
+                        text: data.message,
+                        type: data.status,
+                        animation: 'fade',
+                        delay: 2000
+                    });
+                    _this.list = '';
+                }
                 $('#loadingModal').foundation('close');
             }).catch(function (error) {
                 $('#loadingModal').foundation('close');
             });
+        }
+    }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/leagues/Join.vue":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    mounted: function mounted() {
+        if (this.initialcode) this.code = this.initialcode;
+    },
+
+    props: ['initialcode'],
+    data: function data() {
+        return {
+            code: null
+        };
+    },
+
+    methods: {
+        joinLeague: function joinLeague() {
+            if (this.code) {
+                $('#loadingModal').foundation('open');
+                axios.post('/leagues/join', { code: this.code }).then(function (_ref) {
+                    var data = _ref.data;
+
+                    $('#loadingModal').foundation('close');
+                    if (data.message) {
+                        new PNotify({
+                            text: data.message,
+                            type: data.status,
+                            animation: 'fade',
+                            delay: 2000
+                        });
+                    }
+                    if (data.status == 'success') document.location.href = '/ligas';
+                }).catch(function (error) {
+                    $('#loadingModal').foundation('close');
+                });
+            }
         }
     }
 });
@@ -1950,13 +2399,240 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
         console.log('Component mounted.');
     },
 
-    props: ['league']
+    props: ['league', 'editable'],
+    methods: {
+        leaveLeague: function leaveLeague() {
+            $('#loadingModal').foundation('open');
+            axios.post('/leagues/' + this.league.id + '/leave').then(function (_ref) {
+                var data = _ref.data;
+
+                $('#loadingModal').foundation('close');
+                if (data.message) {
+                    new PNotify({
+                        text: data.message,
+                        type: data.status,
+                        animation: 'fade',
+                        delay: 2000
+                    });
+                }
+                document.location.href = '/ligas';
+            }).catch(function (error) {
+                $('#loadingModal').foundation('close');
+            });
+        }
+    }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/users/ChangePassword.vue":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            password: '',
+            password_confirmation: '',
+            errors: [function (password) {
+                return '';
+            }, function (password_confirmation) {
+                return '';
+            }]
+        };
+    },
+
+    methods: {
+        changePassword: function changePassword() {
+            var _this = this;
+
+            $('#loadingModal').foundation('open');
+            axios.post('users/updatepassword', { 'password': this.password, 'password_confirmation': this.password_confirmation }).then(function (_ref) {
+                var data = _ref.data;
+
+                $('#loadingModal').foundation('close');
+                _this.password = _this.password_confirmation = '';
+                if (data.message) {
+                    new PNotify({
+                        text: data.message,
+                        type: data.status,
+                        animation: 'fade',
+                        delay: 2000
+                    });
+                }
+            }).catch(function (error) {
+                $('#loadingModal').foundation('close');
+                this.password = this.password_confirmation = '';
+                if (error.response) {
+                    if (error.response.status == 422) {
+                        var data = error.response.data;
+                        this.errors = data;
+                    } else {
+                        console.log(error.response.status);
+                    }
+                } else {
+                    console.log('Error', error.message);
+                }
+            }.bind(this));
+        },
+        resetErrors: function resetErrors(field) {
+            Vue.delete(this.errors, field);
+        }
+    }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/utils/Contact.vue":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            name: '',
+            last: '',
+            email: '',
+            country: 'CO',
+            city: 'Bogota',
+            phone: '',
+            message: '',
+            errors: [function (name) {
+                return null;
+            }, function (last) {
+                return null;
+            }, function (country) {
+                return null;
+            }, function (city) {
+                return null;
+            }, function (phone) {
+                return null;
+            }, function (message) {
+                return null;
+            }, function (email) {
+                return null;
+            }]
+        };
+    },
+
+    methods: {
+        sendContact: function sendContact() {
+            $('#loadingModal').foundation('open');
+            axios.post('/contact', {
+                name: this.name,
+                last: this.last,
+                country: this.country,
+                city: this.city,
+                phone: this.phone,
+                email: this.email,
+                message: this.message
+            }).then(function (_ref) {
+                var data = _ref.data;
+
+                if (data.message) {
+                    new PNotify({
+                        text: data.message,
+                        type: data.status,
+                        animation: 'fade',
+                        delay: 2000
+                    });
+                }
+                $('#loadingModal').foundation('close');
+            }).catch(function (error) {
+                $('#loadingModal').foundation('close');
+                if (error.response) {
+                    if (error.response.status == 422) {
+                        var data = error.response.data;
+                        this.errors = data;
+                    } else {
+                        console.log(error.response.status);
+                    }
+                } else {
+                    console.log('Error', error.message);
+                }
+            }.bind(this));
+        },
+        resetErrors: function resetErrors(field) {
+            Vue.delete(this.errors, field);
+        }
+    }
 });
 
 /***/ }),
@@ -19383,12 +20059,12 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     directives: [{
       name: "model",
       rawName: "v-model",
-      value: (_vm.ligue.id),
-      expression: "ligue.id"
+      value: (_vm.league.id),
+      expression: "league.id"
     }],
     attrs: {
-      "name": "ligue",
-      "id": "ligue",
+      "name": "league",
+      "id": "league",
       "autofocus": ""
     },
     on: {
@@ -19399,7 +20075,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
           var val = "_value" in o ? o._value : o.value;
           return val
         });
-        _vm.ligue.id = $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+        _vm.league.id = $event.target.multiple ? $$selectedVal : $$selectedVal[0]
       }, function($event) {
         _vm.loadRanking(1)
       }]
@@ -19464,7 +20140,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       staticClass: "small-9 columns user"
     }, [(_vm.userid == user.id) ? _c('i', {
       staticClass: "fi-torso"
-    }) : _vm._e(), _vm._v("\n                " + _vm._s(user.name + ' ' + user.last) + "\n            ")]), _vm._v(" "), _c('div', {
+    }) : _vm._e(), _vm._v(" "), _c('a', {
+      attrs: {
+        "href": '/users/' + user.id
+      }
+    }, [_vm._v(_vm._s(user.name + ' ' + user.last))])]), _vm._v(" "), _c('div', {
       staticClass: "small-2 columns text-right puntos"
     }, [_vm._v(_vm._s(user.points))])]), _vm._v(" "), _c('hr')])
   }), _vm._v(" "), _c('hr', {
@@ -19591,6 +20271,501 @@ if (false) {
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-3b2d2f2f\",\"hasScoped\":false}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/leagues/Join.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "row"
+  }, [_vm._m(0), _vm._v(" "), _c('div', {
+    staticClass: "medium-6 columns"
+  }, [_c('label', [_vm._v("Código de invitación\n            "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.code),
+      expression: "code"
+    }],
+    attrs: {
+      "type": "text",
+      "name": "code",
+      "id": "code",
+      "autofocus": ""
+    },
+    domProps: {
+      "value": (_vm.code)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.code = $event.target.value
+      }
+    }
+  })]), _vm._v(" "), _c('a', {
+    staticClass: "button expanded",
+    on: {
+      "click": _vm.joinLeague
+    }
+  }, [_vm._v("Unirse")])])])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "medium-6 columns"
+  }, [_c('h5', [_vm._v("¡Unirse es muy fácil!")]), _vm._v(" "), _c('p', [_vm._v("\n            ingresa el código de la liga a la que quieres unirte. Los códigos son generados por la persona que crea la liga.\n        ")])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-3b2d2f2f", module.exports)
+  }
+}
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-45f1a7b8\",\"hasScoped\":false}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/utils/Contact.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "row"
+  }, [_c('div', {
+    staticClass: "medium-6 columns"
+  }, [_c('label', [_vm._v("Nombre\n            "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.name),
+      expression: "name"
+    }],
+    class: {
+      'is-invalid-input': _vm.errors.name
+    },
+    attrs: {
+      "type": "text",
+      "name": "name",
+      "id": "name",
+      "autofocus": "",
+      "required": ""
+    },
+    domProps: {
+      "value": (_vm.name)
+    },
+    on: {
+      "keyup": function($event) {
+        _vm.resetErrors('name')
+      },
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.name = $event.target.value
+      }
+    }
+  }), _vm._v(" "), (_vm.errors.name) ? _c('span', {
+    staticClass: "form-error is-visible"
+  }, [_vm._v(_vm._s(_vm.errors.name[0]))]) : _vm._e()]), _vm._v(" "), _c('label', [_vm._v("Email\n            "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.email),
+      expression: "email"
+    }],
+    class: {
+      'is-invalid-input': _vm.errors.email
+    },
+    attrs: {
+      "type": "email",
+      "name": "email",
+      "id": "email"
+    },
+    domProps: {
+      "value": (_vm.email)
+    },
+    on: {
+      "keyup": function($event) {
+        _vm.resetErrors('email')
+      },
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.email = $event.target.value
+      }
+    }
+  }), _vm._v(" "), (_vm.errors.email) ? _c('span', {
+    staticClass: "form-error is-visible"
+  }, [_vm._v(_vm._s(_vm.errors.email[0]))]) : _vm._e()]), _vm._v(" "), _c('label', [_vm._v("País\n            "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.country),
+      expression: "country"
+    }],
+    class: {
+      'is-invalid-input': _vm.errors.country
+    },
+    attrs: {
+      "type": "text",
+      "name": "country",
+      "id": "country"
+    },
+    domProps: {
+      "value": (_vm.country)
+    },
+    on: {
+      "keyup": function($event) {
+        _vm.resetErrors('country')
+      },
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.country = $event.target.value
+      }
+    }
+  }), _vm._v(" "), (_vm.errors.country) ? _c('span', {
+    staticClass: "form-error is-visible"
+  }, [_vm._v(_vm._s(_vm.errors.country[0]))]) : _vm._e()])]), _vm._v(" "), _c('div', {
+    staticClass: "medium-6 columns"
+  }, [_c('label', [_vm._v("Apellidos\n            "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.last),
+      expression: "last"
+    }],
+    class: {
+      'is-invalid-input': _vm.errors.last
+    },
+    attrs: {
+      "type": "text",
+      "name": "last",
+      "id": "last"
+    },
+    domProps: {
+      "value": (_vm.last)
+    },
+    on: {
+      "keyup": function($event) {
+        _vm.resetErrors('last')
+      },
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.last = $event.target.value
+      }
+    }
+  }), _vm._v(" "), (_vm.errors.last) ? _c('span', {
+    staticClass: "form-error is-visible"
+  }, [_vm._v(_vm._s(_vm.errors.last[0]))]) : _vm._e()]), _vm._v(" "), _c('label', [_vm._v("Celular\n            "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.phone),
+      expression: "phone"
+    }],
+    class: {
+      'is-invalid-input': _vm.errors.phone
+    },
+    attrs: {
+      "type": "text",
+      "name": "phone",
+      "id": "phone"
+    },
+    domProps: {
+      "value": (_vm.phone)
+    },
+    on: {
+      "keyup": function($event) {
+        _vm.resetErrors('phone')
+      },
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.phone = $event.target.value
+      }
+    }
+  }), _vm._v(" "), (_vm.errors.phone) ? _c('span', {
+    staticClass: "form-error is-visible"
+  }, [_vm._v(_vm._s(_vm.errors.phone[0]))]) : _vm._e()]), _vm._v(" "), _c('label', [_vm._v("Ciudad\n            "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.city),
+      expression: "city"
+    }],
+    class: {
+      'is-invalid-input': _vm.errors.city
+    },
+    attrs: {
+      "type": "text",
+      "name": "city",
+      "id": "city"
+    },
+    domProps: {
+      "value": (_vm.city)
+    },
+    on: {
+      "keyup": function($event) {
+        _vm.resetErrors('city')
+      },
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.city = $event.target.value
+      }
+    }
+  }), _vm._v(" "), (_vm.errors.city) ? _c('span', {
+    staticClass: "form-error is-visible"
+  }, [_vm._v(_vm._s(_vm.errors.city[0]))]) : _vm._e()])]), _vm._v(" "), _c('div', {
+    staticClass: "medium-12 columns"
+  }, [_c('label', [_vm._v("Mensaje:\n            "), _c('textarea', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.message),
+      expression: "message"
+    }],
+    class: {
+      'is-invalid-input': _vm.errors.message
+    },
+    attrs: {
+      "name": "message",
+      "rows": "4",
+      "id": "message"
+    },
+    domProps: {
+      "value": (_vm.message)
+    },
+    on: {
+      "keyup": function($event) {
+        _vm.resetErrors('message')
+      },
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.message = $event.target.value
+      }
+    }
+  }), _vm._v(" "), (_vm.errors.message) ? _c('span', {
+    staticClass: "form-error is-visible"
+  }, [_vm._v(_vm._s(_vm.errors.message[0]))]) : _vm._e()])]), _vm._v(" "), _c('div', {
+    staticClass: "medium-4 medium-offset-4 columns end"
+  }, [_c('div', {
+    staticClass: "text-center"
+  }, [_c('a', {
+    staticClass: "button expanded",
+    on: {
+      "click": _vm.sendContact
+    }
+  }, [_vm._v("Enviar")])])])])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-45f1a7b8", module.exports)
+  }
+}
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-5064124e\",\"hasScoped\":false}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/leagues/Invite.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "row"
+  }, [_vm._m(0), _vm._v(" "), _c('div', {
+    staticClass: "medium-6 columns"
+  }, [_vm._m(1), _vm._v(" "), _c('textarea', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.list),
+      expression: "list"
+    }],
+    attrs: {
+      "placeholder": "Tu lista de amigos",
+      "name": "list",
+      "id": "list"
+    },
+    domProps: {
+      "value": (_vm.list)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.list = $event.target.value
+      }
+    }
+  }), _vm._v(" "), _c('a', {
+    staticClass: "button expanded",
+    on: {
+      "click": _vm.sendInvites
+    }
+  }, [_vm._v("Invitar")])]), _vm._v(" "), _vm._m(2)])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "medium-12 columns"
+  }, [_c('h5', {
+    staticClass: "title"
+  }, [_vm._v("2. Invita a tus amigos")])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('p', [_vm._v("\n            Puedes invitar a tus amigos a unirte a esta liga. Para hacerlo, ingresa a continuación las direcciones de correo electrónico y les enviaremos una invitación. "), _c('br'), _vm._v("\n            Puedes escribir las direcciones separadas por espacios, comas, o en lineas separadas, de cualquier forma funciona!\n        ")])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "medium-6 columns"
+  }, [_c('p', [_vm._v("\n            Puedes invitar a tus amigos usando tu cuenta de Facebook.\n        ")]), _vm._v(" "), _c('a', {
+    staticClass: "button facebook expanded",
+    attrs: {
+      "href": "#"
+    }
+  }, [_c('i', {
+    staticClass: "fi-social-facebook"
+  }), _vm._v(" Invitar amigos")])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-5064124e", module.exports)
+  }
+}
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-5a9752c1\",\"hasScoped\":false}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/leagues/Create.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [_c('div', {
+    staticClass: "row"
+  }, [_vm._m(0), _vm._v(" "), _c('div', {
+    staticClass: "medium-6 columns"
+  }, [_c('label', [_vm._v("Nombre de la liga\n                "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.name),
+      expression: "name"
+    }],
+    class: {
+      'is-invalid-input': _vm.errors.name
+    },
+    attrs: {
+      "type": "text",
+      "name": "name",
+      "id": "name",
+      "autofocus": ""
+    },
+    domProps: {
+      "value": (_vm.name)
+    },
+    on: {
+      "keyup": function($event) {
+        _vm.resetErrors('name')
+      },
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.name = $event.target.value
+      }
+    }
+  }), _vm._v(" "), (_vm.errors.name) ? _c('span', {
+    staticClass: "form-error is-visible"
+  }, [_vm._v(_vm._s(_vm.errors.name[0]))]) : _vm._e()])]), _vm._v(" "), _c('div', {
+    staticClass: "medium-6 columns"
+  }, [_c('label', [_vm._v("Código de invitación\n                "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.code),
+      expression: "code"
+    }],
+    class: {
+      'is-invalid-input': _vm.errors.code
+    },
+    attrs: {
+      "type": "text",
+      "name": "code",
+      "id": "code"
+    },
+    domProps: {
+      "value": (_vm.code)
+    },
+    on: {
+      "keyup": function($event) {
+        _vm.resetErrors('code')
+      },
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.code = $event.target.value
+      }
+    }
+  }), _vm._v(" "), (_vm.errors.code) ? _c('span', {
+    staticClass: "form-error is-visible"
+  }, [_vm._v(_vm._s(_vm.errors.code[0]))]) : _vm._e()])]), _vm._v(" "), _c('div', {
+    staticClass: "medium-12 columns"
+  }, [_c('label', [_vm._v("Descripción\n                "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.description),
+      expression: "description"
+    }],
+    class: {
+      'is-invalid-input': _vm.errors.description
+    },
+    attrs: {
+      "type": "text",
+      "name": "description",
+      "id": "description"
+    },
+    domProps: {
+      "value": (_vm.description)
+    },
+    on: {
+      "keyup": function($event) {
+        _vm.resetErrors('description')
+      },
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.description = $event.target.value
+      }
+    }
+  }), _vm._v(" "), (_vm.errors.description) ? _c('span', {
+    staticClass: "form-error is-visible"
+  }, [_vm._v(_vm._s(_vm.errors.description[0]))]) : _vm._e()])]), _vm._v(" "), _c('div', {
+    staticClass: "medium-6 columns"
+  }, [(_vm.id) ? _c('a', {
+    staticClass: "button expanded",
+    on: {
+      "click": _vm.updateLeague
+    }
+  }, [_vm._v("Actualizar")]) : _c('a', {
+    staticClass: "button expanded",
+    on: {
+      "click": _vm.createLeague
+    }
+  }, [_vm._v("Crear")])]), _vm._v(" "), _c('div', {
+    staticClass: "medium-6 columns"
+  }, [(_vm.id) ? _c('a', {
+    staticClass: "button alert expanded",
+    on: {
+      "click": _vm.deleteLeague
+    }
+  }, [_vm._v("Eliminar")]) : _vm._e()])]), _vm._v(" "), (_vm.id) ? _c('div', [_c('league-invite', {
+    attrs: {
+      "id": _vm.id
+    }
+  })], 1) : _vm._e()])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "medium-12 columns"
+  }, [_c('h5', {
+    staticClass: "title"
+  }, [_vm._v("1. Datos de la liga")]), _vm._v(" "), _c('p', [_vm._v("\n                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut libero et tellus\n                sollicitudin aliquam in eget mauris. Proin quis efficitur urna. Nulla ultricies vitae enim\n                vitae consectetur. Etiam interdum massa urna. Curabitur ut vulputate nulla, at bibendum\n                nisl. Duis vulputate semper nunc vel commodo.\n            ")])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-5a9752c1", module.exports)
+  }
+}
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-5d76409e\",\"hasScoped\":false}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/leagues/Summary.vue":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19598,25 +20773,29 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   return _c('div', {
     staticClass: "row item liga column"
   }, [_c('div', {
-    staticClass: "medium-6 columns text-center item-liga"
+    staticClass: "medium-6 columns text-left item-liga"
   }, [_vm._v(_vm._s(_vm.league.name))]), _vm._v(" "), _c('div', {
     staticClass: "small-6 medium-2 columns text-center item-liga"
   }, [_c('strong', {
     staticClass: "show-for-small-only"
-  }, [_vm._v("Usuarios: ")]), _vm._v(" " + _vm._s(_vm.league.users_count))]), _vm._v(" "), _c('div', {
-    staticClass: "small-6 medium-2 columns text-right item-liga"
+  }, [_vm._v("Usuarios: ")]), _vm._v(" " + _vm._s(_vm.league.users_count) + "\n    ")]), _vm._v(" "), _c('div', {
+    staticClass: "small-6 medium-2 columns text-center item-liga"
   }, [_c('strong', {
     staticClass: "show-for-small-only"
-  }, [_vm._v("Puntos: ")]), _vm._v(_vm._s(_vm.league.users_points))]), _vm._v(" "), _vm._m(0)])
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
+  }, [_vm._v("Puntos: ")]), _vm._v(_vm._s(_vm.league.users_points) + "\n    ")]), _vm._v(" "), _c('div', {
     staticClass: "medium-2 columns text-center close "
-  }, [_c('i', {
-    staticClass: "fi-x-circle"
-  }), _vm._v(" "), _c('strong', {
-    staticClass: "show-for-small-only"
-  }, [_vm._v("Abandonar")])])
-}]}
+  }, [(_vm.editable) ? _c('a', {
+    staticClass: "button small",
+    attrs: {
+      "href": '/ligas?edit=' + _vm.league.id
+    }
+  }, [_vm._v("Editar")]) : _vm._e(), _vm._v(" "), (!_vm.editable) ? _c('a', {
+    staticClass: "button alert small",
+    on: {
+      "click": _vm.leaveLeague
+    }
+  }, [_vm._v("Abandonar")]) : _vm._e()])])
+},staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
@@ -19627,7 +20806,235 @@ if (false) {
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-6d42066c\",\"hasScoped\":false}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/Game.vue":
+/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-714d7868\",\"hasScoped\":false}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/users/ChangePassword.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [_c('div', {
+    staticClass: "section"
+  }, [_vm._v("Cambiar contraseña")]), _vm._v(" "), _c('label', [_vm._v("Nueva contraseña\n        "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.password),
+      expression: "password"
+    }],
+    class: {
+      'is-invalid-input': _vm.errors.password
+    },
+    attrs: {
+      "type": "password",
+      "name": "password",
+      "id": "password"
+    },
+    domProps: {
+      "value": (_vm.password)
+    },
+    on: {
+      "keyup": function($event) {
+        _vm.resetErrors('password')
+      },
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.password = $event.target.value
+      }
+    }
+  }), _vm._v(" "), (_vm.errors.password) ? _c('span', {
+    staticClass: "form-error is-visible"
+  }, [_vm._v(_vm._s(_vm.errors.password[0]))]) : _vm._e()]), _vm._v(" "), _c('label', [_vm._v("Confirmar contraseña\n        "), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.password_confirmation),
+      expression: "password_confirmation"
+    }],
+    class: {
+      'is-invalid-input': _vm.errors.password_confirmation
+    },
+    attrs: {
+      "id": "password-confirm",
+      "type": "password",
+      "name": "password_confirmation",
+      "required": ""
+    },
+    domProps: {
+      "value": (_vm.password_confirmation)
+    },
+    on: {
+      "keyup": function($event) {
+        _vm.resetErrors('password_confirmation')
+      },
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.password_confirmation = $event.target.value
+      }
+    }
+  }), _vm._v(" "), (_vm.errors.password_confirmation) ? _c('span', {
+    staticClass: "form-error is-visible"
+  }, [_vm._v(_vm._s(_vm.errors.password_confirmation[0]))]) : _vm._e()]), _vm._v(" "), _c('a', {
+    staticClass: "button expanded",
+    on: {
+      "click": _vm.changePassword
+    }
+  }, [_vm._v("Modificar contraseña")])])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-714d7868", module.exports)
+  }
+}
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-7a27d17a\",\"hasScoped\":false}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/game/Summary.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [_c('div', {
+    staticClass: "row"
+  }, [_c('div', {
+    staticClass: "medium-6 columns"
+  }, [_c('label', [_vm._v("Ligas\n                "), _c('select', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.league.id),
+      expression: "league.id"
+    }],
+    attrs: {
+      "name": "league",
+      "id": "league",
+      "autofocus": ""
+    },
+    on: {
+      "change": [function($event) {
+        var $$selectedVal = Array.prototype.filter.call($event.target.options, function(o) {
+          return o.selected
+        }).map(function(o) {
+          var val = "_value" in o ? o._value : o.value;
+          return val
+        });
+        _vm.league.id = $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+      }, _vm.loadSummary]
+    }
+  }, [_c('option', {
+    attrs: {
+      "value": "0"
+    }
+  }, [_vm._v("Clasificación General")]), _vm._v(" "), _vm._l((_vm.leagues), function(lg) {
+    return _c('option', {
+      domProps: {
+        "value": lg.id
+      }
+    }, [_vm._v(_vm._s(lg.name))])
+  })], 2)])]), _vm._v(" "), _c('div', {
+    staticClass: "medium-6 columns"
+  }, [_c('label', [_vm._v("Fechas\n                "), _c('select', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.round.id),
+      expression: "round.id"
+    }],
+    attrs: {
+      "name": "round",
+      "id": "round"
+    },
+    on: {
+      "change": [function($event) {
+        var $$selectedVal = Array.prototype.filter.call($event.target.options, function(o) {
+          return o.selected
+        }).map(function(o) {
+          var val = "_value" in o ? o._value : o.value;
+          return val
+        });
+        _vm.round.id = $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+      }, _vm.loadSummary]
+    }
+  }, [_c('option', {
+    attrs: {
+      "value": "0"
+    }
+  }, [_vm._v("Seleccione")]), _vm._v(" "), _vm._l((_vm.rounds), function(rnd) {
+    return _c('option', {
+      domProps: {
+        "value": rnd.id
+      }
+    }, [_vm._v(_vm._s(rnd.name) + "\n                        "), _c('small', [_vm._v("(" + _vm._s(rnd.start) + " - " + _vm._s(rnd.end) + ")")])])
+  })], 2)])])]), _vm._v(" "), _c('div', {
+    staticClass: "row"
+  }, [_c('div', {
+    staticClass: "medium-12 columns"
+  }, [_c('div', {
+    staticClass: "row columns resumen text-center"
+  }, [_c('div', {
+    staticClass: "medium-4 medium-offset-1 columns status"
+  }, [_vm._v("Posición en esta liga: "), _c('strong', [_vm._v(_vm._s(_vm.position))])]), _vm._v(" "), _c('div', {
+    staticClass: "medium-4 columns status"
+  }, [_vm._v(" Puntaje acumulado: "), _c('strong', [_vm._v(_vm._s(_vm.userpoints))])]), _vm._v(" "), _vm._m(0)]), _vm._v(" "), _vm._m(1), _vm._v(" "), _vm._l((_vm.matches), function(match) {
+    return _c('div', {
+      staticClass: "row item column gutter-small partido"
+    }, [_c('div', {
+      staticClass: "medium-2 columns fecha text-left"
+    }, [_vm._v(" " + _vm._s(match.when))]), _vm._v(" "), _c('div', {
+      staticClass: "small-6 medium-4 columns text-right"
+    }, [_vm._v("\n                    " + _vm._s(match.local_id.name) + "\n                    "), _c('img', {
+      attrs: {
+        "src": '/storage/' + match.local_id.small_image,
+        "alt": match.local_id.name
+      }
+    }), _vm._v("\n                    " + _vm._s(match.local_score) + "\n                ")]), _vm._v(" "), _c('div', {
+      staticClass: "small-6 medium-4 columns left"
+    }, [_vm._v("\n                    " + _vm._s(match.visit_score) + "\n                    "), _c('img', {
+      attrs: {
+        "src": '/storage/' + match.visit_id.small_image,
+        "alt": match.visit_id.name
+      }
+    }), _vm._v("\n                    " + _vm._s(match.visit_id.name) + "\n                ")]), _vm._v(" "), _c('div', {
+      staticClass: "medium-2 columns text-center puntaje"
+    }, [_c('strong', {
+      staticClass: "show-for-small-only"
+    }, [_vm._v("Puntos: ")]), _vm._v(_vm._s(match.points))])])
+  }), _vm._v(" "), _c('hr'), _vm._v(" "), _c('div', {
+    staticClass: "row columns gutter-small"
+  }, [_c('div', {
+    staticClass: "text-center suma"
+  }, [_vm._v(" Puntaje total de fecha: "), _c('strong', [_vm._v(_vm._s(_vm.totalPoints) + " Puntos")])])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('hr', {
+    staticClass: "light"
+  })], 2)])])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "medium-2 columns end"
+  }, [_c('a', {
+    staticClass: "button small expanded",
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Ver Detalle")])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "row columns encabezado hide-for-small-only"
+  }, [_c('div', {
+    staticClass: "medium-2 columns text-left"
+  }, [_vm._v("Fecha")]), _vm._v(" "), _c('div', {
+    staticClass: "medium-8 columns text-center"
+  }, [_vm._v("Encuentro")]), _vm._v(" "), _c('div', {
+    staticClass: "medium-2 columns text-center"
+  }, [_vm._v("Puntos")])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-7a27d17a", module.exports)
+  }
+}
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-c32bec32\",\"hasScoped\":false}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/game/Play.vue":
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -19696,20 +21103,12 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }) : _c('i', {
       staticClass: "fi-clock"
     })]), _vm._v(" "), _c('div', {
-      staticClass: "small-6 medium-2 columns text-right home"
-    }, [_vm._v("\n                    " + _vm._s(match.local_id.name) + "\n                    "), _c('img', {
-      attrs: {
-        "src": '/storage/' + match.local_id.small_image,
-        "alt": match.local_id.name
-      }
-    })]), _vm._v(" "), _c('div', {
-      staticClass: "small-6 medium-2 medium-push-3 columns text-left away"
-    }, [_c('img', {
-      attrs: {
-        "src": '/storage/' + match.visit_id.small_image,
-        "alt": match.visit_id.name
-      }
-    }), _vm._v("\n                    " + _vm._s(match.visit_id.name) + "\n                ")]), _vm._v(" "), _c('div', {
+      staticClass: "small-5 medium-2 columns text-right home"
+    }, [_vm._v("\n                    " + _vm._s(match.local_id.name) + "\n                    ")]), _vm._v(" "), _c('div', {
+      staticClass: "small-2 columns text-center show-for-small-only versus"
+    }, [_vm._v("VS")]), _vm._v(" "), _c('div', {
+      staticClass: "small-5 medium-2 medium-push-3 columns text-left away"
+    }, [_vm._v("\n                    " + _vm._s(match.visit_id.name) + "\n                ")]), _vm._v(" "), _c('div', {
       staticClass: "small-12 medium-3 medium-pull-2 columns text-center"
     }, [_c('div', {
       staticClass: "row text-center"
@@ -19803,15 +21202,15 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         "for": 'visit' + index
       }
     }, [_vm._v("Gana")])])])]), _vm._v(" "), _c('div', {
-      staticClass: "small-4 medium-1 columns text-center marcador"
+      staticClass: "small-6 medium-1 columns text-center marcador"
     }, [_c('strong', {
       staticClass: "show-for-small-only"
     }, [_vm._v("Marcador: ")]), _vm._v("\n                    " + _vm._s(match.local_score) + " - " + _vm._s(match.visit_score) + "\n                ")]), _vm._v(" "), _c('div', {
-      staticClass: "small-4 medium-1 columns text-center puntaje"
+      staticClass: "small-6 medium-1 columns text-center puntaje"
     }, [_c('strong', {
       staticClass: "show-for-small-only"
     }, [_vm._v("Puntos: ")]), _vm._v(_vm._s(match.points))]), _vm._v(" "), _c('div', {
-      staticClass: "small-4 medium-1 columns canal text-right"
+      staticClass: "medium-1 columns canal"
     }, [_c('img', {
       staticClass: "logo",
       attrs: {
@@ -19819,7 +21218,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         "alt": "DirecTV"
       }
     }), _vm._v(_vm._s(match.channel) + "\n                ")])])
-  }), _vm._v(" "), _c('hr'), _vm._v(" "), _c('div', {
+  }), _vm._v(" "), _c('hr'), _vm._v(" "), _c('hr'), _vm._v(" "), _c('div', {
     staticClass: "row columns gutter-small"
   }, [_c('div', {
     staticClass: "text-center suma"
@@ -19889,7 +21288,7 @@ module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-6d42066c", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-c32bec32", module.exports)
   }
 }
 
@@ -30069,9 +31468,15 @@ window.Vue = __webpack_require__("./node_modules/vue/dist/vue.common.js");
  */
 
 Vue.component('example', __webpack_require__("./resources/assets/js/components/Example.vue"));
-Vue.component('game', __webpack_require__("./resources/assets/js/components/Game.vue"));
+Vue.component('game', __webpack_require__("./resources/assets/js/components/game/Play.vue"));
+Vue.component('game-summary', __webpack_require__("./resources/assets/js/components/game/Summary.vue"));
 Vue.component('ranking', __webpack_require__("./resources/assets/js/components/Ranking.vue"));
 Vue.component('league-summary', __webpack_require__("./resources/assets/js/components/leagues/Summary.vue"));
+Vue.component('league-create', __webpack_require__("./resources/assets/js/components/leagues/Create.vue"));
+Vue.component('league-join', __webpack_require__("./resources/assets/js/components/leagues/Join.vue"));
+Vue.component('league-invite', __webpack_require__("./resources/assets/js/components/leagues/Invite.vue"));
+Vue.component('contact', __webpack_require__("./resources/assets/js/components/utils/Contact.vue"));
+Vue.component('change-password', __webpack_require__("./resources/assets/js/components/users/ChangePassword.vue"));
 
 var app = new Vue({
   el: '#app'
@@ -30173,47 +31578,6 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ "./resources/assets/js/components/Game.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var Component = __webpack_require__("./node_modules/vue-loader/lib/component-normalizer.js")(
-  /* script */
-  __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/Game.vue"),
-  /* template */
-  __webpack_require__("./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-6d42066c\",\"hasScoped\":false}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/Game.vue"),
-  /* styles */
-  null,
-  /* scopeId */
-  null,
-  /* moduleIdentifier (server only) */
-  null
-)
-Component.options.__file = "/Applications/MAMP/htdocs/fansports/resources/assets/js/components/Game.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] Game.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-6d42066c", Component.options)
-  } else {
-    hotAPI.reload("data-v-6d42066c", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-
 /***/ "./resources/assets/js/components/Ranking.vue":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -30255,6 +31619,211 @@ module.exports = Component.exports
 
 /***/ }),
 
+/***/ "./resources/assets/js/components/game/Play.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var Component = __webpack_require__("./node_modules/vue-loader/lib/component-normalizer.js")(
+  /* script */
+  __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/game/Play.vue"),
+  /* template */
+  __webpack_require__("./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-c32bec32\",\"hasScoped\":false}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/game/Play.vue"),
+  /* styles */
+  null,
+  /* scopeId */
+  null,
+  /* moduleIdentifier (server only) */
+  null
+)
+Component.options.__file = "/Applications/MAMP/htdocs/fansports/resources/assets/js/components/game/Play.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] Play.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-c32bec32", Component.options)
+  } else {
+    hotAPI.reload("data-v-c32bec32", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/game/Summary.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var Component = __webpack_require__("./node_modules/vue-loader/lib/component-normalizer.js")(
+  /* script */
+  __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/game/Summary.vue"),
+  /* template */
+  __webpack_require__("./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-7a27d17a\",\"hasScoped\":false}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/game/Summary.vue"),
+  /* styles */
+  null,
+  /* scopeId */
+  null,
+  /* moduleIdentifier (server only) */
+  null
+)
+Component.options.__file = "/Applications/MAMP/htdocs/fansports/resources/assets/js/components/game/Summary.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] Summary.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-7a27d17a", Component.options)
+  } else {
+    hotAPI.reload("data-v-7a27d17a", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/leagues/Create.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var Component = __webpack_require__("./node_modules/vue-loader/lib/component-normalizer.js")(
+  /* script */
+  __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/leagues/Create.vue"),
+  /* template */
+  __webpack_require__("./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-5a9752c1\",\"hasScoped\":false}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/leagues/Create.vue"),
+  /* styles */
+  null,
+  /* scopeId */
+  null,
+  /* moduleIdentifier (server only) */
+  null
+)
+Component.options.__file = "/Applications/MAMP/htdocs/fansports/resources/assets/js/components/leagues/Create.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] Create.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-5a9752c1", Component.options)
+  } else {
+    hotAPI.reload("data-v-5a9752c1", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/leagues/Invite.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var Component = __webpack_require__("./node_modules/vue-loader/lib/component-normalizer.js")(
+  /* script */
+  __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/leagues/Invite.vue"),
+  /* template */
+  __webpack_require__("./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-5064124e\",\"hasScoped\":false}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/leagues/Invite.vue"),
+  /* styles */
+  null,
+  /* scopeId */
+  null,
+  /* moduleIdentifier (server only) */
+  null
+)
+Component.options.__file = "/Applications/MAMP/htdocs/fansports/resources/assets/js/components/leagues/Invite.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] Invite.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-5064124e", Component.options)
+  } else {
+    hotAPI.reload("data-v-5064124e", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/leagues/Join.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var Component = __webpack_require__("./node_modules/vue-loader/lib/component-normalizer.js")(
+  /* script */
+  __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/leagues/Join.vue"),
+  /* template */
+  __webpack_require__("./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-3b2d2f2f\",\"hasScoped\":false}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/leagues/Join.vue"),
+  /* styles */
+  null,
+  /* scopeId */
+  null,
+  /* moduleIdentifier (server only) */
+  null
+)
+Component.options.__file = "/Applications/MAMP/htdocs/fansports/resources/assets/js/components/leagues/Join.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] Join.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-3b2d2f2f", Component.options)
+  } else {
+    hotAPI.reload("data-v-3b2d2f2f", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
 /***/ "./resources/assets/js/components/leagues/Summary.vue":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -30285,6 +31854,88 @@ if (false) {(function () {
     hotAPI.createRecord("data-v-5d76409e", Component.options)
   } else {
     hotAPI.reload("data-v-5d76409e", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/users/ChangePassword.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var Component = __webpack_require__("./node_modules/vue-loader/lib/component-normalizer.js")(
+  /* script */
+  __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/users/ChangePassword.vue"),
+  /* template */
+  __webpack_require__("./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-714d7868\",\"hasScoped\":false}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/users/ChangePassword.vue"),
+  /* styles */
+  null,
+  /* scopeId */
+  null,
+  /* moduleIdentifier (server only) */
+  null
+)
+Component.options.__file = "/Applications/MAMP/htdocs/fansports/resources/assets/js/components/users/ChangePassword.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] ChangePassword.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-714d7868", Component.options)
+  } else {
+    hotAPI.reload("data-v-714d7868", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/utils/Contact.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var Component = __webpack_require__("./node_modules/vue-loader/lib/component-normalizer.js")(
+  /* script */
+  __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/utils/Contact.vue"),
+  /* template */
+  __webpack_require__("./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-45f1a7b8\",\"hasScoped\":false}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/utils/Contact.vue"),
+  /* styles */
+  null,
+  /* scopeId */
+  null,
+  /* moduleIdentifier (server only) */
+  null
+)
+Component.options.__file = "/Applications/MAMP/htdocs/fansports/resources/assets/js/components/utils/Contact.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] Contact.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-45f1a7b8", Component.options)
+  } else {
+    hotAPI.reload("data-v-45f1a7b8", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
