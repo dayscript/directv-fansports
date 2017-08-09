@@ -80,8 +80,7 @@ class LoginController extends Controller
                 }else {
                     $name = $user->getName();
                     $first = trim(substr($name,0,strpos($name,' ')));
-                    $last = trim(str_replace($name,$first,''));
-
+                    $last = trim(str_replace($first,'', $name));
                     $us = User::create(['email' => $user->getEmail(), 'name' => $first,'last'=>$last]);
                     auth()->login($us);
                 }
