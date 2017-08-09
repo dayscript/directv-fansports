@@ -78,7 +78,11 @@ class LoginController extends Controller
                 if ($us){
                     auth()->login($us);
                 }else {
-                    $us = User::create(['email' => $user->getEmail(), 'name' => $user->getName()]);
+                    $name = $user->getName();
+                    $first = trim(substr($name,0,strpos($name,' ')));
+                    $last = trim(str_replace($name,$first,''));
+
+                    $us = User::create(['email' => $user->getEmail(), 'name' => $first,'last'=>$last]);
                     auth()->login($us);
                 }
             }
