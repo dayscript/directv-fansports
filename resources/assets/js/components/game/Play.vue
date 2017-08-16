@@ -72,12 +72,9 @@
                     </div>
                     <div class="small-5 medium-2 columns text-right home">
                         {{ match.local_id.name }}
-                        <!--<img :src="'/storage/'+match.local_id.small_image" :alt="match.local_id.name">-->
-                        <!--http://images.akamai.opta.net/football/team/badges_150/3.png-->
                     </div>
                     <div class="small-2 columns text-center show-for-small-only versus">VS</div>
                     <div class="small-5 medium-2 medium-push-3 columns text-left away">
-                        <!--<img :src="'/storage/'+match.visit_id.small_image" :alt="match.visit_id.name">-->
                         {{ match.visit_id.name }}
                     </div>
                     <div class="small-12 medium-3 medium-pull-2 columns text-center">
@@ -92,18 +89,9 @@
                     <div class="small-6 medium-1 columns text-center marcador"><strong class="show-for-small-only">Marcador: </strong>
                         {{ match.local_score }} - {{ match.visit_score }}
                     </div>
-<<<<<<< HEAD
-                    <div class="small-6 medium-1 columns text-center puntaje"><strong class="show-for-small-only">Puntos: </strong>{{ match.points }}</div>
-                    <div class="medium-1 columns canal">
-                        <img class="logo" :src="'/img/channels/'+ match.channel +'.png'" alt="DirecTV">{{ match.channel }}
-=======
-                    <div class="small-4 medium-1 columns text-center puntaje"><strong class="show-for-small-only">Puntos: </strong>{{ match.points
-                        }}
-                    </div>
+                    <div class="small-4 medium-1 columns text-center puntaje"><strong class="show-for-small-only">Puntos: </strong>{{ match.points }}</div>
                     <div class="small-4 medium-1 columns canal text-right">
-                        <img class="logo" :src="'/img/channels/'+ match.channel +'.png'" alt="DirecTV">{{ match.channel
-                        }}
->>>>>>> a73271d3d5c9a6dbab13a4cceee53cd02a63fccd
+                        <img class="logo" :src="'/img/channels/'+ match.channel +'.png'" alt="DirecTV">{{ match.channel }}
                     </div>
                 </div>
                 <hr>
