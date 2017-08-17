@@ -4,13 +4,16 @@
             <h3 class="light show-for-small-only">Las mejores ligas</h3>
         </div>
         <div class="row">
-            <div class="medium-4 large-3 large-offset-3 columns text-center">
+            <div class="medium-3 columns text-center">
+                <img class="logo" src="{{ asset('img/logos/mejores-ligas.png') }}" alt="Directv">
+            </div>
+            <div class="medium-3 columns text-center">
                 <img class="logo" src="{{ asset('img/logos/premier_league.png') }}" alt="Premier League">
             </div>
-            <div class="medium-4 large-3 columns text-center">
+            <div class="medium-3 columns text-center">
                 <img class="logo" src="{{ asset('img/logos/la-liga.png') }}" alt="La Liga">
             </div>
-            <div class="medium-4 large-3 columns text-center">
+            <div class="medium-3 columns text-center">
                 <img class="logo" src="{{ asset('img/logos/ligue-1.png') }}" alt="Ligue 1">
             </div>
         </div>
