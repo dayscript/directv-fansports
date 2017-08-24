@@ -20,28 +20,32 @@
             </div>
             <div class="medium-4 columns">
                 <div class="row" v-if="round.special">
-                    <div class="medium-7 column comodin" v-if="!round.code && round.editable">
-                        <label>Comodín <img src="/img/logos/servientrega.png" alt="Comodín Servientrega" class="comodin-img">
-                            <div class="input-group">
-                                <input class="input-group-field" type="text" placeholder="Ingrese su código" v-model="code" v-on:keyup="resetErrors('code')" :class="{ 'is-invalid-input' : errors.code }">
-                                <div class="input-group-button">
-                                    <input type="button" class="button" value="Enviar" @click="applyCode"></div>
-                            </div>
-                        </label>
+                    <div class="medium-12 column">
+                        <img src="/img/logos/semana-servientrega.png" height="104" width="448"/>
                     </div>
-                    <div class="medium-7 column comodin" v-else>
-                        <label>Comodín <img src="/img/logos/servientrega.png" alt="Comodín Servientrega" class="comodin-img">
-                            <div class="input-group">
-                                <input disabled class="input-group-field" type="text" placeholder="Ingrese su código" v-model="code">
-                                <div class="input-group-button">
-                                    <input disabled type="button" class="button" value="Enviar" @click="applyCode"></div>
-                            </div>
-                        </label>
-                    </div>
-                    <div class="medium-5 column">
-                        <p class="nota">
-                            Ingrese su código Servientrega y duplique el valor de sus aciertos para las fechas de esta semana.</p>
-                    </div>
+                    <!--<div class="medi
+                    v-if="!round.code && round.editable">-->
+                        <!--<label>Comodín <img src="/img/logos/servientrega.png" alt="Comodín Servientrega" class="comodin-img">-->
+                            <!--<div class="input-group">-->
+                                <!--<input class="input-group-field" type="text" placeholder="Ingrese su código" v-model="code" v-on:keyup="resetErrors('code')" :class="{ 'is-invalid-input' : errors.code }">-->
+                                <!--<div class="input-group-button">-->
+                                    <!--<input type="button" class="button" value="Enviar" @click="applyCode"></div>-->
+                            <!--</div>-->
+                        <!--</label>-->
+                    <!--</div>-->
+                    <!--<div class="medium-7 column comodin" v-else>-->
+                        <!--<label>Comodín <img src="/img/logos/servientrega.png" alt="Comodín Servientrega" class="comodin-img">-->
+                            <!--<div class="input-group">-->
+                                <!--<input disabled class="input-group-field" type="text" placeholder="Ingrese su código" v-model="code">-->
+                                <!--<div class="input-group-button">-->
+                                    <!--<input disabled type="button" class="button" value="Enviar" @click="applyCode"></div>-->
+                            <!--</div>-->
+                        <!--</label>-->
+                    <!--</div>-->
+                    <!--<div class="medium-5 column">-->
+                        <!--<p class="nota">-->
+                            <!--Ingrese su código Servientrega y duplique el valor de sus aciertos para las fechas de esta semana.</p>-->
+                    <!--</div>-->
                 </div>
             </div>
         </div>
@@ -66,7 +70,7 @@
                 <div class="row item column gutter-small partido" v-for="(match,index) in matches">
                     <div class="medium-1 columns fecha text-left">{{ match.when }}</div>
                     <div class="medium-1 columns text-center status">
-                        <i class="fi-lock" v-if="match.status=='finished'"></i>
+                        <i class="fi-lock" v-if="!match.editable || match.status=='finished'"></i>
                         <i class="fi-play" v-else-if="match.status=='playing'"></i>
                         <i class="fi-clock" v-else></i>
                     </div>
@@ -97,7 +101,7 @@
                 <hr>
                 <hr>
                 <div class="row columns gutter-small">
-                    <div class="text-center suma"> Puntaje total <span v-if="round.code" style="color:#009F33;font-weight: bold;">X2</span> de fecha: <strong>{{ totalPoints }} Puntos</strong>
+                    <div class="text-center suma"> Puntaje total <span v-if="round.special" style="color:#009F33;font-weight: bold;">X3</span> de fecha: <strong>{{ totalPoints }} Puntos</strong>
                     </div>
                 </div>
                 <hr>

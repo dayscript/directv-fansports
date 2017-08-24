@@ -10,7 +10,7 @@
                         Próxima fecha: <strong>{{ $selected_round?$selected_round->name:'' }}</strong>
                     </h3>
                     @if($selected_round)
-                        @forelse($selected_round->matches as $match)
+                        @forelse($selected_round->matches()->take(10)->get() as $match)
                             <div class="row item column gutter-small">
                                 <div class="small-9 medium-2 end columns fecha"> {{ $match->when }}</div>
                                 <div class="small-9 medium-8 columns equipos">

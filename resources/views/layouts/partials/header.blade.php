@@ -18,6 +18,7 @@
                         <li class="{{ request()->is('ligas')?'is-active':'' }}"><a href="/ligas">Ligas</a></li>
                         <li class="{{ request()->is('ranking')?'is-active':'' }}"><a href="/ranking">Ranking</a></li>
                         <li class="{{ request()->is('como-jugar')?'is-active':'' }}"><a href="/como-jugar">Cómo jugar</a></li>
+                        <li class="{{ request()->is('premios')?'is-active':'' }}"><a href="/premios">Premios</a></li>
                         @auth
                             <a href="#" class="button" onclick="$('.login.in').slideToggle();"><i class="fi-torso"> </i> {{ Auth::user()->name }}</a>
                         @endauth

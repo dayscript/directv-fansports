@@ -13,7 +13,9 @@
                 <div class="medium-6 columns">
                     <div class="section">Resumen</div>
                     <div class="usuario">
-                        <strong>{{ $user->full_name }}</strong> <br>Email: <strong>{{ $user->email }}</strong> <br>Pais: <strong>{{ $user->country }}</strong> <br>Ciudad: <strong>{{ $user->city }}</strong> <br>Fecha de registro: <strong>{{ $user->created_at }}</strong>
+                        <strong>{{ $user->full_name }}</strong> <br>
+                        {{--Email: <strong>{{ $user->email }}</strong> <br>--}}
+                        Pais: <strong>{{ $user->country }}</strong> <br>Ciudad: <strong>{{ $user->city }}</strong> <br>Fecha de registro: <strong>{{ $user->created_at }}</strong>
                         <br>Último ingreso: <strong> {{ $user->updated_at->diffForHumans() }}</strong>
                     </div>
                     <hr class="light">

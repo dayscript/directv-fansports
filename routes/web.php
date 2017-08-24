@@ -20,6 +20,7 @@ Route::get('como-jugar', 'HomeController@instructions');
 Route::get('terminos-y-condiciones', 'HomeController@terms');
 Route::get('politica-de-privacidad', 'HomeController@privacy');
 Route::get('soporte', 'HomeController@support');
+Route::get('premios', 'HomeController@premios');
 Route::get('pronosticos', 'HomeController@game');
 Route::get('ligas', 'HomeController@ligas');
 Route::get('ranking', 'HomeController@ranking');

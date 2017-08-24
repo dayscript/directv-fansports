@@ -16,36 +16,35 @@
                 <hr class="green">
                 <div class="row">
                     <div class="medium-6 columns">
+                        <label>Tipo de identificación
+                            @php($types = collect(['CC'=>'Cédula de ciudadanía','CE'=>'Cédula de extranjería','PASSPORT'=>'Pasaporte']))
+                            <select name="identification_type" class="{{ $errors->has('identification_type') ? ' is-invalid-input' : '' }}">
+                                @foreach($types as $key=>$type)
+                                    <option {{ ($key==old('identification_type','CC'))?'selected':'' }} value="{{ $key }}">{{ $type }}</option>
+                                @endforeach
+                            </select>
+                            @if ($errors->has('identification_type'))
+                                <span class="form-error is-visible">{{ $errors->first('identification_type') }}</span>
+                            @endif
+                        </label>
+                    </div>
+                    <div class="medium-6 columns">
+                        <label>
+                            Identificación
+                            <input type="text" name="identification" class="{{ $errors->has('identification') ? ' is-invalid-input' : '' }}" value="{{ old('identification') }}" required autofocus>
+                            @if ($errors->has('identification'))
+                                <span class="form-error is-visible">{{ $errors->first('identification') }}</span>
+                            @endif
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="medium-6 columns">
                         <label>
                             Nombres
                             <input type="text" name="name" class="{{ $errors->has('name') ? ' is-invalid-input' : '' }}" value="{{ old('name') }}" required autofocus>
                             @if ($errors->has('name'))
                                 <span class="form-error is-visible">{{ $errors->first('name') }}</span>
-                            @endif
-                        </label>
-                        <label>
-                            Email
-                            <input type="email" name="email" class="{{ $errors->has('email') ? ' is-invalid-input' : '' }}" value="{{ old('email') }}" required>
-                            @if ($errors->has('email'))
-                                <span class="form-error is-visible">{{ $errors->first('email') }}</span>
-                            @endif
-                        </label>
-                        <label>Pais
-                            @php($countries = App\Http\Utilities\Country::all())
-                            <select name="country" class="{{ $errors->has('country') ? ' is-invalid-input' : '' }}">
-                                @foreach($countries as $key=>$country)
-                                    <option {{ ($key==old('country','CO'))?'selected':'' }} value="{{ $key }}">{{ $country }}</option>
-                                @endforeach
-                            </select>
-                            @if ($errors->has('country'))
-                                <span class="form-error is-visible">{{ $errors->first('country') }}</span>
-                            @endif
-                        </label>
-                        <label>
-                            Contraseña
-                            <input type="password" name="password" class="{{ $errors->has('password') ? ' is-invalid-input' : '' }}" required>
-                            @if ($errors->has('password'))
-                                <span class="form-error is-visible">{{ $errors->first('password') }}</span>
                             @endif
                         </label>
                     </div>
@@ -57,6 +56,19 @@
                                 <span class="form-error is-visible">{{ $errors->first('last') }}</span>
                             @endif
                         </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="medium-6 columns">
+                        <label>
+                            Email
+                            <input type="email" name="email" class="{{ $errors->has('email') ? ' is-invalid-input' : '' }}" value="{{ old('email') }}" required>
+                            @if ($errors->has('email'))
+                                <span class="form-error is-visible">{{ $errors->first('email') }}</span>
+                            @endif
+                        </label>
+                    </div>
+                    <div class="medium-6 columns">
                         <label>
                             Celular
                             <input type="text" name="phone" class="{{ $errors->has('phone') ? ' is-invalid-input' : '' }}" value="{{ old('phone') }}">
@@ -64,6 +76,23 @@
                                 <span class="form-error is-visible">{{ $errors->first('phone') }}</span>
                             @endif
                         </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="medium-6 columns">
+                        <label>Pais
+                            @php($countries = App\Http\Utilities\Country::all())
+                            <select name="country" class="{{ $errors->has('country') ? ' is-invalid-input' : '' }}">
+                                @foreach($countries as $key=>$country)
+                                    <option {{ ($key==old('country','CO'))?'selected':'' }} value="{{ $key }}">{{ $country }}</option>
+                                @endforeach
+                            </select>
+                            @if ($errors->has('country'))
+                                <span class="form-error is-visible">{{ $errors->first('country') }}</span>
+                            @endif
+                        </label>
+                    </div>
+                    <div class="medium-6 columns">
                         <label>Ciudad
                             <select name="city">
                                 <option value="" {{ old('city','Bogotá')==''?'selected':'' }}>Seleccione</option>
@@ -73,6 +102,19 @@
                                 <span class="form-error is-visible">{{ $errors->first('city') }}</span>
                             @endif
                         </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="medium-6 columns">
+                        <label>
+                            Contraseña
+                            <input type="password" name="password" class="{{ $errors->has('password') ? ' is-invalid-input' : '' }}" required>
+                            @if ($errors->has('password'))
+                                <span class="form-error is-visible">{{ $errors->first('password') }}</span>
+                            @endif
+                        </label>
+                    </div>
+                    <div class="medium-6 columns">
                         <label>
                             Confirmar contraseña
                             <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>

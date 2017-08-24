@@ -101,8 +101,11 @@ class Match extends Model
             $result = 'undefined';
         }
         foreach ($this->predictions as $prediction){
-            if ($code = Code::where('round_id',$this->roundId->id)->where('user_id',auth()->user()->id)->first()){
-                $points = 2*$points;
+//            if ($code = Code::where('round_id',$this->roundId->id)->where('user_id',auth()->user()->id)->first()){
+//                $points = 2*$points;
+//            }
+            if($this->roundId->special){
+                $points = 3*$points;
             }
             if($result == $prediction->value && $this->status != 'pending'){
                 $prediction->points = $points;

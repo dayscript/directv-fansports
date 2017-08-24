@@ -69,6 +69,16 @@ class HomeController extends Controller
         return view('privacy',compact('page'));
     }
     /**
+     * Show premios page
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function premios()
+    {
+        $page = Page::firstOrCreate(['slug'=>'premios'],['title'=>'Premios']);
+        return view('premios',compact('page'));
+    }
+    /**
      * Show Ligas page
      *
      * @return \Illuminate\Http\Response

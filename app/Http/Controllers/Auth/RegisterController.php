@@ -48,14 +48,16 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name'     => 'required|string|max:255',
-            'last'     => 'required|string|max:255',
-            'phone'    => 'required|min:5',
-            'email'    => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6|confirmed',
-            'country'  => 'required',
-            'city'     => 'required',
-            'gender'   => 'required',
+            'name'                => 'required|string|max:255',
+            'last'                => 'required|string|max:255',
+            'identification_type' => 'required',
+            'identification'      => 'required|unique:users',
+            'phone'               => 'required|min:5',
+            'email'               => 'required|string|email|max:255|unique:users',
+            'password'            => 'required|string|min:6|confirmed',
+            'country'             => 'required',
+            'city'                => 'required',
+            'gender'              => 'required',
         ]);
     }
 
@@ -68,15 +70,17 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name'     => $data['name'],
-            'last'     => $data['last'],
-            'phone'     => $data['phone'],
-            'country'     => $data['country'],
-            'promotions'     => $data['promotions'],
-            'city'     => $data['city'],
-            'email'    => $data['email'],
-            'gender'    => $data['gender'],
-            'password' => bcrypt($data['password']),
+            'name'                => $data['name'],
+            'identification'      => $data['identification'],
+            'identification_type' => $data['identification_type'],
+            'last'                => $data['last'],
+            'phone'               => $data['phone'],
+            'country'             => $data['country'],
+            'promotions'          => $data['promotions'] ?? 0,
+            'city'                => $data['city'],
+            'email'               => $data['email'],
+            'gender'              => $data['gender'],
+            'password'            => bcrypt($data['password']),
         ]);
     }
 }
