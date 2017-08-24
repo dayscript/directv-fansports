@@ -5,8 +5,9 @@
                 <figure class="orbit-figure">
                     <img class="orbit-image" src="{{ asset('img/banners/slide.jpg') }}" alt="Banner">
                     <figcaption class="orbit-caption text-center hide-for-small-only">
-                        <h5 class="seccion">Premios</h5>
-                        <h1>Lorem ipsum dolor sit amet consectetur adipiscing elited</h1>
+                        <h5 class="seccion">Premio Mayor</h5>
+                        <h2 class="hide-for-large-only">Vive las emociones del partido Real Madrid VS Sevilla en el Santiago Bernabéu</h2>
+                        <a href="premios" class="button">Ver más</a>
                     </figcaption>
                 </figure>
             </li>

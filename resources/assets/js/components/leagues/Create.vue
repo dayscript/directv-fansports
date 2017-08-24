@@ -4,10 +4,7 @@
             <div class="medium-12 columns">
                 <h5 class="title">1. Datos de la liga</h5>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut libero et tellus
-                    sollicitudin aliquam in eget mauris. Proin quis efficitur urna. Nulla ultricies vitae enim
-                    vitae consectetur. Etiam interdum massa urna. Curabitur ut vulputate nulla, at bibendum
-                    nisl. Duis vulputate semper nunc vel commodo.
+                    Crear ligas preivadas para que participar con sus amigos es muy fácil. Sólo debe diligenciar los campos a continuación e invitar a sus amigos usando su cuenta de correo electrónico.
                 </p>
             </div>
             <div class="medium-6 columns">
