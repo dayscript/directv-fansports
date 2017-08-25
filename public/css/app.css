@@ -2013,7 +2013,7 @@ template {
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-size: 95%;
+  font-size: 97%;
 }
 
 *,
@@ -2101,7 +2101,7 @@ textarea {
 }
 
 .row {
-  max-width: 80.26315789rem;
+  max-width: 78.60824742rem;
   margin-right: auto;
   margin-left: auto;
 }
@@ -2128,21 +2128,21 @@ textarea {
 }
 
 .row .row {
-  margin-right: -0.46052632rem;
-  margin-left: -0.46052632rem;
+  margin-right: -0.45103093rem;
+  margin-left: -0.45103093rem;
 }
 
 @media print, screen and (min-width: 40em) {
   .row .row {
-    margin-right: -0.59210526rem;
-    margin-left: -0.59210526rem;
+    margin-right: -0.57989691rem;
+    margin-left: -0.57989691rem;
   }
 }
 
 @media print, screen and (min-width: 64em) {
   .row .row {
-    margin-right: -0.59210526rem;
-    margin-left: -0.59210526rem;
+    margin-right: -0.57989691rem;
+    margin-left: -0.57989691rem;
   }
 }
 
@@ -2166,29 +2166,29 @@ textarea {
 
 .row.gutter-small > .column,
 .row.gutter-small > .columns {
-  padding-right: 0.46052632rem;
-  padding-left: 0.46052632rem;
+  padding-right: 0.45103093rem;
+  padding-left: 0.45103093rem;
 }
 
 .row.gutter-medium > .column,
 .row.gutter-medium > .columns {
-  padding-right: 0.59210526rem;
-  padding-left: 0.59210526rem;
+  padding-right: 0.57989691rem;
+  padding-left: 0.57989691rem;
 }
 
 .column,
 .columns {
   width: 100%;
   float: left;
-  padding-right: 0.46052632rem;
-  padding-left: 0.46052632rem;
+  padding-right: 0.45103093rem;
+  padding-left: 0.45103093rem;
 }
 
 @media print, screen and (min-width: 40em) {
   .column,
   .columns {
-    padding-right: 0.59210526rem;
-    padding-left: 0.59210526rem;
+    padding-right: 0.57989691rem;
+    padding-left: 0.57989691rem;
   }
 }
 
@@ -2607,8 +2607,8 @@ textarea {
 
 .small-uncollapse > .column,
 .small-uncollapse > .columns {
-  padding-right: 0.46052632rem;
-  padding-left: 0.46052632rem;
+  padding-right: 0.45103093rem;
+  padding-left: 0.45103093rem;
 }
 
 .small-centered {
@@ -3024,8 +3024,8 @@ textarea {
 
   .medium-uncollapse > .column,
   .medium-uncollapse > .columns {
-    padding-right: 0.59210526rem;
-    padding-left: 0.59210526rem;
+    padding-right: 0.57989691rem;
+    padding-left: 0.57989691rem;
   }
 
   .medium-centered {
@@ -3442,8 +3442,8 @@ textarea {
 
   .large-uncollapse > .column,
   .large-uncollapse > .columns {
-    padding-right: 0.59210526rem;
-    padding-left: 0.59210526rem;
+    padding-right: 0.57989691rem;
+    padding-left: 0.57989691rem;
   }
 
   .large-centered {
@@ -3468,7 +3468,7 @@ textarea {
 }
 
 .column-block {
-  margin-bottom: 0.92105263rem;
+  margin-bottom: 0.90206186rem;
 }
 
 .column-block > :last-child {
@@ -3477,7 +3477,7 @@ textarea {
 
 @media print, screen and (min-width: 40em) {
   .column-block {
-    margin-bottom: 1.18421053rem;
+    margin-bottom: 1.15979381rem;
   }
 
   .column-block > :last-child {
@@ -3556,42 +3556,42 @@ h6 small {
 }
 
 h1 {
-  font-size: 1.57894737rem;
+  font-size: 1.54639175rem;
   line-height: 1.1;
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
 
 h2 {
-  font-size: 1.31578947rem;
+  font-size: 1.28865979rem;
   line-height: 1.1;
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-size: 1.2242268rem;
   line-height: 1.1;
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
 
 h4 {
-  font-size: 1.18421053rem;
+  font-size: 1.15979381rem;
   line-height: 1.1;
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
 
 h5 {
-  font-size: 1.11842105rem;
+  font-size: 1.09536082rem;
   line-height: 1.1;
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
 
 h6 {
-  font-size: 1.05263158rem;
+  font-size: 1.03092784rem;
   line-height: 1.1;
   margin-top: 0;
   margin-bottom: 0.5rem;
@@ -3599,27 +3599,27 @@ h6 {
 
 @media print, screen and (min-width: 40em) {
   h1 {
-    font-size: 2.76315789rem;
+    font-size: 2.70618557rem;
   }
 
   h2 {
-    font-size: 2.5rem;
+    font-size: 2.44845361rem;
   }
 
   h3 {
-    font-size: 2.03947368rem;
+    font-size: 1.93298969rem;
   }
 
   h4 {
-    font-size: 1.64473684rem;
+    font-size: 1.61082474rem;
   }
 
   h5 {
-    font-size: 1.31578947rem;
+    font-size: 1.28865979rem;
   }
 
   h6 {
-    font-size: 1.05263158rem;
+    font-size: 1.03092784rem;
   }
 }
 
@@ -3641,9 +3641,9 @@ a img {
 
 hr {
   clear: both;
-  max-width: 80.26315789rem;
+  max-width: 78.60824742rem;
   height: 0;
-  margin: 1.31578947rem auto;
+  margin: 1.28865979rem auto;
   border-top: 0;
   border-right: 0;
   border-bottom: 1px solid #cacaca;
@@ -3690,7 +3690,7 @@ dl dt {
 
 blockquote {
   margin: 0 0 1rem;
-  padding: 0.59210526rem 1.31578947rem 0 1.25rem;
+  padding: 0.57989691rem 1.28865979rem 0 1.2242268rem;
   border-left: 1px solid #cacaca;
 }
 
@@ -3702,7 +3702,7 @@ blockquote p {
 
 cite {
   display: block;
-  font-size: 0.85526316rem;
+  font-size: 0.83762887rem;
   color: #8a8a8a;
 }
 
@@ -3722,7 +3722,7 @@ figure {
 }
 
 code {
-  padding: 0.13157895rem 0.32894737rem 0.06578947rem;
+  padding: 0.12886598rem 0.32216495rem 0.06443299rem;
   border: 1px solid #cacaca;
   background-color: #e6e6e6;
   font-family: Consolas, "Liberation Mono", Courier, monospace;
@@ -3732,7 +3732,7 @@ code {
 
 kbd {
   margin: 0;
-  padding: 0.13157895rem 0.26315789rem 0;
+  padding: 0.12886598rem 0.25773196rem 0;
   background-color: #e6e6e6;
   font-family: Consolas, "Liberation Mono", Courier, monospace;
   color: #0a0a0a;
@@ -3747,7 +3747,7 @@ kbd {
 }
 
 .lead {
-  font-size: 118.75%;
+  font-size: 121.25%;
   line-height: 1.6;
 }
 
@@ -3941,16 +3941,16 @@ textarea {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
-  height: 2.56578947rem;
-  margin: 0 0 1.05263158rem;
-  padding: 0.52631579rem;
+  height: 2.5128866rem;
+  margin: 0 0 1.03092784rem;
+  padding: 0.51546392rem;
   border: 1px solid #cacaca;
   border-radius: 0;
   background-color: #fefefe;
   -webkit-box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
           box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
   font-family: inherit;
-  font-size: 1.05263158rem;
+  font-size: 1.03092784rem;
   font-weight: normal;
   line-height: 1.5;
   color: #0a0a0a;
@@ -4036,15 +4036,15 @@ input[type='search'] {
 [type='file'],
 [type='checkbox'],
 [type='radio'] {
-  margin: 0 0 1.05263158rem;
+  margin: 0 0 1.03092784rem;
 }
 
 [type='checkbox'] + label,
 [type='radio'] + label {
   display: inline-block;
   vertical-align: baseline;
-  margin-left: 0.52631579rem;
-  margin-right: 1.05263158rem;
+  margin-left: 0.51546392rem;
+  margin-right: 1.03092784rem;
   margin-bottom: 0;
 }
 
@@ -4055,7 +4055,7 @@ input[type='search'] {
 
 label > [type='checkbox'],
 label > [type='radio'] {
-  margin-right: 0.52631579rem;
+  margin-right: 0.51546392rem;
 }
 
 [type='file'] {
@@ -4065,20 +4065,20 @@ label > [type='radio'] {
 label {
   display: block;
   margin: 0;
-  font-size: 0.92105263rem;
+  font-size: 0.90206186rem;
   font-weight: normal;
   line-height: 1.8;
   color: #0a0a0a;
 }
 
 label.middle {
-  margin: 0 0 1.05263158rem;
-  padding: 0.59210526rem 0;
+  margin: 0 0 1.03092784rem;
+  padding: 0.57989691rem 0;
 }
 
 .help-text {
-  margin-top: -0.52631579rem;
-  font-size: 0.85526316rem;
+  margin-top: -0.51546392rem;
+  font-size: 0.83762887rem;
   font-style: italic;
   color: #0a0a0a;
 }
@@ -4088,7 +4088,7 @@ label.middle {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  margin-bottom: 1.05263158rem;
+  margin-bottom: 1.03092784rem;
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
@@ -4161,10 +4161,10 @@ label.middle {
 .input-group-button input,
 .input-group-button button,
 .input-group-button label {
-  height: 2.63157895rem;
+  height: 2.57731959rem;
   padding-top: 0;
   padding-bottom: 0;
-  font-size: 1.05263158rem;
+  font-size: 1.03092784rem;
 }
 
 fieldset {
@@ -4175,25 +4175,25 @@ fieldset {
 
 legend {
   max-width: 100%;
-  margin-bottom: 0.52631579rem;
+  margin-bottom: 0.51546392rem;
 }
 
 .fieldset {
-  margin: 1.18421053rem 0;
-  padding: 1.31578947rem;
+  margin: 1.15979381rem 0;
+  padding: 1.28865979rem;
   border: 1px solid #cacaca;
 }
 
 .fieldset legend {
   margin: 0;
-  margin-left: -0.19736842rem;
-  padding: 0 0.19736842rem;
+  margin-left: -0.19329897rem;
+  padding: 0 0.19329897rem;
 }
 
 select {
-  height: 2.56578947rem;
-  margin: 0 0 1.05263158rem;
-  padding: 0.52631579rem;
+  height: 2.5128866rem;
+  margin: 0 0 1.03092784rem;
+  padding: 0.51546392rem;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -4201,16 +4201,16 @@ select {
   border-radius: 0;
   background-color: #fefefe;
   font-family: inherit;
-  font-size: 1.05263158rem;
+  font-size: 1.03092784rem;
   font-weight: normal;
   line-height: 1.5;
   color: #0a0a0a;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%280, 159, 51%29'></polygon></svg>");
   background-origin: content-box;
-  background-position: right -1.05263158rem center;
+  background-position: right -1.03092784rem center;
   background-repeat: no-repeat;
   background-size: 9px 6px;
-  padding-right: 1.57894737rem;
+  padding-right: 1.54639175rem;
   -webkit-transition: border-color 0.25s ease-in-out, -webkit-box-shadow 0.5s;
   transition: border-color 0.25s ease-in-out, -webkit-box-shadow 0.5s;
   transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
@@ -4272,9 +4272,9 @@ select[multiple] {
 
 .form-error {
   display: none;
-  margin-top: -0.52631579rem;
-  margin-bottom: 1.05263158rem;
-  font-size: 0.78947368rem;
+  margin-top: -0.51546392rem;
+  margin-bottom: 1.03092784rem;
+  font-size: 0.77319588rem;
   font-weight: bold;
   color: #cc4b37;
 }
@@ -4882,7 +4882,7 @@ select[multiple] {
   padding: 1.25rem 1rem;
   border: 1px solid #e6e6e6;
   border-bottom: 0;
-  font-size: 0.78947368rem;
+  font-size: 0.77319588rem;
   line-height: 1;
   color: #fefefe;
 }
@@ -5089,7 +5089,7 @@ select[multiple] {
 
 .breadcrumbs li {
   float: left;
-  font-size: 0.72368421rem;
+  font-size: 0.70876289rem;
   color: #0a0a0a;
   cursor: default;
   text-transform: uppercase;
@@ -6274,7 +6274,7 @@ select[multiple] {
 .flex-video {
   position: relative;
   height: 0;
-  margin-bottom: 1.05263158rem;
+  margin-bottom: 1.03092784rem;
   padding-bottom: 75%;
   overflow: hidden;
 }
@@ -7041,9 +7041,9 @@ select[multiple] {
 }
 
 .pagination li {
-  margin-right: 0.06578947rem;
+  margin-right: 0.06443299rem;
   border-radius: 0;
-  font-size: 0.92105263rem;
+  font-size: 0.90206186rem;
   display: none;
 }
 
@@ -7061,7 +7061,7 @@ select[multiple] {
 .pagination a,
 .pagination button {
   display: block;
-  padding: 0.19736842rem 0.65789474rem;
+  padding: 0.19329897rem 0.6443299rem;
   border-radius: 0;
   color: #0a0a0a;
 }
@@ -7072,14 +7072,14 @@ select[multiple] {
 }
 
 .pagination .current {
-  padding: 0.19736842rem 0.65789474rem;
+  padding: 0.19329897rem 0.6443299rem;
   background: #009F33;
   color: #fefefe;
   cursor: default;
 }
 
 .pagination .disabled {
-  padding: 0.19736842rem 0.65789474rem;
+  padding: 0.19329897rem 0.6443299rem;
   color: #cacaca;
   cursor: not-allowed;
 }
@@ -7089,7 +7089,7 @@ select[multiple] {
 }
 
 .pagination .ellipsis::after {
-  padding: 0.19736842rem 0.65789474rem;
+  padding: 0.19329897rem 0.6443299rem;
   content: '\2026';
   color: #0a0a0a;
 }
@@ -7351,7 +7351,7 @@ html.is-reveal-open body {
 @media print, screen and (min-width: 40em) {
   .reveal {
     width: 600px;
-    max-width: 80.26315789rem;
+    max-width: 78.60824742rem;
   }
 }
 
@@ -7362,21 +7362,21 @@ html.is-reveal-open body {
 @media print, screen and (min-width: 40em) {
   .reveal.tiny {
     width: 30%;
-    max-width: 80.26315789rem;
+    max-width: 78.60824742rem;
   }
 }
 
 @media print, screen and (min-width: 40em) {
   .reveal.small {
     width: 50%;
-    max-width: 80.26315789rem;
+    max-width: 78.60824742rem;
   }
 }
 
 @media print, screen and (min-width: 40em) {
   .reveal.large {
     width: 90%;
-    max-width: 80.26315789rem;
+    max-width: 78.60824742rem;
   }
 }
 
@@ -7417,7 +7417,7 @@ html.is-reveal-open body {
   position: relative;
   margin-bottom: 1rem;
   outline: 0;
-  font-size: 0.92105263rem;
+  font-size: 0.90206186rem;
   font-weight: bold;
   color: #fefefe;
   -webkit-user-select: none;
@@ -7510,7 +7510,7 @@ input:checked + label > .switch-inactive {
 .switch.tiny .switch-paddle {
   width: 3rem;
   height: 1.5rem;
-  font-size: 0.65789474rem;
+  font-size: 0.6443299rem;
 }
 
 .switch.tiny .switch-paddle::after {
@@ -7531,7 +7531,7 @@ input:checked + label > .switch-inactive {
 .switch.small .switch-paddle {
   width: 3.5rem;
   height: 1.75rem;
-  font-size: 0.78947368rem;
+  font-size: 0.77319588rem;
 }
 
 .switch.small .switch-paddle::after {
@@ -7552,7 +7552,7 @@ input:checked + label > .switch-inactive {
 .switch.large .switch-paddle {
   width: 5rem;
   height: 2.5rem;
-  font-size: 1.05263158rem;
+  font-size: 1.03092784rem;
 }
 
 .switch.large .switch-paddle::after {
@@ -7581,7 +7581,7 @@ tfoot {
 }
 
 caption {
-  padding: 0.52631579rem 0.65789474rem 0.65789474rem;
+  padding: 0.51546392rem 0.6443299rem 0.6443299rem;
   font-weight: bold;
 }
 
@@ -7604,14 +7604,14 @@ thead th,
 thead td,
 tfoot th,
 tfoot td {
-  padding: 0.52631579rem 0.65789474rem 0.65789474rem;
+  padding: 0.51546392rem 0.6443299rem 0.6443299rem;
   font-weight: bold;
   text-align: left;
 }
 
 tbody th,
 tbody td {
-  padding: 0.52631579rem 0.65789474rem 0.65789474rem;
+  padding: 0.51546392rem 0.6443299rem 0.6443299rem;
 }
 
 tbody tr:nth-child(even) {
@@ -7735,7 +7735,7 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
 .tabs-title > a {
   display: block;
   padding: 1.25rem 1.5rem;
-  font-size: 0.78947368rem;
+  font-size: 0.77319588rem;
   line-height: 1;
   color: #009F33;
 }
@@ -8419,7 +8419,7 @@ label {
 
 .orbit .orbit-caption {
   background: none;
-  padding: 8% 20%;
+  padding: 7% 15%;
 }
 
 @media print, screen and (min-width: 40em) {
@@ -8492,7 +8492,7 @@ label {
   color: #009F33;
   font-size: 0.8em;
   font-family: "HelveticaNeueLTStd-Cn" !important;
-  margin-top: 0px;
+  margin-top: 1px;
   text-align: center;
 }
 
@@ -8828,6 +8828,10 @@ h2.section {
 
 .day {
   margin: 16px 0;
+}
+
+.servientrega {
+  width: 100%;
 }
 
 .login {

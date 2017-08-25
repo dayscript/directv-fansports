@@ -152,7 +152,7 @@
     color: $primary-color;
     font-size: 0.8em;
     font-family: $font-condensed !important;
-    margin-top: 0px;
+    margin-top: 1px;
     text-align: center;
     @include breakpoint(medium) {
       text-align: left;
