@@ -4,9 +4,9 @@
             <li class="is-active orbit-slide">
                 <figure class="orbit-figure">
                     <img class="orbit-image" src="{{ asset('img/banners/slide.jpg') }}" alt="Banner">
-                    <figcaption class="orbit-caption text-center hide-for-small-only">
+                    <figcaption class="orbit-caption text-left hide-for-small-only">
                         <h5 class="seccion">Premio Mayor</h5>
-                        <h2 class="hide-for-large-only">Vive las emociones del partido Real Madrid VS Sevilla en el Estadio Santiago Bernabéu</h2>
+                        <h2 class="hide-for-large-only">Vive las emociones del partido Real Madrid VS Sevilla en Madrid</h2>
                         <a href="premios" class="button">Ver más</a>
                     </figcaption>
                 </figure>
@@ -14,7 +14,7 @@
             <li class="orbit-slide">
                 <figure class="orbit-figure">
                     <img class="orbit-image" src="{{ asset('img/banners/slide2.jpg') }}" alt="Banner">
-                    <figcaption class="orbit-caption text-center hide-for-small-only">
+                    <figcaption class="orbit-caption text-left hide-for-small-only">
                         <h5 class="seccion">Premios Semana Servientrega</h5>
                         <h2 class="hide-for-large-only">Gánate una camiseta oficial de la Selección Colombia</h2>
                         <a href="premios" class="button">Ver más</a>

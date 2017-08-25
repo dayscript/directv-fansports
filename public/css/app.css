@@ -3603,7 +3603,7 @@ h6 {
   }
 
   h2 {
-    font-size: 2.44845361rem;
+    font-size: 2.19072165rem;
   }
 
   h3 {
@@ -8267,7 +8267,7 @@ h4.seccion,
 h5.seccion,
 h6.seccion {
   color: #009F33;
-  margin: 0;
+  margin-bottom: 8px;
 }
 
 h1.light,
@@ -8419,7 +8419,8 @@ label {
 
 .orbit .orbit-caption {
   background: none;
-  padding: 7% 15%;
+  padding: 6% 15%;
+  width: 60%;
 }
 
 @media print, screen and (min-width: 40em) {
