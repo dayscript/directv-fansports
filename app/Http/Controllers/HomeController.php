@@ -24,6 +24,7 @@ class HomeController extends Controller
             'privacy',
             'support',
             'contact',
+            'premios',
         ]);
     }
 
