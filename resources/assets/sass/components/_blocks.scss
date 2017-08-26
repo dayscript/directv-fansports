@@ -66,8 +66,12 @@
   border-bottom: 4px solid $primary-color;
   .orbit-caption {
     background: none;
-    padding: 6% 15%;
-    width: 60%;
+    padding-bottom: 5%;
+    padding-left: 4%;
+    width: 600px;
+    @include breakpoint(xxlarge) {
+      padding-left: 12%;
+    }
   }
   @include breakpoint(medium) {
     margin-bottom: 60px;
