@@ -8420,14 +8420,7 @@ label {
 .orbit .orbit-caption {
   background: none;
   padding-bottom: 5%;
-  padding-left: 4%;
   width: 600px;
-}
-
-@media screen and (min-width: 90em) {
-  .orbit .orbit-caption {
-    padding-left: 12%;
-  }
 }
 
 @media print, screen and (min-width: 40em) {
