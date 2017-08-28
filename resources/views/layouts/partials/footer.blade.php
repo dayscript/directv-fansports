@@ -23,7 +23,7 @@
     <div class="row">
         <div class="medium-7 columns">
             <img src="{{ asset('img/logos/fansports.png') }}" alt="Fansports">
-            <div class="footer-links">Copyright 2014 <a href="/terminos-y-condiciones">TÉRMINOS Y CONDICIONES </a>  |  <a href="/politica-de-privacidad">POLITICA DE PRIVACIDAD </a>    |
+            <div class="footer-links">Copyright© 2017, Todos los derechos reservados.<br><a href="/terminos-y-condiciones">TÉRMINOS Y CONDICIONES </a>  |  <a href="/politica-de-privacidad">POLITICA DE PRIVACIDAD </a>    |
                 <a href="/soporte">SOPORTE</a>  </div>
         </div>
         <div class="medium-5 columns">
