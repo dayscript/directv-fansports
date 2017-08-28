@@ -5,10 +5,10 @@
                 <figure class="orbit-figure">
                     <img class="orbit-image" src="{{ asset('img/banners/slide.jpg') }}" alt="Banner">
                     <div class="row">
-                        <figcaption class="orbit-caption text-left hide-for-small-only">
-                            <h5 class="seccion">Premio Mayor</h5>
-                            <h2 class="row hide-for-large-only">Vive las emociones del partido Real Madrid VS Sevilla en Madrid</h2>
-                            <a href="premios" class="button">Ver más</a>
+                        <figcaption class="orbit-caption text-left">
+                            <h5 class="seccion hide-for-small-only">Premio Mayor</h5>
+                            <h2 class="banner">Vive las emociones del partido Real Madrid VS Sevilla en Madrid</h2>
+                            <a href="premios" class="button hide-for-small-only">Ver más</a>
                         </figcaption>
                     </div>
                 </figure>
@@ -17,10 +17,10 @@
                 <figure class="orbit-figure">
                     <img class="orbit-image" src="{{ asset('img/banners/slide2.jpg') }}" alt="Banner">
                     <div class="row">
-                        <figcaption class="orbit-caption text-left hide-for-small-only">
-                            <h5 class="seccion">Premios Semana Servientrega</h5>
-                            <h2 class="hide-for-large-only">Gánate una camiseta oficial de la Selección Colombia</h2>
-                            <a href="premios" class="button">Ver más</a>
+                        <figcaption class="orbit-caption text-left">
+                            <h5 class="seccion hide-for-small-only">Premios Semana Servientrega</h5>
+                            <h2 class="banner">Gánate una camiseta oficial de la Selección Colombia</h2>
+                            <a href="premios" class="button hide-for-small-only">Ver más</a>
                         </figcaption>
                     </div>
                 </figure>

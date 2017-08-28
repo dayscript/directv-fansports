@@ -8280,6 +8280,28 @@ h6.light {
   margin-bottom: 8px;
 }
 
+h1.banner,
+h2.banner,
+h3.banner,
+h4.banner,
+h5.banner,
+h6.banner {
+  font-size: 11px;
+  width: 30%;
+}
+
+@media print, screen and (min-width: 40em) {
+  h1.banner,
+  h2.banner,
+  h3.banner,
+  h4.banner,
+  h5.banner,
+  h6.banner {
+    font-size: 32px;
+    width: 80%;
+  }
+}
+
 body {
   font-size: 0.9em;
 }

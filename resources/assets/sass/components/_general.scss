@@ -17,6 +17,14 @@ h1,h2,h3,h4,h5,h6{
     color: white;
     margin-bottom: 8px;
   }
+  &.banner{
+    font-size: 11px;
+    width: 30%;
+    @include breakpoint(medium){
+      font-size: 32px;
+      width: 80%;
+    }
+  }
 }
 body{
   font-size: 0.9em;
