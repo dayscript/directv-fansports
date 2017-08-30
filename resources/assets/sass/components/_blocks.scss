@@ -83,12 +83,6 @@
   .user {
     font-size: 0.9em;
     margin: 6px 0 7px 0;
-    a{
-      color: white;
-      &:hover{
-        color: $primary-color;
-      }
-    }
 
     @include breakpoint(medium) {
       font-size: 1em;
@@ -153,6 +147,12 @@
   &.account {
     background-color: $secondary-color;
     color: white;
+    a{
+      color: white;
+      &:hover{
+        color: $primary-color;
+      }
+    }
   }
   .fi-shield {
     font-size: 1.8em;
