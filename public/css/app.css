@@ -8466,6 +8466,14 @@ label {
   margin: 6px 0 7px 0;
 }
 
+.item .user a {
+  color: white;
+}
+
+.item .user a:hover {
+  color: #009F33;
+}
+
 @media print, screen and (min-width: 40em) {
   .item .user {
     font-size: 1em;
