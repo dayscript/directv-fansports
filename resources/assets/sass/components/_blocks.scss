@@ -175,6 +175,12 @@
       margin-top: 10px;
     }
   }
+  a{
+    color: black;
+    &:hover{
+      color: $primary-color;
+    }
+  }
 }
 
 .puntos {

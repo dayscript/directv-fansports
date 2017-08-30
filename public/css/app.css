@@ -8586,6 +8586,14 @@ label {
   margin-top: 10px;
 }
 
+.item a {
+  color: black;
+}
+
+.item a:hover {
+  color: #009F33;
+}
+
 .puntos {
   font-family: "Raleway-Bold";
   color: #009F33;
