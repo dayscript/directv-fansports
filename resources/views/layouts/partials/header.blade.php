@@ -58,9 +58,9 @@
                 <div class="login-title">Iniciar sesión</div>
                 <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                     {{ csrf_field() }}
-                    <strong>¿Ya tiene cuenta en Fansports?</strong>
+                    <strong>¿Ya tiene cuenta en Fútbol Fans?</strong>
                     <div class="small-12 columns">
-                        <input type="email" name="email" placeholder="Email" value="{{ old('email') }}" class="{{ $errors->has('email') ? ' is-invalid-input' : '' }}" required autofocus />
+                        <input type="email" name="email" placeholder="Correo electrónico" value="{{ old('email') }}" class="{{ $errors->has('email') ? ' is-invalid-input' : '' }}" required autofocus />
                         @if ($errors->has('email'))
                             <span class="form-error is-visible">{{ $errors->first('email') }}</span>
                         @endif
@@ -80,17 +80,15 @@
                     <div class="text-center"><a href="{{ route('password.request') }}">Olvidé mi contraseña</a></div>
                     <hr class="light">
                     <p class="text-center">O ingrese usando su cuenta en Faceebok</p>
-                    <a href="/login/facebook" class="button facebook expanded"><i class="fi-social-facebook"></i> Iniciar sesión enFacebook</a>
+                    <a href="/login/facebook" class="button facebook expanded"><i class="fi-social-facebook"></i> Iniciar sesión en Facebook</a>
                     <hr class="light">
                 </form>
             </div>
             <div class="medium-offset-2 medium-4 columns end">
                 <div class="login-title">Registro</div>
-                <strong>¿Aun no es miembro?</strong>
+                <strong>¿Aún no es miembro?</strong>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sagittis
-                    ultricies lectus at posuere. Nulla quis justo magna. Etiam placerat
-                    velit at arcu semper, ac fringilla quam cursus.
+                    Crea tu cuenta en Futbol Fans y podrás ganar grandes premios. Tu conocimiento del fútbol europeo te podrá llevar a ver un Partido del Real Madrid.
                 </p>
                 <a href="{{ route('register') }}" class="button expanded">Crear cuenta</a>
             </div>
