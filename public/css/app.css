@@ -9485,7 +9485,13 @@ label {
 
 .section-title h1 {
   color: white;
-  font-size: 2em;
+  font-size: 1.5em;
+}
+
+@media print, screen and (min-width: 40em) {
+  .section-title h1 {
+    font-size: 2em;
+  }
 }
 
 h2.section {
