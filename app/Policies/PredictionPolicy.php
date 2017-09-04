@@ -45,6 +45,8 @@ class PredictionPolicy
     {
         if($prediction->match && ($prediction->match->when < Carbon::now()->addMinutes(10)))
             return false;
+        if($prediction->match && ($prediction->match->status != 'pending'))
+            return false;
         return true;
     }
 
