@@ -9613,9 +9613,9 @@ h2.section {
 
 .partido strong {
   font-family: "Raleway-Regular";
-  font-size: 10px;
+  font-size: 15px;
   text-transform: uppercase;
-  color: black;
+  color: #009F33;
 }
 
 @media print, screen and (min-width: 40em) {

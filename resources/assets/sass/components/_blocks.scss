@@ -311,9 +311,9 @@ h2.section {
   }
   strong {
     font-family: $font-body;
-    font-size: 10px;
+    font-size: 15px;
     text-transform: uppercase;
-    color: black;
+    color: $primary-color;
   }
   @include breakpoint(medium) {
     margin: 0;
