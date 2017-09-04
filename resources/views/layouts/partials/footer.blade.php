@@ -30,6 +30,7 @@
             <div class="footer-links">Patrocinan:</div>
             <a href="https://www.directv.com.co" target="_blank"><img src="{{ asset('img/logos/directv.png') }}" alt="" class="patrocinio"></a>
             <a href="https://www.servientrega.com" target="_blank"><img src="{{ asset('img/logos/servientrega.png') }}" alt="" class="patrocinio"></a>
+            <hr class="light">
         </div>
         <div class="medium-2 columns">
             <img src="{{ asset('img/logos/coljuegos.jpg') }}" alt="" class="Autoriza">
