@@ -21259,11 +21259,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }, [_c('strong', {
       staticClass: "show-for-small-only"
     }, [_vm._v("Marcador: ")]), _vm._v("\n                    " + _vm._s(match.local_score) + " - " + _vm._s(match.visit_score) + "\n                ")]), _vm._v(" "), _c('div', {
-      staticClass: "small-4 medium-1 columns text-center puntaje"
+      staticClass: "small-6 medium-1 columns text-center puntaje"
     }, [_c('strong', {
       staticClass: "show-for-small-only"
     }, [_vm._v("Puntos: ")]), _vm._v(_vm._s(match.points))]), _vm._v(" "), _c('div', {
-      staticClass: "small-4 medium-1 columns canal text-right"
+      staticClass: "small-12 medium-1 columns canal text-right"
     }, [_c('img', {
       staticClass: "logo",
       attrs: {
