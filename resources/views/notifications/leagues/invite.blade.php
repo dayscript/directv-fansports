@@ -15,6 +15,6 @@ Contraseña: **{{ $password }}**
     Unirme a esta liga
 @endcomponent
 
-Gracias por participar en Fansports!,<br>
+Gracias por participar en Fútbol Fans!,<br>
 {{ config('app.name') }}
 @endcomponent
