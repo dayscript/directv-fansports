@@ -103,10 +103,13 @@ class HomeController extends Controller
      */
     public function ranking()
     {
+        if( ! ($l = request()->get('l'))){
+            $l = null;
+        }
         $rounds = Round::orderBy('name')->get();
         $leagues = auth()->user()->leagues;
         $page = Page::firstOrCreate(['slug'=>'ranking'],['title'=>'Ranking']);
-        return view('ranking',compact('page','rounds', 'leagues'));
+        return view('ranking',compact('page','rounds', 'leagues','l'));
     }
     /**
      * Show support page

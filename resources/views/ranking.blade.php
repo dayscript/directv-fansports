@@ -10,7 +10,7 @@
         <div class="medium-9 columns">
             <h2 class="section">{!! $page->excerpt !!}</h2>
             {!! $page->body  !!}
-            <ranking :rounds="{{ $rounds }}" :leagues="{{ $leagues }}" userid="{{ auth()->user()->id }}"></ranking>
+            <ranking :rounds="{{ $rounds }}" :leagues="{{ $leagues }}" userid="{{ auth()->user()->id }}" :l="{{ $l }}"></ranking>
         </div>
         <div class="medium-3 columns text-center">
             @include('layouts.partials.ads')

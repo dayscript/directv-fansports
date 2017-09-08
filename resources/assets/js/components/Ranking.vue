@@ -57,6 +57,7 @@
 <script>
     export default {
         mounted() {
+            if(this.l)this.league.id = this.l;
             this.loadRanking(1);
         },
         data() {
@@ -80,7 +81,7 @@
                 }
             }
         },
-        props: ['rounds', 'leagues', 'userid'],
+        props: ['rounds', 'leagues', 'userid','l'],
         methods: {
             loadRanking(page) {
                 $('#loadingModal').foundation('open');
