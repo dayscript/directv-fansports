@@ -1,7 +1,7 @@
 <template>
     <div class="row item liga column">
         <div class="medium-6 columns text-left item-liga">
-            <a :href="'/ranking?l='+league.id"></a>{{ league.name }}
+            <a :href="'/ranking?l='+league.id">{{ league.name }}</a>
         </div>
         <div class="small-6 medium-2 columns text-center item-liga"><strong
                 class="show-for-small-only">Usuarios: </strong> {{ league.users_count }}
