@@ -57,7 +57,9 @@
 <script>
     export default {
         mounted() {
-            if(this.l)this.league.id = this.l;
+            if(this.l){
+                this.league.id = this.l;
+            }
             this.loadRanking(1);
         },
         data() {

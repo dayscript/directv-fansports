@@ -103,7 +103,7 @@ class HomeController extends Controller
      */
     public function ranking()
     {
-        if( ! ($l = request()->get('l'))){
+        if( !($l = request()->get('l'))){
             $l = null;
         }
         $rounds = Round::orderBy('name')->get();
