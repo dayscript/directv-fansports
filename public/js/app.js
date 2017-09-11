@@ -21279,7 +21279,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         "src": '/img/channels/' + match.channel + '.png',
         "alt": "DirecTV"
       }
-    }), _vm._v(_vm._s(match.channel) + "\n                ")])])
+    }), _c('strong', [_vm._v(_vm._s(match.channel))])])])
   }), _vm._v(" "), _c('hr'), _vm._v(" "), _c('hr'), _vm._v(" "), _c('div', {
     staticClass: "row columns gutter-small"
   }, [_c('div', {

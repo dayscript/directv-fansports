@@ -31,7 +31,7 @@
                                     </div>
                                 </div>
                                 <div class="small-3 medium-2 columns canal">
-                                    <img class="logo" src="{{ asset('img/channels/'.$match->channel . '.png') }}" alt="{{ $match->channel }}">{{ $match->channel }}
+                                    <img class="logo" src="{{ asset('img/channels/'.$match->channel . '.png') }}" alt="{{ $match->channel }}"><strong>{{ $match->channel }}</strong>
                                 </div>
                             </div>
                             <hr>

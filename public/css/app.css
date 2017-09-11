@@ -9378,18 +9378,18 @@ label {
   text-align: center;
 }
 
-.item .canal {
+.item .canal strong {
   font-size: 0.6em;
   text-transform: uppercase;
   line-height: 0.6em;
   font-family: "Raleway-Bold";
   color: #0c4d78;
   text-align: center;
+  display: none;
 }
 
 .item .canal .logo {
   height: 22px;
-  width: 22px;
 }
 
 @media print, screen and (min-width: 40em) {

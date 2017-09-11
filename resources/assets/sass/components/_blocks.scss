@@ -127,15 +127,17 @@
     text-align: center;
   }
   .canal {
-    font-size: 0.6em;
-    text-transform: uppercase;
-    line-height: 0.6em;
-    font-family: $font-bold;
-    color: #0c4d78;
-    text-align: center;
+    strong{
+      font-size: 0.6em;
+      text-transform: uppercase;
+      line-height: 0.6em;
+      font-family: $font-bold;
+      color: #0c4d78;
+      text-align: center;
+      display: none;
+    }
     .logo {
       height: 22px;
-      width: 22px;
     }
     @include breakpoint(medium) {
       text-align: right;

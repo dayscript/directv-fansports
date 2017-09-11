@@ -95,7 +95,7 @@
                     </div>
                     <div class="small-6 medium-1 columns text-center puntaje"><strong class="show-for-small-only">Puntos: </strong>{{ match.points }}</div>
                     <div class="small-12 medium-1 columns canal text-right">
-                        <img class="logo" :src="'/img/channels/'+ match.channel +'.png'" alt="DirecTV">{{ match.channel }}
+                        <img class="logo" :src="'/img/channels/'+ match.channel +'.png'" alt="DirecTV"><strong>{{ match.channel }}</strong>
                     </div>
                 </div>
                 <hr>
