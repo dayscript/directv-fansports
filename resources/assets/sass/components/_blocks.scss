@@ -138,6 +138,7 @@
     }
     .logo {
       height: 22px;
+      text-align: center;
     }
     @include breakpoint(medium) {
       text-align: right;

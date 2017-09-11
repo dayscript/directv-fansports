@@ -9390,6 +9390,7 @@ label {
 
 .item .canal .logo {
   height: 22px;
+  text-align: center;
 }
 
 @media print, screen and (min-width: 40em) {
