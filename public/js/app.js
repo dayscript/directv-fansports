@@ -1731,7 +1731,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 prev: null,
                 next: null,
                 total: 0,
-                items: 10
+                items: 50
             }
         };
     },

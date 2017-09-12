@@ -79,7 +79,7 @@
                     prev: null,
                     next: null,
                     total: 0,
-                    items: 10
+                    items: 50
                 }
             }
         },
