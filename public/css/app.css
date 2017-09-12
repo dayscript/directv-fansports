@@ -9321,8 +9321,9 @@ label {
 }
 
 .item .user {
-  font-size: 0.9em;
+  font-size: 0.8em;
   margin: 6px 0 7px 0;
+  text-transform: uppercase;
 }
 
 @media print, screen and (min-width: 40em) {
