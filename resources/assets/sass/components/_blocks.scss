@@ -81,12 +81,12 @@
     padding: 6px 0;
   }
   .user {
-    font-size: 0.7em;
+    font-size: 0.8em;
     margin: 6px 0 7px 0;
     text-transform: uppercase;
 
     @include breakpoint(medium) {
-      font-size: 1em;
+      font-size: 0.9em;
     }
   }
   strong {
