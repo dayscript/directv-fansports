@@ -6,7 +6,7 @@
         <div class="medium-6 columns">
             <p>
                 Puedes invitar a tus amigos a unirte a esta liga. Para hacerlo, ingresa a continuación las direcciones de correo electrónico y les enviaremos una invitación. <br>
-                Puedes escribir las direcciones separadas por espacios, comas, o en lineas separadas, de cualquier forma funciona!
+                Puedes escribir las direcciones separadas por espacios, comas, o en líneas separadas, de cualquier forma funciona.
             </p>
             <textarea placeholder="Tu lista de amigos" name="list" id="list" v-model="list"></textarea>
             <a @click="sendInvites" class="button expanded">Invitar</a>

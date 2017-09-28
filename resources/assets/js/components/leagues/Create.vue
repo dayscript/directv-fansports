@@ -4,7 +4,7 @@
             <div class="medium-12 columns">
                 <h5 class="title">1. Datos de la liga</h5>
                 <p>
-                    Crear ligas preivadas para que participar con sus amigos es muy fácil. Sólo debe diligenciar los campos a continuación e invitar a sus amigos usando su cuenta de correo electrónico.
+                    Crear ligas privadas para que participar con sus amigos es muy fácil. Sólo debe diligenciar los campos a continuación e invitar a sus amigos usando su cuenta de correo electrónico.
                 </p>
             </div>
             <div class="medium-6 columns">

@@ -20673,7 +20673,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "title"
   }, [_vm._v("2. Invita a tus amigos")])])
 },function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('p', [_vm._v("\n            Puedes invitar a tus amigos a unirte a esta liga. Para hacerlo, ingresa a continuación las direcciones de correo electrónico y les enviaremos una invitación. "), _c('br'), _vm._v("\n            Puedes escribir las direcciones separadas por espacios, comas, o en lineas separadas, de cualquier forma funciona!\n        ")])
+  return _c('p', [_vm._v("\n            Puedes invitar a tus amigos a unirte a esta liga. Para hacerlo, ingresa a continuación las direcciones de correo electrónico y les enviaremos una invitación. "), _c('br'), _vm._v("\n            Puedes escribir las direcciones separadas por espacios, comas, o en líneas separadas, de cualquier forma funciona.\n        ")])
 },function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "medium-6 columns"
@@ -20818,7 +20818,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "medium-12 columns"
   }, [_c('h5', {
     staticClass: "title"
-  }, [_vm._v("1. Datos de la liga")]), _vm._v(" "), _c('p', [_vm._v("\n                Crear ligas preivadas para que participar con sus amigos es muy fácil. Sólo debe diligenciar los campos a continuación e invitar a sus amigos usando su cuenta de correo electrónico.\n            ")])])
+  }, [_vm._v("1. Datos de la liga")]), _vm._v(" "), _c('p', [_vm._v("\n                Crear ligas privadas para que participar con sus amigos es muy fácil. Sólo debe diligenciar los campos a continuación e invitar a sus amigos usando su cuenta de correo electrónico.\n            ")])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
