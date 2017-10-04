@@ -42,7 +42,7 @@ class Round extends Model
     {
         $rounds = Round::orderBy('name')->get();
         $matches = Match::orderBy('when')->get();
-        $selected_round = $rounds->first();
+        $selected_round = $rounds->last();
         foreach ($matches as $match){
             if($match->when > Carbon::now()){
                 $selected_round = $match->round();
