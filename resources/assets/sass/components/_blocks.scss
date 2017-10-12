@@ -194,6 +194,126 @@
   }
 }
 
+//Item2
+.item2 {
+  padding: 10px 0;
+  @include breakpoint(medium) {
+    padding: 12px 0;
+  }
+  .user {
+    font-size: 0.8em;
+    margin: 6px 0 7px 0;
+    text-transform: uppercase;
+
+    @include breakpoint(medium) {
+      font-size: 0.9em;
+    }
+  }
+  strong {
+    margin-right: 12px;
+    text-align: right;
+    font-weight: normal;
+    color: $primary-color;
+  }
+  .equipos {
+    font-size: 0.9em;
+    font-family: $font-bold;
+    padding: 0 !important;
+    margin: 4px 0;
+    .shield {
+      height: 16px;
+      width: 16px;
+      margin: 4px;
+    }
+    .versus {
+      font-size: 0.9em;
+      color: $primary-color;
+
+    }
+    .home {
+      text-align: right;
+    }
+    .away {
+      text-align: left;
+    }
+    @include breakpoint(medium) {
+      margin: 0;
+    }
+  }
+  .fecha {
+    color: $primary-color;
+    font-size: 0.8em;
+    font-family: $font-condensed !important;
+    margin-top: 1px;
+    text-align: center;
+  }
+  .canal {
+    strong{
+      font-size: 0.6em;
+      text-transform: uppercase;
+      line-height: 0.6em;
+      font-family: $font-bold;
+      color: #0c4d78;
+      text-align: center;
+      display: none;
+    }
+    .logo {
+      height: 22px;
+      text-align: center;
+    }
+    @include breakpoint(medium) {
+      text-align: right;
+    }
+  }
+  &:hover {
+    background-color: #f1f1f1;
+  }
+  &.account {
+    background-color: $secondary-color;
+    color: white;
+    a{
+      color: white;
+      &:hover{
+        color: $primary-color;
+      }
+    }
+  }
+  .fi-shield {
+    font-size: 1.8em;
+    color: #bababa;
+    margin: 4px;
+  }
+  .fi-x-circle {
+    font-size: 1.8em;
+    color: #ad2c2c;
+  }
+  .item-liga {
+    margin-top: 18px;
+  }
+  &.liga{
+    font-size: 0.9em;
+    @include breakpoint(medium){
+      font-size: 1em;
+    }
+    strong{
+      color: black;
+    }
+    .puntaje{
+      color: $primary-color;
+      font-family: $font-bold;
+    }
+    .close{
+      margin-top: 10px;
+    }
+  }
+  a{
+    color: black;
+    &:hover{
+      color: $primary-color;
+    }
+  }
+}
+
 .puntos {
   font-family: $font-bold;
   color: $primary-color;

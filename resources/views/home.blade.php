@@ -11,7 +11,7 @@
                     </h3>
                     @if($selected_round)
                         @forelse($selected_round->matches()->take(10)->get() as $match)
-                            <div class="row item column gutter-small">
+                            <div class="row item2 column gutter-small">
                                 <div class="small-9 medium-3 end columns fecha"> {{ $match->when }}</div>
                                 <div class="small-9 medium-8 columns equipos">
                                     <div class="row gutter-small">

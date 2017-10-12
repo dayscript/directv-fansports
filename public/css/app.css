@@ -9463,6 +9463,159 @@ label {
   color: #009F33;
 }
 
+.item2 {
+  padding: 10px 0;
+}
+
+@media print, screen and (min-width: 40em) {
+  .item2 {
+    padding: 12px 0;
+  }
+}
+
+.item2 .user {
+  font-size: 0.8em;
+  margin: 6px 0 7px 0;
+  text-transform: uppercase;
+}
+
+@media print, screen and (min-width: 40em) {
+  .item2 .user {
+    font-size: 0.9em;
+  }
+}
+
+.item2 strong {
+  margin-right: 12px;
+  text-align: right;
+  font-weight: normal;
+  color: #009F33;
+}
+
+.item2 .equipos {
+  font-size: 0.9em;
+  font-family: "Raleway-Bold";
+  padding: 0 !important;
+  margin: 4px 0;
+}
+
+.item2 .equipos .shield {
+  height: 16px;
+  width: 16px;
+  margin: 4px;
+}
+
+.item2 .equipos .versus {
+  font-size: 0.9em;
+  color: #009F33;
+}
+
+.item2 .equipos .home {
+  text-align: right;
+}
+
+.item2 .equipos .away {
+  text-align: left;
+}
+
+@media print, screen and (min-width: 40em) {
+  .item2 .equipos {
+    margin: 0;
+  }
+}
+
+.item2 .fecha {
+  color: #009F33;
+  font-size: 0.8em;
+  font-family: "HelveticaNeueLTStd-Cn" !important;
+  margin-top: 1px;
+  text-align: center;
+}
+
+.item2 .canal strong {
+  font-size: 0.6em;
+  text-transform: uppercase;
+  line-height: 0.6em;
+  font-family: "Raleway-Bold";
+  color: #0c4d78;
+  text-align: center;
+  display: none;
+}
+
+.item2 .canal .logo {
+  height: 22px;
+  text-align: center;
+}
+
+@media print, screen and (min-width: 40em) {
+  .item2 .canal {
+    text-align: right;
+  }
+}
+
+.item2:hover {
+  background-color: #f1f1f1;
+}
+
+.item2.account {
+  background-color: #132029;
+  color: white;
+}
+
+.item2.account a {
+  color: white;
+}
+
+.item2.account a:hover {
+  color: #009F33;
+}
+
+.item2 .fi-shield {
+  font-size: 1.8em;
+  color: #bababa;
+  margin: 4px;
+}
+
+.item2 .fi-x-circle {
+  font-size: 1.8em;
+  color: #ad2c2c;
+}
+
+.item2 .item-liga {
+  margin-top: 18px;
+}
+
+.item2.liga {
+  font-size: 0.9em;
+}
+
+@media print, screen and (min-width: 40em) {
+  .item2.liga {
+    font-size: 1em;
+  }
+}
+
+.item2.liga strong {
+  color: black;
+}
+
+.item2.liga .puntaje {
+  color: #009F33;
+  font-family: "Raleway-Bold";
+}
+
+.item2.liga .close {
+  margin-top: 10px;
+}
+
+.item2 a {
+  color: black;
+}
+
+.item2 a:hover {
+  color: #009F33;
+}
+
 .puntos {
   font-family: "Raleway-Bold";
   color: #009F33;
