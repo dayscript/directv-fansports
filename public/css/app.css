@@ -9469,7 +9469,7 @@ label {
 
 @media print, screen and (min-width: 40em) {
   .item2 {
-    padding: 12px 0;
+    padding: 12px 0 11px 0;
   }
 }
 
