@@ -12,7 +12,7 @@
                     @if($selected_round)
                         @forelse($selected_round->matches()->take(10)->get() as $match)
                             <div class="row item column gutter-small">
-                                <div class="small-9 medium-2 end columns fecha"> {{ $match->when }}</div>
+                                <div class="small-9 medium-3 end columns fecha"> {{ $match->when }}</div>
                                 <div class="small-9 medium-8 columns equipos">
                                     <div class="row gutter-small">
                                         <div class="small-5 column home">
@@ -30,7 +30,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="small-3 medium-2 columns canal">
+                                <div class="small-3 medium-1 columns canal">
                                     <img class="logo" src="{{ asset('img/channels/'.$match->channel . '.png') }}" alt="{{ $match->channel }}"><strong>{{ $match->channel }}</strong>
                                 </div>
                             </div>
