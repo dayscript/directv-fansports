@@ -31,7 +31,7 @@
                 <div class="small-1 columns text-left puntos">{{ parseInt(index) + 1 }}</div>
                 <div class="small-9 columns user">
                     <i class="fi-torso" v-if="userid==user.id"></i>
-                    <a :href="'/users/'+user.id">{{ user.name + ' ' + user.last }}</a>
+                    <a :href="'/users/'+user.id">{{ user.name + ' ' + (user.last || '') }}</a>
                 </div>
                 <div class="small-2 columns text-right puntos">{{ user.points }}</div>
             </div>
