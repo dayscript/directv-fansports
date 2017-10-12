@@ -5,7 +5,7 @@
     <div class="row">
         <div class="medium-9 columns">
             <div class="row">
-                <div class="medium-6 columns">
+                <div class="medium-7 columns">
                     <h3 class="title">
                         Próxima fecha: <strong>{{ $selected_round?$selected_round->name:'' }}</strong>
                     </h3>
@@ -46,7 +46,7 @@
                     <a href="/pronosticos" class="button expanded">Pronosticar</a>
                     <hr class="light">
                 </div>
-                <div class="medium-6 columns">
+                <div class="medium-5 columns">
                     <h3 class="title">
                         Ranking general
                     </h3>
