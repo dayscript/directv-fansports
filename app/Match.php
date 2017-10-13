@@ -92,7 +92,7 @@ class Match extends Model
      */
     public function calculatePoints()
     {
-        $points = Voyager::setting('winner_points');
+//        $points = Voyager::setting('winner_points');
         if( !is_null($this->local_score) && !is_null($this->visit_score)){
             if($this->local_score > $this->visit_score)$result = 'local';
             elseif($this->local_score < $this->visit_score)$result = 'visit';
@@ -105,13 +105,16 @@ class Match extends Model
 //                $points = 2*$points;
 //            }
             if($this->roundId->special){
-                $points = 3*$points;
+                $points = 3*Voyager::setting('winner_points');
+            } else {
+                $points = Voyager::setting('winner_points');
             }
             if($result == $prediction->value && $this->status != 'pending'){
                 $prediction->points = $points;
             } else {
                 $prediction->points = 0;
             }
+            if($prediction->points >0) dd($prediction);
             $prediction->save();
         }
         $users = User::all();
