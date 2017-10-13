@@ -114,7 +114,6 @@ class Match extends Model
             } else {
                 $prediction->points = 0;
             }
-            if($prediction->points >0) dd($prediction);
             $prediction->save();
         }
         $users = User::all();
