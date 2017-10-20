@@ -95,8 +95,15 @@
                     <div class="medium-6 columns">
                         <label>Ciudad
                             <select name="city">
+                                @php($cities = \App\User::cities())
                                 <option value="" {{ old('city','Bogotá')==''?'selected':'' }}>Seleccione</option>
-                                <option value="Bogotá" {{ old('city','Bogotá')=='Bogotá'?'selected':'' }}>Bogotá</option>
+                                @foreach($cities as $key=>$dept)
+                                    <optgroup label="{{ $key }}">
+                                    @foreach($dept as $city)
+                                        <option value="{{ $city }}" {{ old('city','Bogotá')==$city?'selected':'' }}>{{ $city }}</option>
+                                    @endforeach
+                                    </optgroup>
+                                @endforeach
                             </select>
                             @if ($errors->has('city'))
                                 <span class="form-error is-visible">{{ $errors->first('city') }}</span>
