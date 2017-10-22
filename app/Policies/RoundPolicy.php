@@ -13,7 +13,19 @@ class RoundPolicy
 {
     use HandlesAuthorization;
 
-    public function index()
+    public function read()
+    {
+        return true;
+    }
+    public function add()
+    {
+        return true;
+    }
+    public function edit()
+    {
+        return true;
+    }
+    public function delete()
     {
         return true;
     }
