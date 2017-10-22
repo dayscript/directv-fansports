@@ -82,3 +82,28 @@ Artisan::command('codes:create {limit?}', function ($limit = 1) {
         }
     }
 })->describe('Creates new codes');
+
+
+Artisan::command('matches:updatescores', function ($limit = 1) {
+    $matches = \App\Match::where('when' ,'<', \Carbon\Carbon::now()->addHours(1))
+        ->where('when' ,'>', \Carbon\Carbon::now()->addHours(-1))
+        ->get();
+    foreach ($matches as $match){
+        if($match->opta_id){
+            $match->updateOptaData();
+            $this->info('Match: ' . $match->id . '- ' . $match->when);
+        } else {
+            $this->error('Match: ' . $match->id . '- ' . $match->when);
+        }
+    }
+})->describe('Updates scores near matches');
+
+Artisan::command('matches:updatepoints', function ($limit = 1) {
+    $matches = \App\Match::where('when' ,'<', \Carbon\Carbon::now()->addHours(1))
+        ->where('when' ,'>', \Carbon\Carbon::now()->addHours(-1))
+        ->get();
+    foreach ($matches as $match){
+            $match->calculatepoints();
+            $this->info('Match: ' . $match->id . '- ' . $match->when);
+    }
+})->describe('Updates points near matches');
