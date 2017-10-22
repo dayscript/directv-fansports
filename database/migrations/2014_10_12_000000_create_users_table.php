@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('last')->nullable();
             $table->string('phone')->nullable();
             $table->string('country')->default('CO');
-            $table->string('city')->default('Bogotá');
+            $table->string('city')->default('Bogotá')->nullable();
             $table->string('gender')->nullable();
             $table->boolean('promotions')->default(true);
             $table->rememberToken();

@@ -15,6 +15,12 @@ class CheckCity
      */
     public function handle($request, Closure $next)
     {
-        return $next($request);
+        $response = $next($request);
+        if(($user = auth()->user()) && (!$user->city) && !$request->is('actualizar-ciudad')){
+            return redirect('actualizar-ciudad')->with('redirect','/'.$request->path());
+//            request()->
+//            dd(auth()->user());
+        }
+        return $response;
     }
 }

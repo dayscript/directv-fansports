@@ -12,6 +12,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 use App\Notifications\LeagueInviteNotification;
+use TCG\Voyager\Models\Page;
 
 class UsersController extends Controller
 {
@@ -23,10 +24,11 @@ class UsersController extends Controller
     {
         $this->middleware('auth');
     }
+
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return void
      */
     public function index()
     {
@@ -36,7 +38,7 @@ class UsersController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return void
      */
     public function create()
     {
@@ -47,7 +49,7 @@ class UsersController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
+     * @return void
      */
     public function store(Request $request)
     {
@@ -83,13 +85,18 @@ class UsersController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
-     * @param  int $id
+     * @param User $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(User $user)
     {
-        //
+        $redirect = request()->get('redirect', '/pronosticos');
+        if($redirect == '/users/'.$user->id)$redirect = '/pronosticos';
+        $this->validate(request(), [
+           'city' => 'required'
+        ]);
+        $user->update(request()->all());
+        return redirect($redirect);
     }
 
     /**
@@ -351,6 +358,19 @@ class UsersController extends Controller
             $results['status'] = 'success';
         }
         return $results;
+    }
+
+    /**
+     * Show update city page
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function updateCity()
+    {
+        $redirect = session('redirect','pronosticos');
+        $page = Page::firstOrCreate(['slug'=>'actualizar-ciudad'],['title'=>'Actualizar Ciudad']);
+        $user = auth()->user();
+        return view('users/update-city',compact('page', 'user', 'redirect'));
     }
 
 }
