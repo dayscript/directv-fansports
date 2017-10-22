@@ -13,6 +13,14 @@ class RoundPolicy
 {
     use HandlesAuthorization;
 
+    public function index()
+    {
+        return true;
+    }
+    public function browse()
+    {
+        return true;
+    }
     /**
      * Determine whether the user can update the prediction.
      *
