@@ -85,8 +85,8 @@ Artisan::command('codes:create {limit?}', function ($limit = 1) {
 
 
 Artisan::command('matches:updatescores', function ($limit = 1) {
-    $matches = \App\Match::where('when' ,'<', \Carbon\Carbon::now()->addHours(1))
-        ->where('when' ,'>', \Carbon\Carbon::now()->addHours(-1))
+    $matches = \App\Match::where('when' ,'<', \Carbon\Carbon::now()->addHours(3))
+        ->where('when' ,'>', \Carbon\Carbon::now()->addHours(-3))
         ->get();
     foreach ($matches as $match){
         if($match->opta_id){
@@ -99,8 +99,8 @@ Artisan::command('matches:updatescores', function ($limit = 1) {
 })->describe('Updates scores near matches');
 
 Artisan::command('matches:updatepoints', function ($limit = 1) {
-    $matches = \App\Match::where('when' ,'<', \Carbon\Carbon::now()->addHours(1))
-        ->where('when' ,'>', \Carbon\Carbon::now()->addHours(-1))
+    $matches = \App\Match::where('when' ,'<', \Carbon\Carbon::now()->addHours(3))
+        ->where('when' ,'>', \Carbon\Carbon::now()->addHours(-3))
         ->get();
     foreach ($matches as $match){
             $match->calculatepoints();
