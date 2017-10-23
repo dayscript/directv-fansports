@@ -20,7 +20,11 @@ class CheckCity
            && (!$user->city)
            && !$request->is('actualizar-ciudad')
            && !$request->is('users/'.$user->id)
+           && !$request->is('login')
            && !$request->is('login/*')
+           && !$request->is('users/updatepassword')
+           && !$request->is('password/*')
+           && !$request->is('register')
         ){
             return redirect('actualizar-ciudad')->with('redirect','/'.$request->path());
 //            request()->
