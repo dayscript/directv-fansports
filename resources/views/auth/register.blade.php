@@ -128,7 +128,7 @@
                         </label>
                     </div>
                 </div>
-                <fieldset class="row columns">
+                <fieldset class="row columns hide">
                     <legend>Género</legend>
                     <input type="radio" name="gender" value="M" id="gender_m" {{ old('gender','M')=='M'?'checked':'' }}><label for="gender_m">Masculino</label>
                     <input type="radio" name="gender" value="F" id="gender_f" {{ old('gender','M')=='F'?'checked':'' }}><label for="gender_f">Femenino</label>
