@@ -9263,13 +9263,14 @@ label {
 }
 
 #menu-fan .button {
-  padding: 1em 1em 3em 0;
+  padding: 1em 1em 1em 0;
   font-weight: normal;
-  background: #132029;
+  background: #009F33;
   text-align: right;
   font-family: "Raleway-Regular";
   font-weight: bolder;
   font-size: 1em;
+  margin-bottom: 12px;
 }
 
 #menu-fan .button:hover {
@@ -9281,6 +9282,7 @@ label {
     padding: 3.2em 1em;
     text-align: center;
     background: #009F33;
+    margin-bottom: 0px;
   }
 }
 

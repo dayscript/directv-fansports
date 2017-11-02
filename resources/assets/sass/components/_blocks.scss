@@ -30,13 +30,14 @@
     float: right;
   }
   .button {
-    padding: 1em 1em 3em 0;
+    padding: 1em 1em 1em 0;
     font-weight: normal;
-    background: $secondary-color;
+    background: $primary-color;
     text-align: right;
     font-family: $font-body;
     font-weight: bolder;
     font-size: 1em;
+    margin-bottom: 12px;
     &:hover {
       color: $secondary-color;
     }
@@ -44,6 +45,7 @@
       padding: 3.2em 1em;
       text-align: center;
       background: $primary-color;
+      margin-bottom: 0px;
     }
   }
   .menu .is-active {
