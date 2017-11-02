@@ -13,7 +13,7 @@
                     </div>
                 </figure>
             </li>
-            <li class="orbit-slide hide-for-small-only">
+            <li class="orbit-slide">
                 <figure class="orbit-figure">
                     <img class="orbit-image" src="{{ asset('img/banners/slide2.jpg') }}" alt="Banner">
                     <div class="row">
