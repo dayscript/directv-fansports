@@ -79,19 +79,19 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="medium-6 columns">
-                        <label>Pais
-                            @php($countries = App\Http\Utilities\Country::all())
-                            <select name="country" class="{{ $errors->has('country') ? ' is-invalid-input' : '' }}">
-                                @foreach($countries as $key=>$country)
-                                    <option {{ ($key==old('country','CO'))?'selected':'' }} value="{{ $key }}">{{ $country }}</option>
-                                @endforeach
-                            </select>
-                            @if ($errors->has('country'))
-                                <span class="form-error is-visible">{{ $errors->first('country') }}</span>
-                            @endif
-                        </label>
-                    </div>
+                    {{--<div class="medium-6 columns">--}}
+                        {{--<label>Pais--}}
+                            {{--@php($countries = App\Http\Utilities\Country::all())--}}
+                            {{--<select name="country" class="{{ $errors->has('country') ? ' is-invalid-input' : '' }}">--}}
+                                {{--@foreach($countries as $key=>$country)--}}
+                                    {{--<option {{ ($key==old('country','CO'))?'selected':'' }} value="{{ $key }}">{{ $country }}</option>--}}
+                                {{--@endforeach--}}
+                            {{--</select>--}}
+                            {{--@if ($errors->has('country'))--}}
+                                {{--<span class="form-error is-visible">{{ $errors->first('country') }}</span>--}}
+                            {{--@endif--}}
+                        {{--</label>--}}
+                    {{--</div>--}}
                     <div class="medium-6 columns">
                         <label>Ciudad
                             <select name="city">
