@@ -8,12 +8,12 @@
                         <figcaption class="orbit-caption text-left">
                             <h5 class="seccion hide-for-small-only">Premio Mayor</h5>
                             <h2 class="banner">Vive las emociones del partido Real Madrid VS Sevilla en Madrid</h2>
-                            <a href="register" class="button hide-for-small-only">Regístrate aqui y participa</a>
+                            <a href="register" class="button">Regístrate aquí y participa</a>
                         </figcaption>
                     </div>
                 </figure>
             </li>
-            <li class="orbit-slide">
+            <li class="orbit-slide hide-for-small-only">
                 <figure class="orbit-figure">
                     <img class="orbit-image" src="{{ asset('img/banners/slide2.jpg') }}" alt="Banner">
                     <div class="row">
