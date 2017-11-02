@@ -20,7 +20,7 @@
                         <figcaption class="orbit-caption text-left">
                             <h5 class="seccion hide-for-small-only">Premios Semana Servientrega</h5>
                             <h2 class="banner">Gánate una camiseta oficial de la Selección Colombia</h2>
-                            <a href="premios" class="button hide-for-small-only">Ver más</a>
+                            <a href="register" class="button hide-for-small-only">Regístrate aquí y participa</a>
                         </figcaption>
                     </div>
                 </figure>
