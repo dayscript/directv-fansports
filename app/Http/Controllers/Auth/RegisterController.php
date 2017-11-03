@@ -74,7 +74,7 @@ class RegisterController extends Controller
             'identification_type' => $data['identification_type'],
             'last'                => $data['last'],
             'phone'               => $data['phone'],
-            'country'             => $data['country'],
+            // 'country'             => $data['country'],
             'promotions'          => $data['promotions'] ?? 0,
             'city'                => $data['city'],
             'email'               => $data['email'],
