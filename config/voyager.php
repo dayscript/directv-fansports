@@ -15,6 +15,7 @@ return [
         'default_role'                 => 'user',
         'namespace'                    => App\User::class,
         'default_avatar'               => 'users/default.png',
+        'redirect'                     => '/admin',
     ],
 
     /*
@@ -91,7 +92,7 @@ return [
 
     'database' => [
         'tables' => [
-            'hidden' => ['migrations', 'data_rows', 'data_types', 'menu_items', 'password_resets', 'permission_role', 'permissions', 'settings'],
+            'hidden' => ['migrations', 'data_rows', 'data_types', 'menu_items', 'password_resets', 'permission_role', 'settings'],
         ],
     ],
 
@@ -110,6 +111,11 @@ return [
          * Set whether or not the multilingual is supported by the BREAD input.
          */
         'enabled' => false,
+
+        /*
+         * Set whether or not the admin layout default is RTL.
+         */
+        'rtl' => false,
 
         /*
          * Select default language
@@ -186,11 +192,9 @@ return [
                 'icon_class' => 'voyager-power',
             ],
         ],
-
         'data_tables' => [
             'responsive' => true, // Use responsive extension for jQuery dataTables that are not server-side paginated
         ],
-
         'widgets' => [
             'TCG\\Voyager\\Widgets\\UserDimmer',
             'TCG\\Voyager\\Widgets\\PostDimmer',
@@ -198,7 +202,24 @@ return [
         ],
 
     ],
-
+    /*
+        |--------------------------------------------------------------------------
+        | Automatic Procedures
+        |--------------------------------------------------------------------------
+        |
+        | When a change happens on Voyager, we can automate some routines.
+        |
+        */
+    'bread' => [
+        // When a BREAD is added, create the Menu item using the BREAD properties.
+        'add_menu_item' => true,
+        // which menu add item to
+        'default_menu' => 'admin',
+        // When a BREAD is added, create the related Permission.
+        'add_permission' => true,
+        // which role add premissions to
+        'default_role' => 'admin',
+    ],
     /*
     |--------------------------------------------------------------------------
     | UI Generic Config
@@ -226,6 +247,14 @@ return [
 
     'additional_js' => [
         //'js/custom.js',
+    ],
+    'googlemaps' => [
+        'key'    => env('GOOGLE_MAPS_KEY', ''),
+        'center' => [
+            'lat' => env('GOOGLE_MAPS_DEFAULT_CENTER_LAT', '32.715738'),
+            'lng' => env('GOOGLE_MAPS_DEFAULT_CENTER_LNG', '-117.161084'),
+        ],
+        'zoom' => env('GOOGLE_MAPS_DEFAULT_ZOOM', 11),
     ],
 
 ];

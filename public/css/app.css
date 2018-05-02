@@ -1464,7 +1464,7 @@
 
 /**
  * Foundation for Sites by ZURB
- * Version 6.4.1
+ * Version 6.4.4-rc1
  * foundation.zurb.com
  * Licensed under MIT Open Source
  */
@@ -2933,6 +2933,7 @@ button {
   border-radius: 0;
   background: transparent;
   line-height: 1;
+  cursor: auto;
 }
 
 [data-whatinput='mouse'] button {
@@ -4392,11 +4393,17 @@ small {
 }
 
 h1,
+.h1,
 h2,
+.h2,
 h3,
+.h3,
 h4,
+.h4,
 h5,
-h6 {
+.h5,
+h6,
+.h6 {
   font-family: "Raleway-Bold";
   font-style: normal;
   font-weight: normal;
@@ -4405,51 +4412,63 @@ h6 {
 }
 
 h1 small,
+.h1 small,
 h2 small,
+.h2 small,
 h3 small,
+.h3 small,
 h4 small,
+.h4 small,
 h5 small,
-h6 small {
+.h5 small,
+h6 small,
+.h6 small {
   line-height: 0;
   color: #cacaca;
 }
 
-h1 {
+h1,
+.h1 {
   font-size: 1.54639175rem;
   line-height: 1.1;
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
 
-h2 {
+h2,
+.h2 {
   font-size: 1.28865979rem;
   line-height: 1.1;
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
 
-h3 {
+h3,
+.h3 {
   font-size: 1.2242268rem;
   line-height: 1.1;
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
 
-h4 {
+h4,
+.h4 {
   font-size: 1.15979381rem;
   line-height: 1.1;
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
 
-h5 {
+h5,
+.h5 {
   font-size: 1.09536082rem;
   line-height: 1.1;
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
 
-h6 {
+h6,
+.h6 {
   font-size: 1.03092784rem;
   line-height: 1.1;
   margin-top: 0;
@@ -4457,27 +4476,33 @@ h6 {
 }
 
 @media print, screen and (min-width: 40em) {
-  h1 {
+  h1,
+  .h1 {
     font-size: 2.70618557rem;
   }
 
-  h2 {
+  h2,
+  .h2 {
     font-size: 2.19072165rem;
   }
 
-  h3 {
+  h3,
+  .h3 {
     font-size: 1.93298969rem;
   }
 
-  h4 {
+  h4,
+  .h4 {
     font-size: 1.61082474rem;
   }
 
-  h5 {
+  h5,
+  .h5 {
     font-size: 1.28865979rem;
   }
 
-  h6 {
+  h6,
+  .h6 {
     font-size: 1.03092784rem;
   }
 }
@@ -4866,6 +4891,11 @@ textarea:-ms-input-placeholder {
   color: #0a0a0a;
 }
 
+input::-ms-input-placeholder,
+textarea::-ms-input-placeholder {
+  color: #0a0a0a;
+}
+
 input::placeholder,
 textarea::placeholder {
   color: #0a0a0a;
@@ -5003,7 +5033,6 @@ label.middle {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0px;
-  height: auto;
   min-width: 0;
 }
 
@@ -5011,6 +5040,9 @@ label.middle {
   padding-top: 0;
   padding-bottom: 0;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
@@ -5020,7 +5052,9 @@ label.middle {
 .input-group-button input,
 .input-group-button button,
 .input-group-button label {
-  height: 2.57731959rem;
+  height: auto;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
   padding-top: 0;
   padding-bottom: 0;
   font-size: 1.03092784rem;
@@ -5118,6 +5152,10 @@ select[multiple] {
 }
 
 .is-invalid-input:not(:focus):-ms-input-placeholder {
+  color: #cc4b37;
+}
+
+.is-invalid-input:not(:focus)::-ms-input-placeholder {
   color: #cc4b37;
 }
 
@@ -5717,6 +5755,11 @@ select[multiple] {
   margin-left: 0;
 }
 
+a.button:hover,
+a.button:focus {
+  text-decoration: none;
+}
+
 .accordion {
   margin-left: 0;
   background: #132029;
@@ -6301,7 +6344,6 @@ select[multiple] {
 .menu .button {
   line-height: 1;
   text-decoration: none;
-  white-space: nowrap;
   display: block;
   padding: 0.7rem 1rem;
 }
@@ -6426,6 +6468,15 @@ select[multiple] {
 }
 
 .menu.icons a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu.icon-top a,
+.menu.icon-right a,
+.menu.icon-bottom a,
+.menu.icon-left a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6816,6 +6867,7 @@ select[multiple] {
   border-top-style: solid;
   border-color: #009F33 transparent transparent;
   right: 5px;
+  left: auto;
   margin-top: -3px;
 }
 
@@ -6912,6 +6964,7 @@ select[multiple] {
     border-top-style: solid;
     border-color: #009F33 transparent transparent;
     right: 5px;
+    left: auto;
     margin-top: -3px;
   }
 
@@ -6987,6 +7040,7 @@ select[multiple] {
     border-top-style: solid;
     border-color: #009F33 transparent transparent;
     right: 5px;
+    left: auto;
     margin-top: -3px;
   }
 
@@ -7056,6 +7110,7 @@ select[multiple] {
   position: absolute;
   top: 50%;
   right: 5px;
+  left: auto;
   margin-top: -6px;
 }
 
@@ -7373,16 +7428,31 @@ select[multiple] {
 .position-left {
   top: 0;
   left: 0;
-  width: 250px;
   height: 100%;
+  overflow-y: auto;
+  width: 250px;
   -webkit-transform: translateX(-250px);
           transform: translateX(-250px);
-  overflow-y: auto;
+}
+
+@media print, screen and (min-width: 40em) {
+  .position-left {
+    width: 250px;
+    -webkit-transform: translateX(-250px);
+            transform: translateX(-250px);
+  }
 }
 
 .off-canvas-content .off-canvas.position-left {
   -webkit-transform: translateX(-250px);
           transform: translateX(-250px);
+}
+
+@media print, screen and (min-width: 40em) {
+  .off-canvas-content .off-canvas.position-left {
+    -webkit-transform: translateX(-250px);
+            transform: translateX(-250px);
+  }
 }
 
 .off-canvas-content .off-canvas.position-left.is-transition-overlap.is-open {
@@ -7395,6 +7465,13 @@ select[multiple] {
           transform: translateX(250px);
 }
 
+@media print, screen and (min-width: 40em) {
+  .off-canvas-content.is-open-left.has-transition-push {
+    -webkit-transform: translateX(250px);
+            transform: translateX(250px);
+  }
+}
+
 .position-left.is-transition-push {
   -webkit-box-shadow: inset -13px 0 20px -13px rgba(10, 10, 10, 0.25);
           box-shadow: inset -13px 0 20px -13px rgba(10, 10, 10, 0.25);
@@ -7403,16 +7480,31 @@ select[multiple] {
 .position-right {
   top: 0;
   right: 0;
-  width: 250px;
   height: 100%;
+  overflow-y: auto;
+  width: 250px;
   -webkit-transform: translateX(250px);
           transform: translateX(250px);
-  overflow-y: auto;
+}
+
+@media print, screen and (min-width: 40em) {
+  .position-right {
+    width: 250px;
+    -webkit-transform: translateX(250px);
+            transform: translateX(250px);
+  }
 }
 
 .off-canvas-content .off-canvas.position-right {
   -webkit-transform: translateX(250px);
           transform: translateX(250px);
+}
+
+@media print, screen and (min-width: 40em) {
+  .off-canvas-content .off-canvas.position-right {
+    -webkit-transform: translateX(250px);
+            transform: translateX(250px);
+  }
 }
 
 .off-canvas-content .off-canvas.position-right.is-transition-overlap.is-open {
@@ -7425,6 +7517,13 @@ select[multiple] {
           transform: translateX(-250px);
 }
 
+@media print, screen and (min-width: 40em) {
+  .off-canvas-content.is-open-right.has-transition-push {
+    -webkit-transform: translateX(-250px);
+            transform: translateX(-250px);
+  }
+}
+
 .position-right.is-transition-push {
   -webkit-box-shadow: inset 13px 0 20px -13px rgba(10, 10, 10, 0.25);
           box-shadow: inset 13px 0 20px -13px rgba(10, 10, 10, 0.25);
@@ -7434,15 +7533,30 @@ select[multiple] {
   top: 0;
   left: 0;
   width: 100%;
+  overflow-x: auto;
   height: 250px;
   -webkit-transform: translateY(-250px);
           transform: translateY(-250px);
-  overflow-x: auto;
+}
+
+@media print, screen and (min-width: 40em) {
+  .position-top {
+    height: 250px;
+    -webkit-transform: translateY(-250px);
+            transform: translateY(-250px);
+  }
 }
 
 .off-canvas-content .off-canvas.position-top {
   -webkit-transform: translateY(-250px);
           transform: translateY(-250px);
+}
+
+@media print, screen and (min-width: 40em) {
+  .off-canvas-content .off-canvas.position-top {
+    -webkit-transform: translateY(-250px);
+            transform: translateY(-250px);
+  }
 }
 
 .off-canvas-content .off-canvas.position-top.is-transition-overlap.is-open {
@@ -7455,6 +7569,13 @@ select[multiple] {
           transform: translateY(250px);
 }
 
+@media print, screen and (min-width: 40em) {
+  .off-canvas-content.is-open-top.has-transition-push {
+    -webkit-transform: translateY(250px);
+            transform: translateY(250px);
+  }
+}
+
 .position-top.is-transition-push {
   -webkit-box-shadow: inset 0 -13px 20px -13px rgba(10, 10, 10, 0.25);
           box-shadow: inset 0 -13px 20px -13px rgba(10, 10, 10, 0.25);
@@ -7464,15 +7585,30 @@ select[multiple] {
   bottom: 0;
   left: 0;
   width: 100%;
+  overflow-x: auto;
   height: 250px;
   -webkit-transform: translateY(250px);
           transform: translateY(250px);
-  overflow-x: auto;
+}
+
+@media print, screen and (min-width: 40em) {
+  .position-bottom {
+    height: 250px;
+    -webkit-transform: translateY(250px);
+            transform: translateY(250px);
+  }
 }
 
 .off-canvas-content .off-canvas.position-bottom {
   -webkit-transform: translateY(250px);
           transform: translateY(250px);
+}
+
+@media print, screen and (min-width: 40em) {
+  .off-canvas-content .off-canvas.position-bottom {
+    -webkit-transform: translateY(250px);
+            transform: translateY(250px);
+  }
 }
 
 .off-canvas-content .off-canvas.position-bottom.is-transition-overlap.is-open {
@@ -7483,6 +7619,13 @@ select[multiple] {
 .off-canvas-content.is-open-bottom.has-transition-push {
   -webkit-transform: translateY(-250px);
           transform: translateY(-250px);
+}
+
+@media print, screen and (min-width: 40em) {
+  .off-canvas-content.is-open-bottom.has-transition-push {
+    -webkit-transform: translateY(-250px);
+            transform: translateY(-250px);
+  }
 }
 
 .position-bottom.is-transition-push {
@@ -8145,19 +8288,14 @@ select[multiple] {
   bottom: 0;
 }
 
-body.is-reveal-open {
-  overflow: hidden;
+html.is-reveal-open {
+  position: fixed;
+  width: 100%;
+  overflow-y: scroll;
 }
 
-html.is-reveal-open,
 html.is-reveal-open body {
-  min-height: 100%;
   overflow: hidden;
-  position: fixed;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
 }
 
 .reveal-overlay {
@@ -9682,6 +9820,10 @@ h2.section {
 }
 
 .comodin input:-ms-input-placeholder {
+  font-size: 0.9em;
+}
+
+.comodin input::-ms-input-placeholder {
   font-size: 0.9em;
 }
 
