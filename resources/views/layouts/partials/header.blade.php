@@ -79,7 +79,7 @@
                     <button type="submit" class="button expanded">Iniciar sesión</button>
                     <div class="text-center"><a href="{{ route('password.request') }}">Olvidé mi contraseña</a></div>
                     <hr class="light">
-                    <p class="text-center">O ingrese usando su cuenta en Faceebok</p>
+                    <p class="text-center">O ingrese usando su cuenta en Facebook</p>
                     <a href="/login/facebook" class="button facebook expanded"><i class="fi-social-facebook"></i> Iniciar sesión en Facebook</a>
                     <hr class="light">
                 </form>

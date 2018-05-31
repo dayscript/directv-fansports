@@ -8,7 +8,6 @@
     </div>
     <form class="form-horizontal" method="POST" action="{{ route('register') }}">
         {{ csrf_field() }}
-
         <div class="row">
             <div class="medium-9 columns">
                 <p>Puede registrarse o iniciar sesión usando su cuenta de Facebook</p>
